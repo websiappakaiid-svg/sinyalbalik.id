@@ -26,7 +26,7 @@
 :root{
   --bg:#000;--bg2:#0a0a0a;--card:rgba(30,30,32,.55);--card-s:#1c1c1e;--bdr:rgba(255,255,255,.08);
   --t1:#fff;--t2:#8e8e93;--t3:#48484a;--blue:#0a84ff;--green:#30d158;--red:#ff453a;--wa:#25d366;
-  --blur:blur(40px);--shadow:0 8px 32px rgba(0,0,0,.4);
+  --blur:blur(20px);--shadow:0 8px 32px rgba(0,0,0,.4);
   --grad:linear-gradient(135deg,#0a84ff,#5e5ce6);--grad2:linear-gradient(135deg,#0a84ff,#30d158);
 }
 html.light{
@@ -40,7 +40,7 @@ body{display:flex;justify-content:center;background:var(--bg);overflow-x:hidden}
 .glass{background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);border-radius:24px}
 
 /* APP */
-.app{width:100%;max-width:480px;min-height:100vh;background:var(--bg);position:relative;overflow:hidden;transition:background .4s}
+.app{width:100%;max-width:480px;min-height:100vh;background:var(--bg);position:relative;transition:background .4s}
 
 /* LAYOUT */
 .sec{padding:50px 20px}.tc{text-align:center}
@@ -120,9 +120,9 @@ input:checked+.sl{background:var(--green)}input:checked+.sl:before{transform:tra
 
 /* ======= HERO ======= */
 .hero{padding:100px 20px 30px;text-align:center;position:relative;overflow:hidden}
-.ambient{position:absolute;width:300px;height:300px;border-radius:50%;filter:blur(80px);pointer-events:none;opacity:.25}
-.amb1{background:rgba(10,132,255,.2);top:-80px;right:-80px}
-.amb2{background:rgba(94,92,230,.12);bottom:-50px;left:-60px}
+.ambient{position:absolute;width:300px;height:300px;border-radius:50%;filter:blur(80px);pointer-events:none;opacity:.15;will-change:auto}
+.amb1{background:rgba(10,132,255,.15);top:-80px;right:-80px}
+.amb2{background:rgba(94,92,230,.08);bottom:-50px;left:-60px}
 
 /* GLOW LINE DIVIDER */
 .glow-line{height:1px;background:linear-gradient(90deg,transparent,var(--blue),var(--green),transparent);margin:0 20px;opacity:.3}
@@ -154,18 +154,17 @@ html.light .phone-screen{background:linear-gradient(180deg,#fff 0%,#f2f2f7 100%)
 /* Phone content */
 .phone-content{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 20px;position:relative;z-index:5}
 .signal-icon{display:flex;align-items:flex-end;gap:3px;margin-bottom:15px}
-.signal-icon span{width:5px;border-radius:2px;background:var(--green);animation:barAnim 1.2s infinite}
-.signal-icon span:nth-child(1){height:8px;animation-delay:0s}
-.signal-icon span:nth-child(2){height:14px;animation-delay:.08s}
-.signal-icon span:nth-child(3){height:20px;animation-delay:.16s}
-.signal-icon span:nth-child(4){height:26px;animation-delay:.24s}
-@keyframes barAnim{0%,100%{opacity:.35}50%{opacity:1}}
+.signal-icon span{width:5px;border-radius:2px;background:var(--green)}
+.signal-icon span:nth-child(1){height:8px;opacity:.4}
+.signal-icon span:nth-child(2){height:14px;opacity:.6}
+.signal-icon span:nth-child(3){height:20px;opacity:.8}
+.signal-icon span:nth-child(4){height:26px;opacity:1}
 
 /* HORIZONTAL MARQUEE PROVIDER */
 .provider-marquee{width:100%;overflow:hidden;position:relative;height:28px;margin-bottom:8px}
-.marquee-track{display:flex;gap:30px;animation:scroll 4s linear infinite;white-space:nowrap}
+.marquee-track{display:flex;gap:30px;animation:scroll 8s linear infinite;white-space:nowrap;will-change:transform}
 .marquee-track span{font-size:1rem;font-weight:800;color:var(--t1);opacity:.7}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes scroll{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
 
 .phone-content .sub{font-size:.7rem;color:var(--t2)}
 
@@ -173,7 +172,7 @@ html.light .phone-screen{background:linear-gradient(180deg,#fff 0%,#f2f2f7 100%)
 .home-bar{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:100px;height:4px;border-radius:4px;background:rgba(255,255,255,.3);z-index:10}
 
 /* ======= GLASS CARDS ======= */
-.g-card{background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);border-radius:20px;padding:20px;margin-bottom:12px;transition:transform .2s}
+.g-card{background:var(--card);border:1px solid var(--bdr);border-radius:20px;padding:20px;margin-bottom:12px;transition:transform .2s}
 .g-card:active{transform:scale(.98)}
 .g-row{display:flex;gap:14px;align-items:center}
 .g-icon{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
@@ -187,7 +186,7 @@ html.light .phone-screen{background:linear-gradient(180deg,#fff 0%,#f2f2f7 100%)
 
 /* SOLUSI */
 .sol-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
-.sol{text-align:center;padding:22px 14px;border-radius:20px;background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr)}
+.sol{text-align:center;padding:22px 14px;border-radius:20px;background:var(--card);border:1px solid var(--bdr)}
 .sol i{font-size:1.8rem;margin-bottom:10px;display:block}
 .sol h4{font-size:.95rem;font-weight:700;margin-bottom:4px}.sol p{font-size:.8rem;color:var(--t2)}
 
@@ -422,6 +421,7 @@ footer{padding:30px 20px 90px;text-align:center;border-top:.5px solid var(--bdr)
 </ul>
 <a href="https://wa.me/6285142938392?text=Halo%20min%2C%20saya%20mau%20tanya%20dan%20lanjut%20proses%20iPhone%20saya" class="btn btn-wa" style="padding:18px;font-size:1.1rem"><i class="fab fa-whatsapp" style="font-size:1.2rem"></i> Langsung Proses Sekarang</a>
 <p class="micro" style="margin-top:10px"><i class="fas fa-shield-halved"></i> Tidak bisa diproses? Dana kembali 100%</p>
+<p class="micro" style="margin-top:6px;font-size:.75rem"><i class="fas fa-info-circle" style="color:#ff9f0a"></i> Harga dapat berubah sewaktu-waktu mengikuti biaya server.</p>
 <div class="qris" style="text-align:left;padding:18px">
 <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><i class="fas fa-qrcode" style="font-size:1.3rem;color:var(--blue)"></i><h4 style="font-size:.88rem">QRIS</h4></div>
 <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><i class="fas fa-handshake" style="font-size:1.3rem;color:var(--green)"></i><h4 style="font-size:.88rem">REKBER (biaya admin ditanggung kami)</h4></div>
