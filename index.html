@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="description" content="Jasa tembak sinyal iPhone inter/luar negeri. IMEI terblokir? Sinyal hilang? Kami bantu tanpa bongkar HP.">
+<title>sinyalbalik.id — Jasa Sinyal iPhone Inter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#000;--bg2:#0a0a0a;--card:rgba(30,30,32,.55);--card-s:#1c1c1e;--bdr:rgba(255,255,255,.08);
+  --t1:#fff;--t2:#8e8e93;--t3:#48484a;--blue:#0a84ff;--green:#30d158;--red:#ff453a;--wa:#25d366;
+  --blur:blur(40px);--shadow:0 8px 32px rgba(0,0,0,.4);
+  --grad:linear-gradient(135deg,#0a84ff,#5e5ce6);--grad2:linear-gradient(135deg,#0a84ff,#30d158);
+}
+html.light{
+  --bg:#f2f2f7;--bg2:#e5e5ea;--card:rgba(255,255,255,.6);--card-s:#fff;--bdr:rgba(0,0,0,.06);
+  --t1:#000;--t2:#8e8e93;--t3:#c7c7cc;--shadow:0 8px 32px rgba(0,0,0,.06);
+}
+html{background:var(--bg);color:var(--t1);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",sans-serif;scroll-behavior:smooth}
+body{display:flex;justify-content:center;background:var(--bg);overflow-x:hidden}
+
+/* GLASS MIXIN */
+.glass{background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);border-radius:24px}
+
+/* APP */
+.app{width:100%;max-width:480px;min-height:100vh;background:var(--bg);position:relative;overflow:hidden;transition:background .4s}
+
+/* LAYOUT */
+.sec{padding:50px 20px}.tc{text-align:center}
+.title{font-size:2.1rem;font-weight:800;letter-spacing:-.6px;line-height:1.12;margin-bottom:12px}
+.title em{font-style:normal;background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.desc{color:var(--t2);font-size:.95rem;line-height:1.55;margin-bottom:25px}
+.micro{color:var(--t3);font-size:.8rem;margin-top:10px;position:relative;z-index:2}
+.micro i{color:var(--green);margin-right:4px}
+
+/* TRUST EARLY */
+.trust-early{padding:30px 20px}
+.te-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;font-size:.75rem;font-weight:600;background:rgba(48,209,88,.08);color:var(--green);border:1px solid rgba(48,209,88,.15);margin-bottom:18px}
+.te-list{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.te-item{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--t2)}
+.te-item i{color:var(--green);margin-top:3px;flex-shrink:0}
+
+/* WARNING BOX */
+.warn-box{margin:0 20px;padding:22px;border-radius:20px;background:rgba(255,159,10,.06);border:1px solid rgba(255,159,10,.15)}
+.warn-box h3{font-size:1.1rem;font-weight:700;color:#ff9f0a;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.warn-list{display:flex;flex-direction:column;gap:8px}
+.warn-list li{display:flex;gap:10px;font-size:.88rem;color:var(--t2);list-style:none}
+.warn-list li i{color:#ff9f0a;margin-top:3px;flex-shrink:0}
+
+/* MID-PAGE CTA */
+.mid-cta{margin:0 20px;padding:20px;border-radius:20px;background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);text-align:center}
+.mid-cta p{color:var(--t2);font-size:.88rem;margin-bottom:12px}
+
+/* STICKY BOTTOM BAR */
+.sticky-bar{position:fixed;bottom:0;width:100%;max-width:480px;z-index:95;padding:12px 20px;background:rgba(0,0,0,.85);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border-top:1px solid var(--bdr);display:flex;align-items:center;gap:12px;transform:translateY(100%);transition:transform .4s}
+html.light .sticky-bar{background:rgba(255,255,255,.9)}
+.sticky-bar.show{transform:translateY(0)}
+.sticky-bar .sb-txt{flex:1;font-size:.82rem;color:var(--t2);line-height:1.3}
+.sticky-bar .sb-txt strong{color:var(--t1);display:block;font-size:.9rem}
+.sticky-bar .sb-btn{padding:12px 22px;border-radius:14px;background:var(--wa);color:#fff;font-weight:700;font-size:.9rem;text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:6px}
+
+/* URGENCY */
+.urg{display:flex;gap:8px;align-items:center;padding:10px 14px;border-radius:14px;background:rgba(255,159,10,.06);border:1px solid rgba(255,159,10,.1);font-size:.82rem;color:#ff9f0a;font-weight:600;margin-top:18px}
+.urg i{font-size:1rem}
+
+/* FAST BADGE */
+.fast-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;font-size:.78rem;font-weight:700;background:rgba(10,132,255,.08);color:var(--blue);border:1px solid rgba(10,132,255,.15);margin-bottom:16px;position:relative;z-index:2}
+
+/* BUTTONS */
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px;border-radius:16px;font-size:1.05rem;font-weight:600;border:none;cursor:pointer;transition:transform .15s;text-decoration:none;font-family:inherit}
+.btn:active{transform:scale(.96)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 6px 20px rgba(37,211,102,.25)}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 6px 20px rgba(10,132,255,.25)}
+.btn-glass{background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);color:var(--t1)}
+
+/* NAV Glass */
+nav{position:fixed;top:0;width:100%;max-width:480px;z-index:100;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.4);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border-bottom:.5px solid var(--bdr);transition:all .3s}
+html.light nav{background:rgba(242,242,247,.6)}
+.logo{font-size:1.3rem;font-weight:800;letter-spacing:-.5px;color:var(--t1);text-decoration:none}.logo b{color:var(--blue)}
+.nav-r{display:flex;gap:8px}
+.nav-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);color:var(--t1);transition:transform .15s}
+.nav-icon:active{transform:scale(.9)}
+html.light .ic-m{display:none}html:not(.light) .ic-s{display:none}
+
+/* SIDE MENU Glass */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:199;opacity:0;pointer-events:none;transition:opacity .3s}
+.overlay.active{opacity:1;pointer-events:all}
+.sidebar{position:fixed;top:0;right:-300px;width:280px;height:100%;z-index:200;padding:80px 20px 30px;transition:right .35s cubic-bezier(.25,.8,.25,1);background:rgba(20,20,22,.85);backdrop-filter:blur(50px);-webkit-backdrop-filter:blur(50px);border-left:.5px solid var(--bdr);display:flex;flex-direction:column}
+html.light .sidebar{background:rgba(242,242,247,.85)}
+.sidebar.active{right:0}
+.close-sb{position:absolute;top:20px;right:20px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;background:var(--card-s);border:1px solid var(--bdr);color:var(--t1);cursor:pointer}
+.sb-links{display:flex;flex-direction:column;gap:6px;flex:1}
+.sb-links a{color:var(--t1);font-size:1rem;font-weight:600;text-decoration:none;padding:14px 16px;border-radius:16px;display:flex;align-items:center;gap:12px;transition:background .15s}
+.sb-links a:active{background:rgba(10,132,255,.15)}
+.sb-links a i{width:22px;text-align:center;color:var(--blue)}
+.theme-row{display:flex;justify-content:space-between;align-items:center;padding:16px;border-radius:16px;background:var(--card-s);border:1px solid var(--bdr);margin-top:auto}
+.tl{font-size:.95rem;font-weight:600;display:flex;align-items:center;gap:10px}
+.sw{position:relative;width:50px;height:28px;display:inline-block}
+.sw input{opacity:0;width:0;height:0}
+.sl{position:absolute;cursor:pointer;inset:0;background:var(--t3);border-radius:30px;transition:.3s}
+.sl:before{content:"";position:absolute;height:22px;width:22px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s;box-shadow:0 2px 4px rgba(0,0,0,.2)}
+input:checked+.sl{background:var(--green)}input:checked+.sl:before{transform:translateX(22px)}
+
+/* ======= HERO ======= */
+.hero{padding:100px 20px 30px;text-align:center;position:relative;overflow:hidden}
+.ambient{position:absolute;width:300px;height:300px;border-radius:50%;filter:blur(80px);pointer-events:none;opacity:.25}
+.amb1{background:rgba(10,132,255,.2);top:-80px;right:-80px}
+.amb2{background:rgba(94,92,230,.12);bottom:-50px;left:-60px}
+
+/* GLOW LINE DIVIDER */
+.glow-line{height:1px;background:linear-gradient(90deg,transparent,var(--blue),var(--green),transparent);margin:0 20px;opacity:.3}
+
+/* PHONE WITH DYNAMIC ISLAND */
+.phone{width:250px;height:500px;border-radius:50px;background:#000;border:4px solid #2a2a2e;position:relative;margin:30px auto;box-shadow:0 30px 60px rgba(0,0,0,.5),inset 0 0 0 1.5px #444;overflow:hidden}
+html.light .phone{border-color:#d1d1d6;box-shadow:0 30px 60px rgba(0,0,0,.08),inset 0 0 0 1.5px #fff;background:#f2f2f7}
+.phone-screen{position:absolute;inset:4px;border-radius:46px;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(180deg,#1a1a2e 0%,#0d0d14 100%)}
+html.light .phone-screen{background:linear-gradient(180deg,#fff 0%,#f2f2f7 100%)}
+
+/* REAL Dynamic Island */
+.dynamic-island{
+  position:absolute;top:12px;left:50%;transform:translateX(-50%);
+  width:120px;height:34px;background:#000;border-radius:22px;z-index:10;
+  display:flex;align-items:center;justify-content:center;gap:8px;padding:0 12px;
+  animation:diPop .6s cubic-bezier(.175,.885,.32,1.275);
+  transition:width .4s cubic-bezier(.175,.885,.32,1.275),height .4s cubic-bezier(.175,.885,.32,1.275);
+}
+.dynamic-island.expand{width:200px;height:44px;border-radius:25px}
+@keyframes diPop{0%{transform:translateX(-50%) scale(.7);opacity:0}100%{transform:translateX(-50%) scale(1);opacity:1}}
+.di-dot{width:10px;height:10px;border-radius:50%;background:#111;box-shadow:inset 0 0 3px rgba(255,255,255,.15);flex-shrink:0}
+.di-info{display:flex;flex-direction:column;align-items:flex-start;overflow:hidden;opacity:0;transition:opacity .3s}
+.dynamic-island.expand .di-info{opacity:1}
+.di-info span{font-size:.55rem;color:#888;line-height:1.2;white-space:nowrap}
+.di-info strong{font-size:.7rem;color:var(--green);line-height:1.2;white-space:nowrap}
+.di-led{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:ledPulse 1.5s infinite;flex-shrink:0}
+@keyframes ledPulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* Phone content */
+.phone-content{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 20px;position:relative;z-index:5}
+.signal-icon{display:flex;align-items:flex-end;gap:3px;margin-bottom:15px}
+.signal-icon span{width:5px;border-radius:2px;background:var(--green);animation:barAnim 1.2s infinite}
+.signal-icon span:nth-child(1){height:8px;animation-delay:0s}
+.signal-icon span:nth-child(2){height:14px;animation-delay:.08s}
+.signal-icon span:nth-child(3){height:20px;animation-delay:.16s}
+.signal-icon span:nth-child(4){height:26px;animation-delay:.24s}
+@keyframes barAnim{0%,100%{opacity:.35}50%{opacity:1}}
+
+/* HORIZONTAL MARQUEE PROVIDER */
+.provider-marquee{width:100%;overflow:hidden;position:relative;height:28px;margin-bottom:8px}
+.marquee-track{display:flex;gap:30px;animation:scroll 4s linear infinite;white-space:nowrap}
+.marquee-track span{font-size:1rem;font-weight:800;color:var(--t1);opacity:.7}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+.phone-content .sub{font-size:.7rem;color:var(--t2)}
+
+/* Home bar */
+.home-bar{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:100px;height:4px;border-radius:4px;background:rgba(255,255,255,.3);z-index:10}
+
+/* ======= GLASS CARDS ======= */
+.g-card{background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);border-radius:20px;padding:20px;margin-bottom:12px;transition:transform .2s}
+.g-card:active{transform:scale(.98)}
+.g-row{display:flex;gap:14px;align-items:center}
+.g-icon{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.g-red{background:rgba(255,69,58,.12);color:var(--red)}.g-blue{background:rgba(10,132,255,.12);color:var(--blue)}.g-green{background:rgba(48,209,88,.12);color:var(--green)}.g-purple{background:rgba(94,92,230,.12);color:#5e5ce6}
+.g-text h4{font-size:1rem;font-weight:700;margin-bottom:2px}.g-text p{font-size:.85rem;color:var(--t2);line-height:1.4}
+
+/* EDUKASI */
+.edu{border-radius:24px;padding:24px;border:1px solid rgba(10,132,255,.15);background:linear-gradient(135deg,rgba(10,132,255,.06),rgba(94,92,230,.03));backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur)}
+.edu h3{font-size:1.1rem;font-weight:700;color:var(--blue);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.edu p{font-size:.9rem;color:var(--t2);line-height:1.65;margin-bottom:8px}.edu strong{color:var(--t1)}
+
+/* SOLUSI */
+.sol-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.sol{text-align:center;padding:22px 14px;border-radius:20px;background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr)}
+.sol i{font-size:1.8rem;margin-bottom:10px;display:block}
+.sol h4{font-size:.95rem;font-weight:700;margin-bottom:4px}.sol p{font-size:.8rem;color:var(--t2)}
+
+/* STEPS (iOS Settings-like) */
+.ios-list{background:var(--card-s);border-radius:20px;overflow:hidden;border:1px solid var(--bdr)}
+.ios-item{display:flex;gap:14px;padding:16px;border-bottom:.5px solid var(--bdr);align-items:center}
+.ios-item:last-child{border-bottom:none}
+.ios-num{width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;flex-shrink:0}
+.ios-txt h4{font-size:.95rem;font-weight:600;margin-bottom:1px}.ios-txt p{font-size:.83rem;color:var(--t2)}
+
+/* PRICING */
+.price-card{background:var(--card-s);border:2px solid var(--blue);border-radius:28px;padding:32px 22px;text-align:center;box-shadow:0 12px 40px rgba(10,132,255,.12);position:relative}
+.p-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--grad);color:#fff;padding:6px 16px;border-radius:20px;font-size:.78rem;font-weight:700;white-space:nowrap}
+.p-now{font-size:3.2rem;font-weight:900;line-height:1;margin:12px 0;letter-spacing:-1px}
+.p-now small{font-size:.9rem;font-weight:500;color:var(--t2)}
+.p-list{text-align:left;list-style:none;margin:20px 0 25px;display:flex;flex-direction:column;gap:10px}
+.p-list li{display:flex;gap:10px;font-size:.9rem}.p-list li i{color:var(--green);margin-top:3px;flex-shrink:0}
+.qris{border-radius:16px;padding:14px;margin-top:18px;background:rgba(10,132,255,.05);border:1px dashed rgba(10,132,255,.2)}
+.qris i{font-size:2rem;margin-bottom:4px;color:var(--blue)}.qris h4{font-size:.82rem;font-weight:800}
+
+/* TESTI SWIPE */
+.t-w{display:flex;overflow-x:auto;gap:14px;padding:5px 0 15px;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:0 -20px;padding-left:20px;padding-right:20px}
+.t-w::-webkit-scrollbar{display:none}
+.t-c{min-width:78%;scroll-snap-align:center;background:var(--card-s);border:1px solid var(--bdr);border-radius:24px;aspect-ratio:9/16;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);flex-shrink:0;overflow:hidden}
+.t-c img{width:100%;height:100%;object-fit:cover}
+.t-ph{text-align:center;color:var(--t3)}.t-ph i{font-size:2rem;margin-bottom:8px;opacity:.4}
+
+/* SOCIAL GRID */
+.soc{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.soc a{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 0;border-radius:18px;text-decoration:none;color:#fff;font-size:.72rem;font-weight:700;transition:transform .15s;position:relative;overflow:hidden}
+.soc a:active{transform:scale(.95)}
+.soc a i{font-size:1.5rem}
+.soc .s-wa{background:linear-gradient(135deg,#25d366,#128c7e);box-shadow:0 4px 14px rgba(37,211,102,.2)}
+.soc .s-tt{background:linear-gradient(135deg,#000,#25f4ee);box-shadow:0 4px 14px rgba(37,244,238,.1)}
+html.light .soc .s-tt{background:linear-gradient(135deg,#333,#25f4ee)}
+.soc .s-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);box-shadow:0 4px 14px rgba(225,48,108,.15)}
+.soc .s-fb{background:linear-gradient(135deg,#1877f2,#0a54b0);box-shadow:0 4px 14px rgba(24,119,242,.2)}
+.soc a::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 60%);opacity:0;transition:opacity .3s}
+.soc a:hover::after{opacity:1}
+
+/* PAYMENT SECTION */
+.pay-card{background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);border-radius:20px;padding:20px;margin-bottom:12px}
+.pay-row{display:flex;gap:12px;align-items:center}
+.pay-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+
+/* HONEST TESTI BOX */
+.honest-box{padding:28px 22px;border-radius:24px;background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);text-align:center}
+.honest-box .hb-icon{font-size:2rem;margin-bottom:12px;opacity:.5}
+.honest-box h3{font-size:1.1rem;font-weight:700;margin-bottom:10px}
+.honest-box p{font-size:.88rem;color:var(--t2);line-height:1.55;margin-bottom:6px}
+.honest-box .hb-tag{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:.78rem;font-weight:600;color:var(--blue);padding:5px 12px;border-radius:20px;background:rgba(10,132,255,.08);border:1px solid rgba(10,132,255,.12)}
+
+/* FAQ */
+.f-wrap{background:var(--card-s);border-radius:20px;overflow:hidden;border:1px solid var(--bdr)}
+.faq{border-bottom:.5px solid var(--bdr)}.faq:last-child{border-bottom:none}
+.fq{padding:16px;font-weight:600;font-size:.95rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;user-select:none}
+.fq i{color:var(--t3);transition:transform .3s}.faq.open .fq i{transform:rotate(180deg);color:var(--blue)}
+.fa2{max-height:0;overflow:hidden;transition:all .3s;padding:0 16px;color:var(--t2);font-size:.88rem}
+.faq.open .fa2{max-height:200px;padding:0 16px 16px}
+
+/* TRUST GLASS */
+.trust{border-radius:24px;padding:28px;text-align:center;background:rgba(255,69,58,.04);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid rgba(255,69,58,.12)}
+.trust .shd{font-size:2.5rem;color:var(--red);margin-bottom:12px}
+.trust h3{font-size:1.2rem;margin-bottom:10px}
+.trust>p{color:var(--t2);font-size:.92rem;margin-bottom:18px;line-height:1.5}
+.ch-row{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.ch{padding:12px 16px;border-radius:14px;background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);font-size:.88rem;font-weight:600;display:flex;align-items:center;gap:10px}
+
+/* FOOTER */
+footer{padding:30px 20px 90px;text-align:center;border-top:.5px solid var(--bdr)}
+.f-logo{font-size:1.15rem;font-weight:800;margin-bottom:6px;display:block;color:var(--t1);text-decoration:none}.f-logo b{color:var(--blue)}
+.f-sub{font-size:.78rem;color:var(--t3)}
+.f-trust{font-size:.75rem;color:var(--t3);margin-top:14px;padding:12px;border-radius:14px;background:var(--card);border:1px solid var(--bdr);line-height:1.5}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- NAV -->
+<nav>
+<a href="#" class="logo">sinyalbalik<b>.id</b></a>
+<div class="nav-r">
+<div class="nav-icon" id="thBtn"><i class="fas fa-moon ic-m"></i><i class="fas fa-sun ic-s"></i></div>
+<div class="nav-icon" id="menuBtn"><i class="fas fa-bars"></i></div>
+</div>
+</nav>
+
+<!-- OVERLAY -->
+<div class="overlay" id="ov"></div>
+
+<!-- SIDEBAR Glass -->
+<div class="sidebar" id="sb">
+<div class="close-sb" id="closeSb"><i class="fas fa-xmark"></i></div>
+<div class="sb-links">
+<a href="#masalah" class="sb-lnk"><i class="fas fa-sim-card"></i> Penyakit iPhone Inter</a>
+<a href="#solusi" class="sb-lnk"><i class="fas fa-wand-magic-sparkles"></i> Solusi Kami</a>
+<a href="#cara" class="sb-lnk"><i class="fas fa-list-ol"></i> Cara Order</a>
+<a href="#harga" class="sb-lnk"><i class="fas fa-tag"></i> Harga</a>
+<a href="#testi" class="sb-lnk"><i class="fas fa-star"></i> Testimoni</a>
+<a href="#faq" class="sb-lnk"><i class="fas fa-circle-question"></i> FAQ</a>
+</div>
+<div class="theme-row">
+<div class="tl"><i class="fas fa-circle-half-stroke"></i> Mode Gelap</div>
+<label class="sw"><input type="checkbox" id="thSw" checked><span class="sl"></span></label>
+</div>
+</div>
+
+<!-- 1. HERO -->
+<div class="sec hero">
+<div class="ambient amb1"></div>
+<div class="ambient amb2"></div>
+
+<div class="fast-badge">⚡ Fast Process • Minim Chat</div>
+<h1 class="title" style="position:relative;z-index:2;font-size:2.3rem">iPhone Inter No Service?<br><em>Langsung Kami Proses.</em></h1>
+<p class="desc" style="position:relative;z-index:2">Kirim data, kami proses. <strong>Estimasi 10–30 menit sinyal aktif kembali.</strong> Tanpa bongkar, tanpa ribet.</p>
+<a href="https://wa.me/6285142938392?text=Halo%20min%2C%20saya%20mau%20tanya%20dan%20lanjut%20proses%20iPhone%20saya" class="btn btn-wa" style="position:relative;z-index:2;padding:18px;font-size:1.1rem"><i class="fab fa-whatsapp" style="font-size:1.3rem"></i> Order Sekarang — Proses Cepat</a>
+<p class="micro" style="margin-top:12px"><i class="fas fa-shield-halved"></i> Gagal diproses? Dana dikembalikan.</p>
+
+<!-- PHONE MOCKUP -->
+<div class="phone">
+<div class="phone-screen">
+<div class="dynamic-island" id="di">
+<div class="di-dot"></div>
+<div class="di-info"><span>Inject Sinyal</span><strong>Berhasil ✓</strong></div>
+<div class="di-led"></div>
+</div>
+<div class="phone-content">
+<div class="signal-icon"><span></span><span></span><span></span><span></span></div>
+<div class="provider-marquee">
+<div class="marquee-track" id="marquee">
+<span>Telkomsel</span><span>•</span><span>Indosat</span><span>•</span><span>XL Axiata</span><span>•</span><span>Smartfren</span><span>•</span><span>Tri</span><span>•</span>
+<span>Telkomsel</span><span>•</span><span>Indosat</span><span>•</span><span>XL Axiata</span><span>•</span><span>Smartfren</span><span>•</span><span>Tri</span><span>•</span>
+</div>
+</div>
+<p class="sub">Support mayoritas provider Indonesia</p>
+</div>
+<div class="home-bar"></div>
+</div>
+</div>
+</div>
+
+<div class="glow-line"></div>
+
+<!-- MASALAH -->
+<div class="sec" id="masalah">
+<h2 class="title tc" style="font-size:1.6rem">Penyakit <em>iPhone Inter</em></h2>
+<p class="desc tc">iPhone dari luar negeri masuk Indonesia sinyal langsung mati. Ini penyebabnya:</p>
+<div class="g-card"><div class="g-row"><div class="g-icon g-red"><i class="fas fa-sim-card"></i></div><div class="g-text"><h4>"SIM Tidak Didukung"</h4><p>Nolak semua kartu provider seluler Indonesia.</p></div></div></div>
+<div class="g-card"><div class="g-row"><div class="g-icon g-red"><i class="fas fa-ban"></i></div><div class="g-text"><h4>"Tidak Ada Layanan"</h4><p>Status bar No Service padahal SIM normal di HP lain.</p></div></div></div>
+<div class="g-card"><div class="g-row"><div class="g-icon g-red"><i class="fas fa-signal"></i></div><div class="g-text"><h4>Sinyal Hilang-Timbul</h4><p>Muncul bentar trus ilang. Data mati total.</p></div></div></div>
+<div class="g-card"><div class="g-row"><div class="g-icon g-red"><i class="fas fa-rotate"></i></div><div class="g-text"><h4>"Mencari..." Tanpa Henti</h4><p>iPhone terus cari jaringan, reset percuma.</p></div></div></div>
+
+<div class="edu" style="margin-top:20px">
+<h3><i class="fas fa-lightbulb"></i> Kenapa Bisa Gitu?</h3>
+<p>Sejak 2020, HP masuk Indonesia <strong>wajib registrasi IMEI di Bea Cukai</strong>. Kalau belum terdaftar, sinyal otomatis diblokir sistem Kemenperin.</p>
+<p>Pendaftaran resmi cuma bisa <strong>60 hari</strong> setelah masuk Indo. Lewat itu, jalur resmi <strong>sudah tertutup</strong>.</p>
+<p>Kami bantu lewat <strong>sistem inject sinyal</strong> — aktifkan kembali tanpa bongkar HP.</p>
+</div>
+</div>
+
+<!-- 4. SOLUSI -->
+<div class="sec" id="solusi">
+<h2 class="title tc" style="font-size:1.6rem">Kenapa <em>sinyalbalik.id</em>?</h2>
+<div class="sol-row">
+<div class="sol"><i class="fas fa-laptop-code" style="color:var(--blue)"></i><h4>Tanpa Bongkar</h4><p>Tidak mempengaruhi hardware</p></div>
+<div class="sol"><i class="fas fa-bolt" style="color:var(--green)"></i><h4>Rata-rata 10–30'</h4><p>Proses via server</p></div>
+<div class="sol"><i class="fas fa-shield-halved" style="color:#5e5ce6"></i><h4>Aman Digunakan</h4><p>Selama masa aktif</p></div>
+<div class="sol"><i class="fas fa-hand-holding-dollar" style="color:var(--wa)"></i><h4>Harga Jujur</h4><p>Standar & transparan</p></div>
+</div>
+</div>
+
+<!-- 5. TRUST (Social Proof) -->
+<div class="trust-early tc">
+<div class="te-badge"><i class="fas fa-circle-check"></i> Real Testimoni • Bukan Rekayasa</div>
+<h2 class="title" style="font-size:1.5rem">Kenapa Banyak yang <em>Sudah Pakai?</em></h2>
+<div class="te-list">
+<div class="te-item"><i class="fas fa-check-circle"></i> Sudah bantu banyak user iPhone inter dari berbagai kota</div>
+<div class="te-item"><i class="fas fa-check-circle"></i> Rata-rata aktif dalam 10–30 menit setelah proses</div>
+<div class="te-item"><i class="fas fa-check-circle"></i> Langsung kirim data, langsung diproses</div>
+<div class="te-item"><i class="fas fa-check-circle"></i> Gagal? Dana dikembalikan tanpa drama</div>
+</div>
+<div class="urg" style="color:var(--green);background:rgba(48,209,88,.06);border-color:rgba(48,209,88,.1)"><i class="fas fa-circle-check"></i> Admin online setiap hari — chat di luar jam aktif dibalas secepatnya</div>
+</div>
+
+<div class="mid-cta">
+<p>Langsung kirim data, kami proses.</p>
+<a href="https://wa.me/6285142938392?text=Halo%20min%2C%20saya%20mau%20tanya%20dan%20lanjut%20proses%20iPhone%20saya" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Order Sekarang</a>
+</div>
+
+<!-- 6. CARA CEPAT -->
+<div class="sec" id="cara">
+<h2 class="title tc" style="font-size:1.6rem">Cara <em>Cepat</em> Proses</h2>
+<p class="desc tc">Kirim data → kami proses → sinyal aktif.</p>
+<div class="ios-list">
+<div class="ios-item"><div class="ios-num">1</div><div class="ios-txt"><h4>Kirim Screenshot IMEI</h4><p>Buka <strong>Telepon</strong>, ketik <strong>*#06#</strong>, screenshot, kirim ke admin via WhatsApp.</p></div></div>
+<div class="ios-item"><div class="ios-num">2</div><div class="ios-txt"><h4>Bayar via QRIS</h4><p>Admin kirim barcode QRIS. Scan dari m-banking/e-wallet kamu.</p></div></div>
+<div class="ios-item"><div class="ios-num">3</div><div class="ios-txt"><h4>Tunggu 10–30 Menit</h4><p>Admin langsung proses inject sinyal via server.</p></div></div>
+<div class="ios-item"><div class="ios-num">4</div><div class="ios-txt"><h4>Mode Pesawat On → Off</h4><p>Setelah admin konfirmasi selesai, toggle <strong>Mode Pesawat</strong>. Sinyal muncul.</p></div></div>
+</div>
+<p class="micro tc" style="margin-top:14px"><i class="fas fa-info-circle" style="color:#ff9f0a"></i> Beberapa kondisi IMEI tertentu mungkin tidak bisa diproses. Gagal = refund.</p>
+</div>
+
+<div class="glow-line"></div>
+
+<!-- 7. TRANSPARANSI -->
+<div class="warn-box">
+<h3><i class="fas fa-triangle-exclamation"></i> Harap Dibaca Sebelum Order</h3>
+<ul class="warn-list">
+<li><i class="fas fa-info-circle"></i> Ini bukan unlock resmi dari pemerintah / Bea Cukai</li>
+<li><i class="fas fa-info-circle"></i> Proses via software — tidak mempengaruhi hardware</li>
+<li><i class="fas fa-info-circle"></i> Masa aktif terbatas (±3 bulan), setelah itu bisa perpanjang</li>
+<li><i class="fas fa-info-circle"></i> Hasil bisa berbeda tergantung kondisi & riwayat IMEI</li>
+</ul>
+</div>
+
+<!-- HARGA -->
+<div class="sec" id="harga">
+<h2 class="title tc" style="font-size:1.6rem">Biaya <em>Jasa</em></h2>
+<div class="price-card">
+<div class="p-tag">⚡ FAST PROCESS • GARANSI REFUND</div>
+<h3 style="font-size:1rem;color:var(--t2);margin-top:8px">Inject Sinyal iPhone</h3>
+<div class="p-now">Rp150k <small>/unit</small></div>
+<ul class="p-list">
+<li><i class="fas fa-check-circle"></i> Proses langsung tanpa bongkar HP</li>
+<li><i class="fas fa-check-circle"></i> Masa aktif ±3 bulan (bisa perpanjang)</li>
+<li><i class="fas fa-check-circle"></i> Bebas restart, ganti SIM, update iOS</li>
+<li><i class="fas fa-check-circle"></i> Mayoritas device berhasil diaktifkan</li>
+<li><i class="fas fa-check-circle"></i> Gagal = dana dikembalikan utuh</li>
+</ul>
+<a href="https://wa.me/6285142938392?text=Halo%20min%2C%20saya%20mau%20tanya%20dan%20lanjut%20proses%20iPhone%20saya" class="btn btn-wa" style="padding:18px;font-size:1.1rem"><i class="fab fa-whatsapp" style="font-size:1.2rem"></i> Langsung Proses Sekarang</a>
+<p class="micro" style="margin-top:10px"><i class="fas fa-shield-halved"></i> Tidak bisa diproses? Dana kembali 100%</p>
+<div class="qris" style="text-align:left;padding:18px">
+<div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><i class="fas fa-qrcode" style="font-size:1.3rem;color:var(--blue)"></i><h4 style="font-size:.88rem">QRIS</h4></div>
+<div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><i class="fas fa-handshake" style="font-size:1.3rem;color:var(--green)"></i><h4 style="font-size:.88rem">REKBER (biaya admin ditanggung kami)</h4></div>
+<p style="font-size:.78rem;color:var(--t3);margin-top:6px"><i class="fas fa-shield-halved" style="color:var(--green);margin-right:4px"></i> Proses dilakukan langsung oleh admin (bukan bot)</p>
+</div>
+</div>
+</div>
+
+<!-- TESTIMONI -->
+<div class="sec" id="testi">
+<h2 class="title tc" style="font-size:1.6rem">Bukti & <em>Testimoni</em></h2>
+<div class="honest-box">
+<div class="hb-icon">ℹ️</div>
+<h3>Testimoni akan segera diupdate</h3>
+<p>Saat ini layanan masih baru, hasil & bukti proses akan terus ditambahkan secara bertahap.</p>
+<p>Kami mengutamakan <strong>transparansi & kejujuran</strong> dari awal.</p>
+<div class="hb-tag"><i class="fas fa-shield-halved"></i> Transparansi adalah prioritas kami</div>
+</div>
+<a href="https://whatsapp.com/channel/0029Vb75SUEISTkJAa7cID1s" class="btn btn-glass" style="margin-top:15px"><i class="fab fa-whatsapp" style="color:var(--wa)"></i> Follow Channel WA untuk Update Terbaru</a>
+
+<h3 class="tc" style="font-size:1rem;margin-top:30px">Follow & Cek Sosmed Kami</h3>
+<div class="soc">
+<a href="https://wa.me/6285142938392" class="s-wa"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+<a href="https://tiktok.com/@sinyalbalik.id" class="s-tt"><i class="fab fa-tiktok"></i>TikTok</a>
+<a href="https://instagram.com/sinyalbalik.id" class="s-ig"><i class="fab fa-instagram"></i>Instagram</a>
+<a href="https://facebook.com/sinyalbalik.id" class="s-fb"><i class="fab fa-facebook-f"></i>Facebook</a>
+</div>
+</div>
+
+<!-- FAQ -->
+<div class="sec" id="faq">
+<h2 class="title tc" style="font-size:1.6rem">Masih <em>Ragu?</em></h2>
+<p class="desc tc">Pertanyaan yang paling sering muncul.</p>
+<div class="f-wrap">
+<div class="faq"><div class="fq">Ini aman gak sih?<i class="fas fa-chevron-down"></i></div><div class="fa2">Aman selama masa aktif. Prosesnya lewat software, HP gak dibongkar dan hardware gak terpengaruh.</div></div>
+<div class="faq"><div class="fq">Ini resmi atau bukan?<i class="fas fa-chevron-down"></i></div><div class="fa2">Ini bukan metode resmi dari pemerintah, tapi solusi alternatif yang banyak digunakan. Kami terbuka soal ini dari awal.</div></div>
+<div class="faq"><div class="fq">Bisa gagal gak?<i class="fas fa-chevron-down"></i></div><div class="fa2">Mayoritas berhasil, tapi tergantung kondisi IMEI. Kalau gagal, dana dikembalikan 100%.</div></div>
+<div class="faq"><div class="fq">Kalau nanti sinyal mati lagi?<i class="fas fa-chevron-down"></i></div><div class="fa2">Masa aktifnya ±3 bulan. Setelah itu perpanjang aja, proses sama cepatnya.</div></div>
+<div class="faq"><div class="fq">Perlu kirim HP gak?<i class="fas fa-chevron-down"></i></div><div class="fa2">Gak perlu. Semua dilakukan jarak jauh. Cukup kirim screenshot IMEI. Kami gak pernah minta Apple ID atau password.</div></div>
+<div class="faq"><div class="fq">Semua iPhone bisa?<i class="fas fa-chevron-down"></i></div><div class="fa2">Mayoritas iPhone inter bisa. Langsung kirim aja data kamu, kalau ternyata gak bisa diproses, dana dikembalikan.</div></div>
+<div class="faq"><div class="fq">Aman kalau update iOS?<i class="fas fa-chevron-down"></i></div><div class="fa2">Aman selama masa aktif. Update iOS, restart, ganti SIM — semuanya gak ngaruh.</div></div>
+</div>
+<p class="tc" style="color:var(--t2);font-size:.88rem;margin-top:18px">Pertanyaan lain? <a href="https://wa.me/6285142938392?text=Halo%20min%2C%20saya%20mau%20tanya%20dan%20lanjut%20proses%20iPhone%20saya" style="color:var(--wa);font-weight:600;text-decoration:none">Chat admin — respon cepat.</a></p>
+</div>
+
+<!-- TRUST -->
+<div class="sec">
+<div class="trust">
+<div class="shd"><i class="fas fa-shield-halved"></i></div>
+<h3>Hati-Hati Penipuan!</h3>
+<p>sinyalbalik.id <strong>HANYA</strong> melayani via channel resmi. Di luar ini = <strong>bukan kami</strong>.</p>
+<div class="ch-row">
+<div class="ch"><i class="fas fa-globe" style="color:var(--blue)"></i> sinyalbalik.id.vercel.app</div>
+<a href="https://wa.me/6285142938392" class="ch" style="text-decoration:none;color:var(--t1)"><i class="fab fa-whatsapp" style="color:var(--wa)"></i> 0851-4293-8392</a>
+</div>
+<p style="font-weight:700;color:var(--red);font-size:.95rem">Selain itu = BUKAN KAMI ❌</p>
+</div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="sec">
+<h2 class="title tc" style="font-size:1.6rem">Pembayaran & <em>Keamanan</em></h2>
+<div class="pay-card">
+<div class="pay-row"><div class="pay-icon" style="background:rgba(10,132,255,.1);color:var(--blue)"><i class="fas fa-qrcode"></i></div><div><h4 style="font-size:.95rem;font-weight:700">QRIS</h4><p style="font-size:.83rem;color:var(--t2)">Scan dari m-banking / e-wallet manapun.</p></div></div>
+</div>
+<div class="pay-card">
+<div class="pay-row"><div class="pay-icon" style="background:rgba(48,209,88,.1);color:var(--green)"><i class="fas fa-handshake"></i></div><div><h4 style="font-size:.95rem;font-weight:700">Rekber (Rekening Bersama)</h4><p style="font-size:.83rem;color:var(--t2)">Via admin terpercaya. <strong>Biaya admin ditanggung kami.</strong></p></div></div>
+</div>
+<div class="edu" style="margin-top:12px">
+<p style="margin:0"><i class="fas fa-shield-halved" style="color:var(--green);margin-right:6px"></i> <strong>Jika proses tidak berhasil, dana akan dikembalikan.</strong></p>
+<p style="margin:8px 0 0;font-size:.85rem"><i class="fas fa-user-check" style="color:var(--blue);margin-right:6px"></i> Proses dilakukan langsung oleh admin (bukan bot).</p>
+</div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="sec tc">
+<h2 class="title">Jangan Biarin iPhone<br><em>Jadi WiFi-Only.</em></h2>
+<p class="desc">Langsung kirim data, kami proses sekarang.</p>
+<a href="https://wa.me/6285142938392?text=Halo%20min%2C%20saya%20mau%20tanya%20dan%20lanjut%20proses%20iPhone%20saya" class="btn btn-wa" style="font-size:1.1rem;padding:18px"><i class="fab fa-whatsapp" style="font-size:1.3rem"></i> Order Sekarang — Proses Cepat</a>
+<p class="micro"><i class="fas fa-shield-halved"></i> Gagal = dana dikembalikan • Estimasi 10–30 mnt</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<a href="#" class="f-logo">sinyalbalik<b>.id</b></a>
+<div style="font-size:.85rem;color:var(--t2);margin:10px 0"><i class="fab fa-whatsapp" style="color:var(--wa)"></i> 0851-4293-8392</div>
+<div class="f-sub">&copy; 2026 sinyalbalik.id. Hak Cipta Dilindungi.<br>Jasa Inject Sinyal iPhone Inter & Luar Negeri.</div>
+<div class="f-trust"><i class="fas fa-shield-halved" style="color:var(--green);margin-right:4px"></i> Bukan jasa ilegal. Kami tidak meminta data sensitif (Apple ID, password, iCloud). Yang kami butuhkan hanya screenshot IMEI.</div>
+</footer>
+
+</div>
+
+<!-- STICKY BOTTOM BAR -->
+<div class="sticky-bar" id="stickyBar">
+<div class="sb-txt"><strong>⚡ Fast Process</strong>Kirim data, langsung proses</div>
+<a href="https://wa.me/6285142938392?text=Halo%20min%2C%20saya%20mau%20tanya%20dan%20lanjut%20proses%20iPhone%20saya" class="sb-btn"><i class="fab fa-whatsapp"></i> Order</a>
+</div>
+
+<script>
+// Theme
+document.getElementById('thBtn').onclick=()=>{document.documentElement.classList.toggle('light');document.getElementById('thSw').checked=!document.documentElement.classList.contains('light')};
+document.getElementById('thSw').onchange=(e)=>{if(e.target.checked)document.documentElement.classList.remove('light');else document.documentElement.classList.add('light')};
+
+// Sidebar
+const sb=document.getElementById('sb'),ov=document.getElementById('ov');
+document.getElementById('menuBtn').onclick=()=>{sb.classList.add('active');ov.classList.add('active')};
+document.getElementById('closeSb').onclick=()=>{sb.classList.remove('active');ov.classList.remove('active')};
+ov.onclick=()=>{sb.classList.remove('active');ov.classList.remove('active')};
+document.querySelectorAll('.sb-lnk').forEach(a=>a.onclick=()=>{sb.classList.remove('active');ov.classList.remove('active')});
+
+// Dynamic Island expand/collapse cycle
+const di=document.getElementById('di');
+setInterval(()=>{di.classList.toggle('expand')},3000);
+
+// FAQ
+document.querySelectorAll('.fq').forEach(q=>{q.addEventListener('click',()=>{const p=q.parentElement;document.querySelectorAll('.faq').forEach(f=>{if(f!==p)f.classList.remove('open')});p.classList.toggle('open')})});
+
+// Sticky Bar (show after scrolling 400px)
+const stickyBar=document.getElementById('stickyBar');
+window.addEventListener('scroll',()=>{stickyBar.classList.toggle('show',window.scrollY>400)},{passive:true});
+</script>
+</body>
+</html>
