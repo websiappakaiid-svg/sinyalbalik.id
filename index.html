@@ -16,8 +16,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 <link rel="icon" type="image/webp" href="logo.webp">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"sinyalbalik.id","description":"Jasa aktivasi sinyal iPhone inter & Android tertentu. Proses cepat, aman, transparan.","url":"https://sinyalbalik.id","telephone":"+6285142938392","image":"https://sinyalbalik.id/logo.webp","priceRange":"Rp150.000","address":{"@type":"PostalAddress","addressCountry":"ID"},"sameAs":["https://tiktok.com/@sinyalbalik.id","https://instagram.com/sinyalbalik.id","https://facebook.com/sinyalbalik.id"]}
@@ -37,11 +37,11 @@ html.light{
   --t1:#000;--t2:#555;--t3:#888;--shadow:0 8px 32px rgba(0,0,0,.06);
   --hcard:#fff;--hcard-t:#1a1a1a;--hcard-t2:#555;--hcard-bdr:rgba(0,0,0,.08);
 }
-html{background:var(--bg);color:var(--t1);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",sans-serif;scroll-behavior:smooth}
+html{background:var(--bg);color:var(--t1);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",sans-serif}
 body{display:flex;justify-content:center;background:var(--bg);overflow-x:hidden}
 
 /* GLASS MIXIN */
-.glass{background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);border-radius:24px}
+.glass{background:var(--card);border:1px solid var(--bdr);border-radius:24px}
 
 /* APP */
 .app{width:100%;max-width:480px;min-height:100vh;background:var(--bg);position:relative;transition:background .4s}
@@ -69,7 +69,7 @@ body{display:flex;justify-content:center;background:var(--bg);overflow-x:hidden}
 .warn-list li i{color:#ff9f0a;margin-top:3px;flex-shrink:0}
 
 /* MID-PAGE CTA */
-.mid-cta{margin:0 20px;padding:20px;border-radius:20px;background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);text-align:center}
+.mid-cta{margin:0 20px;padding:20px;border-radius:20px;background:var(--card);border:1px solid var(--bdr);text-align:center}
 .mid-cta p{color:var(--t2);font-size:.88rem;margin-bottom:12px}
 
 /* STICKY BOTTOM BAR */
@@ -90,10 +90,10 @@ html.light .sticky-bar{background:rgba(255,255,255,.9)}
 /* BUTTONS */
 .btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:18px;border-radius:16px;font-size:1.08rem;font-weight:700;border:none;cursor:pointer;transition:transform .15s,box-shadow .3s;text-decoration:none;font-family:inherit}
 .btn:active{transform:scale(.96)}
-.btn-wa{background:var(--wa);color:#fff;box-shadow:0 6px 25px rgba(37,211,102,.35);animation:ctaPulse 2.5s ease-in-out infinite}
-@keyframes ctaPulse{0%,100%{box-shadow:0 6px 25px rgba(37,211,102,.35)}50%{box-shadow:0 8px 40px rgba(37,211,102,.55)}}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 6px 25px rgba(37,211,102,.35);animation:ctaPulse 3s ease-in-out 3}
+@keyframes ctaPulse{0%,100%{box-shadow:0 6px 25px rgba(37,211,102,.35)}50%{box-shadow:0 8px 35px rgba(37,211,102,.5)}}
 .btn-blue{background:var(--blue);color:#fff;box-shadow:0 6px 20px rgba(10,132,255,.25)}
-.btn-glass{background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);color:var(--t1)}
+.btn-glass{background:var(--card);border:1px solid var(--bdr);color:var(--t1)}
 
 /* NAV Glass */
 nav{position:fixed;top:0;width:100%;max-width:480px;z-index:100;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.4);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border-bottom:.5px solid var(--bdr);transition:all .3s}
@@ -125,7 +125,7 @@ input:checked+.sl{background:var(--green)}input:checked+.sl:before{transform:tra
 
 /* ======= HERO ======= */
 .hero{padding:100px 20px 30px;text-align:center;position:relative;overflow:hidden}
-.ambient{position:absolute;width:300px;height:300px;border-radius:50%;filter:blur(80px);pointer-events:none;opacity:.15;will-change:auto}
+.ambient{position:absolute;width:300px;height:300px;border-radius:50%;filter:blur(80px);pointer-events:none;opacity:.12;will-change:auto;contain:strict}
 .amb1{background:rgba(10,132,255,.15);top:-80px;right:-80px}
 .amb2{background:rgba(94,92,230,.08);bottom:-50px;left:-60px}
 
@@ -167,7 +167,7 @@ html.light .phone-screen{background:linear-gradient(180deg,#fff 0%,#f2f2f7 100%)
 
 /* HORIZONTAL MARQUEE PROVIDER */
 .provider-marquee{width:100%;overflow:hidden;position:relative;height:28px;margin-bottom:8px}
-.marquee-track{display:flex;gap:30px;animation:scroll 8s linear infinite;white-space:nowrap;will-change:transform}
+.marquee-track{display:flex;gap:30px;animation:scroll 10s linear infinite;white-space:nowrap;will-change:transform;contain:layout}
 .marquee-track span{font-size:1rem;font-weight:800;color:var(--t1);opacity:.7}
 @keyframes scroll{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
 
@@ -257,13 +257,20 @@ html.light .soc .s-tt{background:linear-gradient(135deg,#333,#25f4ee)}
 .faq.open .fa2{max-height:200px;padding:0 16px 16px}
 
 /* TRUST GLASS */
-.trust{border-radius:24px;padding:28px;text-align:center;background:rgba(255,69,58,.04);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid rgba(255,69,58,.12)}
+.trust{border-radius:24px;padding:28px;text-align:center;background:rgba(255,69,58,.04);border:1px solid rgba(255,69,58,.12)}
 html.light .trust{background:rgba(255,69,58,.06);border-color:rgba(255,69,58,.15)}
 .trust .shd{font-size:2.5rem;color:var(--red);margin-bottom:12px}
 .trust h3{font-size:1.2rem;margin-bottom:10px;color:var(--t1)}
 .trust>p{color:var(--t2);font-size:.92rem;margin-bottom:18px;line-height:1.5}
 .ch-row{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
-.ch{padding:12px 16px;border-radius:14px;background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);font-size:.88rem;font-weight:600;display:flex;align-items:center;gap:10px}
+.ch{padding:12px 16px;border-radius:14px;background:var(--card);border:1px solid var(--bdr);font-size:.88rem;font-weight:600;display:flex;align-items:center;gap:10px}
+
+/* REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* SECTION FADE-IN */
+.sec,.warn-box,.mid-cta,.blog-link{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.sec.visible,.warn-box.visible,.mid-cta.visible,.blog-link.visible{opacity:1;transform:translateY(0)}
 
 /* FOOTER */
 footer{padding:30px 20px 90px;text-align:center;border-top:.5px solid var(--bdr)}
@@ -316,10 +323,10 @@ html.light .f-trust{background:rgba(0,0,0,.03)}
 <div class="ambient amb1"></div>
 <div class="ambient amb2"></div>
 
-<div class="fast-badge">⚡ Fast Process • Minim Chat</div>
-<h1 class="title" style="position:relative;z-index:2;font-size:2.3rem">iPhone Inter No Service?<br><em>Langsung Kami Proses.</em></h1>
+<div class="fast-badge">⚡ 10–30 Menit Selesai</div>
+<h1 class="title" style="position:relative;z-index:2;font-size:2.3rem">Capek iPhone Cuma Buat WiFi?<br><em>Kirim IMEI. Beres.</em></h1>
 <p class="tc" style="position:relative;z-index:2;color:var(--t2);font-size:.9rem;margin-bottom:12px;margin-top:-5px">Support iPhone & beberapa Android tertentu</p>
-<p class="desc" style="position:relative;z-index:2">Kirim data, kami proses. <strong>Estimasi 10–30 menit sinyal aktif kembali.</strong> Tanpa bongkar, tanpa ribet.</p>
+<p class="desc" style="position:relative;z-index:2">Kirim screenshot IMEI, kami proses. <strong>10–30 menit sinyal aktif kembali.</strong> Tanpa bongkar, tanpa ribet.</p>
 <a href="https://wa.me/6285142938392?text=Halo%20min%2C%20saya%20mau%20tanya%20dan%20lanjut%20proses%20iPhone%20saya" class="btn btn-wa" style="position:relative;z-index:2;padding:18px;font-size:1.1rem"><i class="fab fa-whatsapp" style="font-size:1.3rem"></i> Chat Admin & Proses Sekarang</a>
 <p class="micro" style="margin-top:12px"><i class="fas fa-shield-halved"></i> Gagal diproses? Dana dikembalikan. <span style="margin-left:6px"><i class="fas fa-user-check"></i> Diproses admin, bukan bot.</span></p>
 
@@ -520,7 +527,7 @@ html.light .f-trust{background:rgba(0,0,0,.03)}
 
 <!-- STICKY BOTTOM BAR -->
 <div class="sticky-bar" id="stickyBar">
-<div class="sb-txt"><strong>⚡ Fast Process</strong>Kirim data, langsung proses</div>
+<div class="sb-txt"><strong>⚡ Sinyal Balik</strong> 10–30 menit, garansi refund</div>
 <a href="https://wa.me/6285142938392?text=Halo%20min%2C%20saya%20mau%20tanya%20dan%20lanjut%20proses%20iPhone%20saya" class="sb-btn"><i class="fab fa-whatsapp"></i> Order</a>
 </div>
 
@@ -536,16 +543,26 @@ document.getElementById('closeSb').onclick=()=>{sb.classList.remove('active');ov
 ov.onclick=()=>{sb.classList.remove('active');ov.classList.remove('active')};
 document.querySelectorAll('.sb-lnk').forEach(a=>a.onclick=()=>{sb.classList.remove('active');ov.classList.remove('active')});
 
-// Dynamic Island expand/collapse cycle
+// Smooth scroll for nav links only
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+
+// Dynamic Island — pause when offscreen
 const di=document.getElementById('di');
-setInterval(()=>{di.classList.toggle('expand')},3000);
+let diInterval=null;
+const diObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&!diInterval){diInterval=setInterval(()=>{di.classList.toggle('expand')},3000)}else if(!e.isIntersecting&&diInterval){clearInterval(diInterval);diInterval=null}})},{threshold:0.1});
+diObs.observe(di.closest('.phone'));
 
 // FAQ
 document.querySelectorAll('.fq').forEach(q=>{q.addEventListener('click',()=>{const p=q.parentElement;document.querySelectorAll('.faq').forEach(f=>{if(f!==p)f.classList.remove('open')});p.classList.toggle('open')})});
 
-// Sticky Bar (show after scrolling 400px)
+// Sticky Bar (show after scrolling 400px) — throttled
 const stickyBar=document.getElementById('stickyBar');
-window.addEventListener('scroll',()=>{stickyBar.classList.toggle('show',window.scrollY>400)},{passive:true});
+let ticking=false;
+window.addEventListener('scroll',()=>{if(!ticking){window.requestAnimationFrame(()=>{stickyBar.classList.toggle('show',window.scrollY>400);ticking=false});ticking=true}},{passive:true});
+
+// Section fade-in on scroll
+const fadeObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.sec,.warn-box,.mid-cta,.blog-link').forEach(el=>fadeObs.observe(el));
 </script>
 </body>
 </html>
