@@ -33,9 +33,9 @@
   --hcard:#fff;--hcard-t:#1a1a1a;--hcard-t2:#555;--hcard-bdr:rgba(0,0,0,.06);
 }
 html.light{
-  --bg:#f2f2f7;--bg2:#e5e5ea;--card:rgba(255,255,255,.6);--card-s:#fff;--bdr:rgba(0,0,0,.06);
-  --t1:#000;--t2:#8e8e93;--t3:#c7c7cc;--shadow:0 8px 32px rgba(0,0,0,.06);
-  --hcard:#fff;--hcard-t:#1a1a1a;--hcard-t2:#555;--hcard-bdr:rgba(0,0,0,.06);
+  --bg:#f2f2f7;--bg2:#e5e5ea;--card:rgba(0,0,0,.04);--card-s:rgba(0,0,0,.03);--bdr:rgba(0,0,0,.1);
+  --t1:#000;--t2:#555;--t3:#888;--shadow:0 8px 32px rgba(0,0,0,.06);
+  --hcard:#fff;--hcard-t:#1a1a1a;--hcard-t2:#555;--hcard-bdr:rgba(0,0,0,.08);
 }
 html{background:var(--bg);color:var(--t1);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",sans-serif;scroll-behavior:smooth}
 body{display:flex;justify-content:center;background:var(--bg);overflow-x:hidden}
@@ -254,8 +254,9 @@ html.light .soc .s-tt{background:linear-gradient(135deg,#333,#25f4ee)}
 
 /* TRUST GLASS */
 .trust{border-radius:24px;padding:28px;text-align:center;background:rgba(255,69,58,.04);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid rgba(255,69,58,.12)}
+html.light .trust{background:rgba(255,69,58,.06);border-color:rgba(255,69,58,.15)}
 .trust .shd{font-size:2.5rem;color:var(--red);margin-bottom:12px}
-.trust h3{font-size:1.2rem;margin-bottom:10px}
+.trust h3{font-size:1.2rem;margin-bottom:10px;color:var(--t1)}
 .trust>p{color:var(--t2);font-size:.92rem;margin-bottom:18px;line-height:1.5}
 .ch-row{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
 .ch{padding:12px 16px;border-radius:14px;background:var(--card);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border:1px solid var(--bdr);font-size:.88rem;font-weight:600;display:flex;align-items:center;gap:10px}
@@ -265,6 +266,12 @@ footer{padding:30px 20px 90px;text-align:center;border-top:.5px solid var(--bdr)
 .f-logo{font-size:1.15rem;font-weight:800;margin-bottom:6px;display:block;color:var(--t1);text-decoration:none}.f-logo b{color:var(--blue)}
 .f-sub{font-size:.78rem;color:var(--t3)}
 .f-trust{font-size:.75rem;color:var(--t3);margin-top:14px;padding:12px;border-radius:14px;background:var(--card);border:1px solid var(--bdr);line-height:1.5}
+html.light .f-trust{background:rgba(0,0,0,.03)}
+
+/* BLOG LINK */
+.blog-link{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 20px;padding:16px;border-radius:16px;background:var(--hcard);border:1px solid var(--hcard-bdr);box-shadow:0 2px 12px rgba(0,0,0,.06);text-decoration:none;color:var(--hcard-t);font-weight:600;font-size:.95rem;transition:transform .15s}
+.blog-link:active{transform:scale(.98)}
+.blog-link i{color:var(--blue)}
 </style>
 </head>
 <body>
@@ -469,6 +476,8 @@ footer{padding:30px 20px 90px;text-align:center;border-top:.5px solid var(--bdr)
 </div>
 <p class="tc" style="color:var(--t2);font-size:.88rem;margin-top:18px">Pertanyaan lain? <a href="https://wa.me/6285142938392?text=Halo%20min%2C%20saya%20mau%20tanya%20dan%20lanjut%20proses%20iPhone%20saya" style="color:var(--wa);font-weight:600;text-decoration:none">Chat admin — respon cepat.</a></p>
 </div>
+
+<a href="/blog/" class="blog-link"><i class="fas fa-newspaper"></i> Baca Blog — Panduan iPhone Inter & IMEI</a>
 
 <!-- TRUST -->
 <div class="sec">
