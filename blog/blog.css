@@ -217,15 +217,15 @@ article td {
     margin-right: 5px
 }
 
-/* INLINE CTA — subtle */
+/* INLINE CTA — links to LP, blue themed */
 .inline-cta {
     display: flex;
     align-items: center;
     gap: 12px;
     padding: 14px 16px;
     border-radius: 10px;
-    background: #f0faf4;
-    border: 1px solid #d4edda;
+    background: #f0f4ff;
+    border: 1px solid #d0daf0;
     margin: 22px 0;
     text-decoration: none;
     color: #222;
@@ -233,12 +233,12 @@ article td {
 }
 
 .inline-cta:active {
-    background: #e5f5ec
+    background: #e0eaff
 }
 
 .inline-cta i {
     font-size: 1.2rem;
-    color: #25d366
+    color: #0066cc
 }
 
 .inline-cta .ic-text {
@@ -258,7 +258,7 @@ article td {
 }
 
 .inline-cta .ic-arrow {
-    color: #25d366;
+    color: #0066cc;
     font-size: .85rem
 }
 
@@ -296,28 +296,7 @@ article td {
     color: #0066cc
 }
 
-/* MAIN CTA BOX — clean */
-.cta-box {
-    text-align: center;
-    padding: 28px 20px;
-    background: #f8f8f8;
-    border-radius: 12px;
-    margin: 32px 0
-}
-
-.cta-box h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 4px;
-    color: #222
-}
-
-.cta-box p {
-    color: #666;
-    font-size: .88rem;
-    margin-bottom: 14px
-}
-
+/* WA BUTTON (floating & article bottom) */
 .btn-wa {
     display: inline-flex;
     align-items: center;
@@ -334,6 +313,20 @@ article td {
 
 .btn-wa:active {
     background: #1fb855
+}
+
+/* ARTICLE BOTTOM WA CTA */
+.bottom-wa {
+    text-align: center;
+    margin: 24px 0 0;
+    padding: 20px 0;
+    border-top: 1px solid #eee
+}
+
+.bottom-wa p {
+    font-size: .82rem;
+    color: #888;
+    margin-bottom: 10px
 }
 
 /* AUTHOR BOX */
