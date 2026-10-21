@@ -72,6 +72,13 @@
         "@type": "Country",
         "name": "Indonesia"
       },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "184",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Layanan Aktivasi Sinyal iPhone",
@@ -94,6 +101,93 @@
           }
         ]
       }
+    }
+  </script>
+
+  <!-- SCHEMA FAQ FOR GOOGLE SERP DROPDOWN & AI SEARCH -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Berapa lama proses pengerjaan aktivasi sinyal iPhone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paket Fast membutuhkan waktu di bawah 1 jam (< 60 menit) karena masuk antrean prioritas admin. Paket Slow membutuhkan waktu 1 hingga 15 jam."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana cara kerja Garansi 3 Bulan Real di sinyalbalik.id?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jika sinyal iPhone Anda yang telah berstatus Roamer tiba-tiba padam dalam kurun waktu 3 bulan karena faktor jaringan, kami bantu proses aktivasi ulang secara gratis. Namun apabila kegagalan disebabkan oleh kerusakan mesin/hardware HP Anda sendiri atau unit bypass, maka garansi hangus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apa itu status Roamer dan Unknown di sistem CEIR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Admin kami yang akan memvalidasi status IMEI Anda di sistem CEIR (ceira.id). Status Roamer menandakan IMEI berhasil aktif dan sinyal langsung menyala. Sedangkan status Unknown berarti IMEI tidak dapat diproses oleh sistem, dan uang pembayaran Anda langsung kami kembalikan utuh 100%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Metode pembayaran apa saja yang diterima?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kami hanya melayani pembayaran via QRIS resmi. Anda dapat melakukan scan menggunakan aplikasi e-wallet apa saja (GoPay, OVO, Dana, ShopeePay) maupun seluruh Mobile Banking yang mendukung QRIS di Indonesia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah aman jika nantinya saya ganti kartu atau update iOS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sangat aman. Karena unit iPhone Anda adalah Ex-Inter biasa, Anda bebas berganti-ganti kartu SIM operator lokal dan bebas melakukan update versi iOS selama masa aktif 3 bulan berlangsung."
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- SCHEMA HOWTO FOR STEP-BY-STEP SERP & GEMINI/CHATGPT -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Cara Aktivasi Sinyal iPhone IMEI Terblokir di sinyalbalik.id",
+      "description": "Panduan 4 langkah mudah mengaktifkan kembali sinyal iPhone Ex-Inter yang terkena blokir IMEI secara online.",
+      "totalTime": "PT30M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Kirim Nomor IMEI (*#06#)",
+          "text": "Buka menu panggilan telepon, ketik *#06#, lalu screenshot nomor IMEI dan kirimkan ke WhatsApp admin kami."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Pilih Kecepatan Proses",
+          "text": "Tentukan pilihan paket: Fast (di bawah 1 jam) atau Slow (1–15 jam) sesuai kebutuhan Anda."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Bayar Mudah via QRIS",
+          "text": "Admin mengirimkan barcode QRIS resmi. Scan menggunakan e-wallet atau Mobile Banking apa saja."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Admin Proses & Sinyal Aktif",
+          "text": "Admin memproses injeksi IMEI hingga status Roamer. Setelah selesai, hidupkan lalu matikan Mode Pesawat untuk mengaktifkan sinyal 4G/5G."
+        }
+      ]
     }
   </script>
 
@@ -933,10 +1027,6 @@
         <ul class="check-list" style="margin: 0;">
           <li>
             <i class="fas fa-check-circle"></i>
-            <span><strong>Status CEIR Transparan:</strong> Admin kami bantu validasi langsung status nomor IMEI Anda.</span>
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
             <span><strong>Garansi 3 Bulan Real:</strong> Sinyal padam dalam masa aktif? Kami cover aktivasi ulang sampai normal.</span>
           </li>
           <li>
@@ -1039,7 +1129,7 @@
           </div>
           <h4 style="font-size: 0.98rem; font-weight: 800; color: #065f46; margin-bottom: 4px;">AKTIVASI BERHASIL (DONE)</h4>
           <p style="font-size: 0.88rem; color: #047857; line-height: 1.5;">
-            Setelah data di-inject dan status terbaca <strong>Roamer</strong>, IMEI iPhone Anda berhasil dibuka di jaringan seluler. Cukup hidupkan lalu matikan Mode Pesawat, sinyal langsung menyala.
+            Setelah admin unblock dan status terbaca <strong>Roamer</strong>, IMEI iPhone Anda berhasil dibuka di jaringan seluler. Cukup hidupkan lalu matikan Mode Pesawat, sinyal langsung menyala.
           </p>
         </div>
 
@@ -1291,7 +1381,11 @@
           <img src="testi-3.webp" alt="Bukti Testimoni Aktivasi Sinyal iPhone Pelanggan 3" loading="lazy" decoding="async" width="400" height="300">
         </div>
       </div>
-      <p style="text-align: center; font-size: 0.8rem; color: var(--text-soft); margin-top: 6px;">(Geser ke samping untuk melihat screenshot lainnya 👉)</p>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.8rem; font-weight: 600; color: var(--text-soft); margin-top: 10px;">
+        <i class="fas fa-arrow-left-long" style="font-size: 0.78rem; color: var(--apple-blue);"></i>
+        <span>Geser Testimoni</span>
+        <i class="fas fa-arrow-right-long" style="font-size: 0.78rem; color: var(--apple-blue);"></i>
+      </div>
 
       <div class="glass-card" style="text-align: center; margin-top: 24px; background: rgba(0, 113, 227, 0.05); border-color: rgba(0, 113, 227, 0.2);">
         <h3 style="font-size: 1rem; font-weight: 800; color: var(--apple-blue-dark); margin-bottom: 4px;">Ragu dengan Kondisi iPhone Anda?</h3>
