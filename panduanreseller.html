@@ -240,143 +240,86 @@
       line-height: 1.55;
     }
 
-    /* Kalkulator Interaktif Cuan HP */
-    .calc-box {
-      background: #f8fafc;
+    /* Clean Mobile Profit Card */
+    .profit-calc-clean {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
       border: 1.5px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 16px;
-      margin: 14px 0;
+      padding: 16px 18px;
+      margin: 14px 0 14px;
     }
 
-    .preset-label {
-      font-size: 0.78rem;
+    .profit-calc-label {
+      font-size: 0.8rem;
       font-weight: 800;
-      color: var(--text-muted);
+      color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .preset-group {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 6px;
-      margin-bottom: 14px;
-    }
-
-    .btn-preset {
-      background: #fff;
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-size: 0.76rem;
-      font-weight: 700;
-      padding: 8px 4px;
-      border-radius: 8px;
-      cursor: pointer;
-      text-align: center;
-      transition: all 0.2s;
-    }
-
-    .btn-preset.active, .btn-preset:hover {
-      background: var(--blue);
-      color: #fff;
-      border-color: var(--blue);
-    }
-
-    .calc-inputs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .calc-input-item {
-      background: #fff;
-      padding: 10px 12px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-    }
-
-    .calc-input-item label {
-      display: block;
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .calc-input-wrap {
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
     }
 
-    .calc-input-wrap span {
+    .profit-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.92rem;
+      padding: 6px 0;
+      color: var(--text-muted);
+    }
+
+    .profit-line strong {
+      color: var(--text);
       font-weight: 800;
-      font-size: 0.95rem;
-      color: var(--text);
+      font-size: 0.98rem;
     }
 
-    .calc-input-wrap input {
-      width: 100%;
-      border: none;
-      outline: none;
-      font-size: 1.05rem;
+    .profit-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 8px 0;
+    }
+
+    .profit-line.total {
+      padding-top: 6px;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .profit-line.total strong {
+      color: var(--green);
+      font-size: 1.25rem;
       font-weight: 900;
-      color: var(--text);
-      font-family: inherit;
     }
 
-    .calc-display {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      color: #fff;
-      border-radius: 12px;
-      padding: 18px 16px;
+    .month-clean-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .month-clean-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
       text-align: center;
     }
 
-    .calc-display .head {
-      font-size: 0.78rem;
-      color: #94a3b8;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .calc-display .profit-num {
-      font-size: 2.3rem;
-      font-weight: 900;
-      color: #38bdf8;
-      margin: 2px 0 8px;
-      letter-spacing: -0.5px;
-    }
-
-    .calc-display .month-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      padding-top: 12px;
-      margin-top: 6px;
-    }
-
-    .month-item {
-      background: rgba(255, 255, 255, 0.06);
-      padding: 8px 4px;
-      border-radius: 8px;
-      font-size: 0.72rem;
-      color: #cbd5e1;
-    }
-
-    .month-item strong {
+    .month-clean-box span {
       display: block;
-      color: #4ade80;
-      font-size: 0.92rem;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .month-clean-box strong {
+      font-size: 1rem;
       font-weight: 900;
-      margin-top: 2px;
+      color: var(--blue);
     }
 
     /* Paket Fast vs Slow Cards */
@@ -821,72 +764,55 @@
       </div>
     </section>
 
-    <!-- 2. CARA MENDAPATKAN KEUNTUNGAN (KALKULATOR PROFESIONAL & SIMPLE) -->
+    <!-- 2. CARA MENDAPATKAN KEUNTUNGAN -->
     <section class="card">
       <h2 class="card-title">
         <span class="num">2</span> Cara Mendapatkan Keuntungan
       </h2>
       <p class="p-desc">
-        Keuntungan Kakak didapat langsung dari <strong>selisih harga modal reseller dengan harga jual ke pelanggan</strong>. Kakak bebas menentukan harga jual sendiri!
+        Salah satu keuntungan menjadi reseller adalah Kakak bisa mendapatkan penghasilan dari <strong>selisih harga reseller dan harga jual kepada pelanggan</strong>. Kakak bebas menentukan harga jual sendiri!
       </p>
 
-      <!-- Kalkulator Cuan -->
-      <div class="calc-box">
-        <span class="preset-label">Pilih Margin Keuntungan Cepat:</span>
-        <div class="preset-group">
-          <button type="button" class="btn-preset" onclick="setPresetMargin(30000, this)">+Rp30rb</button>
-          <button type="button" class="btn-preset active" onclick="setPresetMargin(50000, this)">+Rp50rb</button>
-          <button type="button" class="btn-preset" onclick="setPresetMargin(75000, this)">+Rp75rb</button>
-          <button type="button" class="btn-preset" onclick="setPresetMargin(100000, this)">+Rp100rb</button>
+      <div class="profit-calc-clean">
+        <div class="profit-calc-label">
+          <i class="fas fa-coins"></i> Contoh Ilustrasi Perhitungan:
+        </div>
+        <div class="profit-line">
+          <span>• Harga Reseller (dari Admin):</span>
+          <strong>Rp100.000</strong>
+        </div>
+        <div class="profit-line">
+          <span>• Harga Jual ke Pelanggan:</span>
+          <strong>Rp150.000</strong>
+        </div>
+        <div class="profit-divider"></div>
+        <div class="profit-line total">
+          <span>💰 Keuntungan Bersih Kakak:</span>
+          <strong>Rp50.000 / HP</strong>
         </div>
 
-        <div class="calc-inputs">
-          <div class="calc-input-item">
-            <label>Modal Reseller</label>
-            <div class="calc-input-wrap">
-              <span>Rp</span>
-              <input type="number" id="inModal" value="155000" step="5000" oninput="hitungProfit()">
-            </div>
+        <div class="month-clean-grid">
+          <div class="month-clean-box">
+            <span>Closing 1 HP / Hari:</span>
+            <strong>Rp1.500.000 /bln</strong>
           </div>
-          <div class="calc-input-item">
-            <label>Harga Jual Pelanggan</label>
-            <div class="calc-input-wrap">
-              <span>Rp</span>
-              <input type="number" id="inJual" value="205000" step="5000" oninput="hitungProfit()">
-            </div>
-          </div>
-        </div>
-
-        <div class="calc-display">
-          <div class="head">Keuntungan Bersih Per 1 Orderan:</div>
-          <div class="profit-num" id="profitVal">Rp50.000</div>
-          
-          <div class="month-grid">
-            <div class="month-item">
-              <div>Closing 1 HP/Hari</div>
-              <strong id="profit1HP">Rp1.500.000</strong>
-              <span style="font-size: 0.65rem; color: #94a3b8;">/ bulan</span>
-            </div>
-            <div class="month-item">
-              <div>Closing 3 HP/Hari</div>
-              <strong id="profit3HP">Rp4.500.000</strong>
-              <span style="font-size: 0.65rem; color: #94a3b8;">/ bulan</span>
-            </div>
-            <div class="month-item">
-              <div>Closing 5 HP/Hari</div>
-              <strong id="profit5HP">Rp7.500.000</strong>
-              <span style="font-size: 0.65rem; color: #94a3b8;">/ bulan</span>
-            </div>
+          <div class="month-clean-box">
+            <span>Closing 3 HP / Hari:</span>
+            <strong>Rp4.500.000 /bln</strong>
           </div>
         </div>
       </div>
+
+      <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0 0 14px; line-height: 1.5;">
+        <em>*Angka tersebut hanya ilustrasi, bukan patokan harga mutlak. Kakak bebas menentukan harga jual sendiri sesuai kesepakatan dengan pelanggan.</em>
+      </p>
 
       <!-- Alert Pantau Status WA Admin -->
       <div class="alert amber">
         <i class="fas fa-bell"></i>
         <div>
           <strong>PENTING: HARGA RESELLER BISA BERUBAH SEWAKTU-WAKTU!</strong><br>
-          Wajib simpan kontak WhatsApp Admin (<a href="https://wa.me/6285142938392" target="_blank" style="color: inherit; font-weight: 800; text-decoration: underline;">0851-4293-8392</a>) dan <strong>pantau Status WhatsApp Admin</strong> untuk mengetahui update harga terbaru sebelum deal dengan pelanggan.
+          Untuk mengetahui harga terbaru, Kakak wajib menyimpan nomor WhatsApp Admin (<a href="https://wa.me/6285142938392" target="_blank" style="color: inherit; font-weight: 800; text-decoration: underline;">0851-4293-8392</a>) dan <strong>memantau WhatsApp Status Admin</strong>. Cek harga terbaru sebelum menerima order agar perhitungan keuntungan tidak salah!
         </div>
       </div>
     </section>
@@ -1202,42 +1128,6 @@
     </div>
   </aside>
 
-  <script>
-    const inModal = document.getElementById('inModal');
-    const inJual = document.getElementById('inJual');
-    const profitVal = document.getElementById('profitVal');
-    const profit1HP = document.getElementById('profit1HP');
-    const profit3HP = document.getElementById('profit3HP');
-    const profit5HP = document.getElementById('profit5HP');
-
-    function formatRupiah(n) {
-      return 'Rp' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    }
-
-    function hitungProfit() {
-      const modal = parseInt(inModal.value) || 0;
-      const jual = parseInt(inJual.value) || 0;
-      let margin = jual - modal;
-      if (margin < 0) margin = 0;
-
-      profitVal.textContent = formatRupiah(margin);
-      profit1HP.textContent = formatRupiah(margin * 30);
-      profit3HP.textContent = formatRupiah(margin * 30 * 3);
-      profit5HP.textContent = formatRupiah(margin * 30 * 5);
-    }
-
-    function setPresetMargin(amount, btn) {
-      document.querySelectorAll('.btn-preset').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const modal = parseInt(inModal.value) || 155000;
-      inJual.value = modal + amount;
-      hitungProfit();
-    }
-
-    // Init
-    hitungProfit();
-  </script>
-
+  <!-- No inline JS needed for clean static card -->
 </body>
 </html>
