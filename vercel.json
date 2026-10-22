@@ -4,10 +4,6 @@
     {
       "source": "/panduanreseller",
       "destination": "/panduanreseller.html"
-    },
-    {
-      "source": "/panduan-reseller",
-      "destination": "/panduan-reseller.html"
     }
   ]
 }

@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>Panduan Reseller SinyalBalik.id</title>
+  <title>Panduan Reseller SinyalBalik.id | Dari Nol Sampai Closing Order</title>
   
-  <meta name="description" content="Panduan resmi reseller SinyalBalik.id. Belajar cara cek kondisi iPhone, cek IMEI, cara order, dan tips mendapatkan pelanggan.">
+  <meta name="description" content="Panduan resmi reseller SinyalBalik.id. Belajar cara cek kelayakan iPhone, cek IMEI 1, dan alur order aktivasi sinyal dengan mudah.">
   <meta property="og:title" content="Panduan Reseller SinyalBalik.id">
   <meta property="og:description" content="Belajar dari nol sampai bisa mendapatkan pelanggan dan melakukan order.">
   <meta property="og:url" content="https://sinyalbalik.id/panduanreseller">
   <meta property="og:image" content="https://sinyalbalik.id/logo.webp">
 
-  <!-- Plus Jakarta Sans Font -->
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <link rel="icon" type="image/webp" href="logo.webp">
@@ -28,12 +28,22 @@
       --text: #0f172a;
       --text-muted: #475569;
       --blue: #0071e3;
+      --blue-soft: #eff6ff;
       --green: #16a34a;
-      --amber: #d97706;
+      --green-soft: #f0fdf4;
+      --green-border: #bbf7d0;
       --red: #dc2626;
+      --red-soft: #fef2f2;
+      --red-border: #fecaca;
+      --amber: #d97706;
+      --amber-soft: #fffbeb;
+      --amber-border: #fde68a;
       --wa: #25d366;
       --wa-dark: #128c7e;
-      --radius: 16px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
     }
 
     * {
@@ -53,14 +63,16 @@
     }
 
     .container {
-      max-width: 640px;
+      max-width: 600px;
       margin: 0 auto;
       padding: 16px 14px;
     }
 
-    /* Header Nav */
+    /* Top Sticky Nav */
     .top-header {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       padding: 12px 14px;
       position: sticky;
@@ -69,7 +81,7 @@
     }
 
     .top-header-inner {
-      max-width: 640px;
+      max-width: 600px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -87,15 +99,15 @@
     }
 
     .brand img {
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       border-radius: 8px;
     }
 
     .btn-top-wa {
       background: #0f172a;
       color: #fff;
-      padding: 6px 14px;
+      padding: 7px 14px;
       border-radius: 999px;
       font-size: 0.8rem;
       font-weight: 700;
@@ -103,208 +115,386 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-top-wa:hover {
+      background: #1e293b;
     }
 
     /* Hero */
-    .hero-box {
+    .hero {
       text-align: center;
-      padding: 20px 8px 12px;
+      padding: 22px 6px 14px;
     }
 
     .badge-pill {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       background: #eff6ff;
       color: var(--blue);
       border: 1px solid #bfdbfe;
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       font-weight: 800;
-      padding: 4px 12px;
+      padding: 4px 14px;
       border-radius: 999px;
       margin-bottom: 12px;
     }
 
     .hero-title {
-      font-size: 1.65rem;
+      font-size: 1.7rem;
       font-weight: 900;
-      line-height: 1.3;
-      margin-bottom: 8px;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
       color: #0f172a;
     }
 
-    .hero-sub {
+    .hero-desc {
       font-size: 0.95rem;
       color: var(--text-muted);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      line-height: 1.55;
     }
 
-    /* Friendly Callout */
-    .note-card {
-      background: #f0fdf4;
-      border: 1.5px solid #bbf7d0;
-      border-radius: var(--radius);
+    /* Note Pengguna Android */
+    .android-box {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+      border: 1.5px solid var(--green-border);
+      border-radius: var(--radius-md);
       padding: 14px 16px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       display: flex;
       gap: 12px;
       align-items: flex-start;
       text-align: left;
+      box-shadow: 0 2px 8px rgba(22, 163, 74, 0.06);
     }
 
-    .note-card i {
+    .android-icon {
+      width: 40px;
+      height: 40px;
+      background: #22c55e;
+      color: #fff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 1.3rem;
-      color: var(--green);
-      margin-top: 2px;
+      flex-shrink: 0;
     }
 
-    .note-card p {
-      font-size: 0.88rem;
+    .android-box h4 {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #15803d;
+      margin-bottom: 3px;
+    }
+
+    .android-box p {
+      font-size: 0.86rem;
       color: #166534;
       margin: 0;
       line-height: 1.5;
     }
 
-    /* Section Cards */
+    /* Card Wrapper */
     .card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px 16px;
-      margin-bottom: 16px;
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+      border-radius: var(--radius-lg);
+      padding: 20px 16px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
     }
 
     .card-title {
-      font-size: 1.12rem;
+      font-size: 1.15rem;
       font-weight: 900;
       margin-bottom: 12px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 9px;
       color: #0f172a;
     }
 
     .card-title .num {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       background: var(--blue);
       color: #fff;
       border-radius: 8px;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
+      font-weight: 800;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
 
     .p-desc {
       font-size: 0.9rem;
       color: var(--text-muted);
       margin-bottom: 14px;
-      line-height: 1.6;
+      line-height: 1.55;
     }
 
-    /* Bullet List */
-    .clean-list {
+    /* Kalkulator Simpel */
+    .calc-card {
+      background: #f8fafc;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin: 12px 0 16px;
+    }
+
+    .preset-label {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .preset-group {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .btn-preset {
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 8px 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .btn-preset.active, .btn-preset:hover {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+    }
+
+    .calc-display {
+      background: #0f172a;
+      color: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .calc-display .head {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .calc-display .profit-num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #38bdf8;
+      margin: 2px 0 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .calc-display .month-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 10px;
+      margin-top: 4px;
+    }
+
+    .month-item {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+    }
+
+    .month-item strong {
+      display: block;
+      color: #4ade80;
+      font-size: 0.95rem;
+      font-weight: 900;
+      margin-top: 2px;
+    }
+
+    /* Traffic Light Logic Cards */
+    .traffic-box {
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 14px;
+      border: 1.5px solid transparent;
+    }
+
+    .traffic-box.green {
+      background: var(--green-soft);
+      border-color: var(--green-border);
+    }
+
+    .traffic-box.red {
+      background: var(--red-soft);
+      border-color: var(--red-border);
+    }
+
+    .traffic-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .traffic-pill {
+      font-size: 0.74rem;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-transform: uppercase;
+    }
+
+    .traffic-box.green .traffic-pill {
+      background: #22c55e;
+      color: #fff;
+    }
+
+    .traffic-box.red .traffic-pill {
+      background: #ef4444;
+      color: #fff;
+    }
+
+    .traffic-title {
+      font-size: 1rem;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    .traffic-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .traffic-checklist {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-bottom: 12px;
+      gap: 6px;
+      margin-top: 8px;
     }
 
-    .clean-list li {
-      font-size: 0.88rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      line-height: 1.5;
-    }
-
-    .clean-list li i {
-      margin-top: 3px;
-      font-size: 0.95rem;
-      flex-shrink: 0;
-    }
-
-    /* Alert / Warning Boxes */
-    .alert {
-      border-radius: 12px;
-      padding: 12px 14px;
+    .traffic-checklist li {
       font-size: 0.86rem;
-      margin: 12px 0;
       display: flex;
-      gap: 10px;
       align-items: flex-start;
-      line-height: 1.5;
+      gap: 8px;
+      line-height: 1.45;
     }
 
-    .alert.amber {
-      background: #fffbeb;
-      border: 1px solid #fde68a;
-      color: #92400e;
+    /* Warning IMEI 1 Big Banner */
+    .imei1-banner {
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      border: 2px solid #ef4444;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      text-align: center;
+      margin: 16px 0;
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.12);
     }
 
-    .alert.red {
-      background: #fef2f2;
-      border: 1px solid #fecaca;
+    .imei1-banner .tag {
+      background: #dc2626;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .imei1-banner h3 {
+      font-size: 1.25rem;
+      font-weight: 900;
       color: #991b1b;
+      margin-bottom: 4px;
+      letter-spacing: -0.3px;
     }
 
-    .alert i {
-      font-size: 1.1rem;
-      margin-top: 2px;
-      flex-shrink: 0;
+    .imei1-banner p {
+      font-size: 0.88rem;
+      color: #b91c1c;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.45;
     }
 
-    /* Image Display Container (Clean & 100% Readable on Mobile) */
-    .img-box {
+    /* Images */
+    .img-card {
       background: #0f172a;
-      border-radius: 14px;
+      border-radius: 12px;
       overflow: hidden;
       margin: 12px 0 16px;
-      border: 1px solid #cbd5e1;
+      border: 1px solid var(--border);
     }
 
-    .img-box img {
+    .img-card img {
       width: 100%;
       height: auto;
       max-height: 480px;
       object-fit: contain;
       display: block;
-      margin: 0 auto;
       background: #000;
     }
 
-    .img-box-cap {
+    .img-cap {
       background: #fff;
       padding: 10px 14px;
       border-top: 1px solid var(--border);
     }
 
-    .img-box-cap strong {
+    .img-cap strong {
       display: block;
       font-size: 0.88rem;
       color: var(--text);
       margin-bottom: 2px;
     }
 
-    .img-box-cap span {
+    .img-cap span {
       font-size: 0.8rem;
       color: var(--text-muted);
     }
 
     /* Dial Mockup */
-    .dial-card {
+    .dial-box {
       background: #f1f5f9;
       border: 1px solid #cbd5e1;
       border-radius: 12px;
-      padding: 12px 16px;
+      padding: 12px 14px;
       margin: 10px 0 14px;
       display: flex;
       align-items: center;
       gap: 12px;
     }
 
-    .dial-num {
+    .dial-code {
       background: #0f172a;
       color: #38bdf8;
       font-family: monospace;
@@ -322,7 +512,7 @@
       gap: 10px;
     }
 
-    .step-row {
+    .step-item {
       background: #f8fafc;
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -332,13 +522,14 @@
       align-items: flex-start;
     }
 
-    .step-badge {
-      background: #e2e8f0;
-      color: var(--text);
-      font-weight: 800;
-      font-size: 0.85rem;
-      width: 28px;
-      height: 28px;
+    .step-num {
+      background: var(--blue-soft);
+      color: var(--blue);
+      border: 1px solid #bfdbfe;
+      font-weight: 900;
+      font-size: 0.88rem;
+      width: 30px;
+      height: 30px;
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -354,66 +545,45 @@
     }
 
     .step-info p {
-      font-size: 0.84rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       margin: 0;
       line-height: 1.45;
     }
 
-    /* Copy Script Box */
-    .copy-card {
-      background: #0f172a;
-      color: #f8fafc;
+    /* Alert Notice */
+    .alert {
       border-radius: 12px;
-      padding: 14px;
-      margin-top: 12px;
-    }
-
-    .copy-card-head {
+      padding: 12px 14px;
+      font-size: 0.86rem;
+      margin: 12px 0;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 8px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .copy-card-head span {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #94a3b8;
-    }
-
-    .btn-copy {
-      background: rgba(255, 255, 255, 0.18);
-      border: none;
-      color: #fff;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .btn-copy:hover {
-      background: var(--blue);
-    }
-
-    .copy-text {
-      font-family: inherit;
-      font-size: 0.84rem;
+      gap: 10px;
+      align-items: flex-start;
       line-height: 1.5;
-      white-space: pre-wrap;
-      color: #e2e8f0;
     }
 
-    /* Bottom Bar */
+    .alert.amber {
+      background: var(--amber-soft);
+      border: 1px solid var(--amber-border);
+      color: #92400e;
+    }
+
+    .alert i {
+      font-size: 1.15rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    /* Sticky Bottom Bar */
     .bottom-bar {
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
-      background: #fff;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-top: 1px solid var(--border);
       padding: 10px 14px;
       z-index: 50;
@@ -421,7 +591,7 @@
     }
 
     .bottom-bar-inner {
-      max-width: 640px;
+      max-width: 600px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -429,13 +599,13 @@
       gap: 10px;
     }
 
-    .bottom-text span {
+    .bottom-bar-inner .text span {
       display: block;
       font-size: 0.74rem;
       color: var(--text-muted);
     }
 
-    .bottom-text strong {
+    .bottom-bar-inner .text strong {
       font-size: 0.88rem;
       color: var(--text);
     }
@@ -452,47 +622,28 @@
       align-items: center;
       gap: 6px;
       flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(37, 211, 102, 0.35);
+      transition: all 0.2s;
     }
 
     .btn-wa-action:hover {
       background: var(--wa-dark);
-    }
-
-    /* Toast */
-    .toast {
-      position: fixed;
-      bottom: 75px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #0f172a;
-      color: #fff;
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 8px 18px;
-      border-radius: 999px;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-      z-index: 999;
-    }
-
-    .toast.show {
-      opacity: 1;
+      transform: translateY(-1px);
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Top Simple Nav -->
+  <!-- Top Sticky Header -->
   <header class="top-header">
     <div class="top-header-inner">
       <a href="https://sinyalbalik.id" class="brand">
         <img src="logo.webp" alt="SinyalBalik.id" onerror="this.src='apple-touch-icon.png'">
         <span>SinyalBalik.id</span>
       </a>
-      <a href="https://wa.me/6285142938392?text=Halo%20Admin%2C%20mau%20cek%20harga%20reseller%20hari%20ini" target="_blank" rel="noopener" class="btn-top-wa">
-        <i class="fab fa-whatsapp" style="color: #25d366;"></i> Chat Admin
+      <a href="https://wa.me/6285142938392?text=Halo%20Admin%20SinyalBalik%2C%20mau%20cek%20harga%20reseller%20hari%20ini" target="_blank" rel="noopener" class="btn-top-wa">
+        <i class="fab fa-whatsapp" style="color: #25d366;"></i> WhatsApp Admin
       </a>
     </div>
   </header>
@@ -500,20 +651,26 @@
   <main class="container">
 
     <!-- Hero -->
-    <div class="hero-box">
-      <div class="badge-pill">🔥 PANDUAN LENGKAP RESELLER</div>
-      <h1 class="hero-title">Belajar Dari Nol Sampai Bisa Order & Cuan</h1>
-      <p class="hero-sub">
-        Halo, Kak! 👋 Selamat bergabung menjadi reseller SinyalBalik.id. Di sini Kakak belajar cara cek kondisi iPhone, cek nomor IMEI, dan meneruskan pesanan ke admin dengan benar.
+    <div class="hero">
+      <div class="badge-pill">
+        <i class="fas fa-fire"></i> PANDUAN RESMI RESELLER
+      </div>
+      <h1 class="hero-title">Belajar Dari Nol Sampai Bisa Order & Cuan!</h1>
+      <p class="hero-desc">
+        Halo, Kak! 👋 Selamat bergabung menjadi reseller SinyalBalik.id. Di sini Kakak belajar cara cek kelayakan iPhone pelanggan, cara cek IMEI yang benar, sampai meneruskan pesanan ke admin.
       </p>
 
       <!-- Note Ramah Android -->
-      <div class="note-card">
-        <i class="fab fa-android"></i>
-        <p>
-          <strong>Kakak pakai HP Android? Gak masalah sama sekali!</strong><br>
-          Kakak tidak harus punya iPhone sendiri dan tidak perlu paham teknis mesin/server. Tugas Kakak cukup minta foto layar customer, kirim ke admin, dan nikmati untungnya!
-        </p>
+      <div class="android-box">
+        <div class="android-icon">
+          <i class="fab fa-android"></i>
+        </div>
+        <div>
+          <h4>Kakak Pakai HP Android? Gak Masalah Sama Sekali!</h4>
+          <p>
+            Kakak tidak wajib punya iPhone dan tidak perlu paham teknis mesin/server. Tugas Kakak cukup minta foto layar customer, kirimkan ke admin, dan nikmati keuntungan selisih harganya!
+          </p>
+        </div>
       </div>
     </div>
 
@@ -523,140 +680,187 @@
         <span class="num">1</span> Kenapa Peluang Ini Menarik?
       </h2>
       <p class="p-desc">
-        Pengguna iPhone di Indonesia sangat banyak. Banyak yang membeli <strong>iPhone Ex-Inter (dari luar negeri)</strong> karena harganya jauh lebih terjangkau.
+        Pengguna iPhone di Indonesia sangat banyak. Banyak yang membeli <strong>iPhone Ex-Inter (dari luar negeri)</strong> karena harganya jauh lebih terjangkau dibanding unit resmi iBox.
       </p>
       <p class="p-desc">
-        Kendala utamanya: iPhone inter sering mengalami masalah sinyal mati, <em>No Service</em>, atau <em>SOS</em> karena aturan IMEI. Mereka butuh bantuan agar HP-nya bisa dipakai telepon dan internetan kembali.
+        Kendala utamanya: Sebagian iPhone inter mengalami masalah sinyal mati, muncul tulisan <em>"No Service"</em> atau <em>"SOS"</em> karena aturan IMEI. Mereka butuh bantuan agar iPhone-nya bisa dipakai internetan & telepon lagi.
       </p>
-      <ul class="clean-list">
-        <li>
-          <i class="fas fa-check-circle" style="color: var(--green);"></i>
-          <span>Kakak mencari calon pelanggan lewat WhatsApp, Facebook, TikTok, maupun teman sekitar.</span>
-        </li>
-        <li>
-          <i class="fas fa-check-circle" style="color: var(--green);"></i>
-          <span>Kakak tidak perlu urus teknisnya. Admin SinyalBalik.id yang mengerjakan aktivasi sampai sinyal menyala!</span>
-        </li>
-      </ul>
+
+      <!-- Foto Contoh No Service -->
+      <div class="img-card">
+        <img src="img-no-service.jpg" alt="Contoh Sinyal Hilang No Service di iPhone">
+        <div class="img-cap">
+          <strong style="color: var(--blue);"><i class="fas fa-signal"></i> Contoh Gejala: Sinyal Hilang (No Service / Tidak Ada Layanan)</strong>
+          <span>Kartu SIM sudah terpasang, tapi sinyal tetap No Service. Ini ciri umum nomor IMEI butuh aktivasi sistem.</span>
+        </div>
+      </div>
+
+      <div style="background: #f8fafc; border-radius: 12px; padding: 14px; border: 1px solid var(--border);">
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
+          💡 <strong>Fokus Kakak:</strong> Cari calon pelanggan, kumpulkan foto layarnya, dan teruskan ke admin. Proses teknis aktivasi server 100% dikerjakan oleh admin SinyalBalik.id!
+        </p>
+      </div>
     </section>
 
-    <!-- 2. CARA MENDAPATKAN KEUNTUNGAN -->
+    <!-- 2. CARA MENDAPATKAN KEUNTUNGAN (KALKULATOR SIMPEL) -->
     <section class="card">
       <h2 class="card-title">
         <span class="num">2</span> Cara Mendapatkan Keuntungan
       </h2>
       <p class="p-desc">
-        Keuntungan Kakak didapat langsung dari <strong>selisih harga reseller dengan harga jual ke pelanggan</strong>. Kakak bebas menentukan harga jual sendiri.
+        Keuntungan Kakak didapat langsung dari <strong>selisih harga modal reseller dengan harga jual ke pelanggan</strong>. Kakak bebas menentukan harga jual sendiri!
       </p>
 
-      <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 14px; margin-bottom: 12px;">
-        <strong style="display: block; font-size: 0.9rem; margin-bottom: 4px;">Contoh Perhitungan:</strong>
-        <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
-          • Modal Reseller ke Admin: Rp155.000<br>
-          • Harga Jual ke Pelanggan: Rp205.000<br>
-          • <strong>Keuntungan Bersih Kakak: Rp50.000 per 1 HP</strong>
-        </p>
+      <!-- Kalkulator Cuan Simpel -->
+      <div class="calc-card">
+        <span class="preset-label">Pilih Margin Keuntungan Per 1 HP:</span>
+        <div class="preset-group">
+          <button type="button" class="btn-preset" onclick="setMargin(30000, this)">+Rp30rb</button>
+          <button type="button" class="btn-preset active" onclick="setMargin(50000, this)">+Rp50rb</button>
+          <button type="button" class="btn-preset" onclick="setMargin(75000, this)">+Rp75rb</button>
+          <button type="button" class="btn-preset" onclick="setMargin(100000, this)">+Rp100rb</button>
+        </div>
+
+        <div class="calc-display">
+          <div class="head">Keuntungan Bersih Per 1 Orderan:</div>
+          <div class="profit-num" id="profitVal">Rp50.000</div>
+          
+          <div class="month-grid">
+            <div class="month-item">
+              <div>Closing 1 HP/Hari:</div>
+              <strong id="profit1HP">Rp1.500.000 /bln</strong>
+            </div>
+            <div class="month-item">
+              <div>Closing 3 HP/Hari:</div>
+              <strong id="profit3HP">Rp4.500.000 /bln</strong>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <!-- Alert Pantau Status WA Admin -->
       <div class="alert amber">
         <i class="fas fa-bell"></i>
         <div>
           <strong>PENTING: HARGA RESELLER BISA BERUBAH SEWAKTU-WAKTU!</strong><br>
-          Wajib simpan kontak WhatsApp Admin SinyalBalik.id (<a href="https://wa.me/6285142938392" target="_blank" style="color: inherit; font-weight: 800;">0851-4293-8392</a>) dan <strong>pantau Status WhatsApp Admin</strong> untuk cek harga terbaru sebelum menerima pesanan.
+          Wajib simpan kontak WhatsApp Admin (<a href="https://wa.me/6285142938392" target="_blank" style="color: inherit; font-weight: 800; text-decoration: underline;">0851-4293-8392</a>) dan <strong>pantau Status WhatsApp Admin</strong> untuk mengetahui update harga terbaru sebelum deal dengan pelanggan.
         </div>
       </div>
     </section>
 
-    <!-- 3. KENALI KONDISI IPHONE PELANGGAN -->
+    <!-- 3. KENALI KONDISI IPHONE PELANGGAN (LOGIKA LAMPU HIJAU VS LAMPU MERAH) -->
     <section class="card">
       <h2 class="card-title">
         <span class="num">3</span> Kenali Kondisi iPhone Pelanggan
       </h2>
       <p class="p-desc">
-        Sebelum menerima order, tanyakan 5 hal penting ini ke calon pelanggan:
+        Sebelum menerima orderan, gunakan panduan logika <strong>Lampu Hijau</strong> vs <strong>Lampu Merah</strong> berikut:
       </p>
 
-      <ul class="clean-list">
-        <li>
-          <i class="fas fa-question-circle" style="color: var(--blue);"></i>
-          <span><strong>Apakah pernah di-unblock IMEI sebelumnya?</strong> (Jika pernah, catat informasinya untuk admin).</span>
-        </li>
-        <li>
-          <i class="fas fa-question-circle" style="color: var(--blue);"></i>
-          <span><strong>Apakah perangkat merupakan iPhone Ex-Inter?</strong></span>
-        </li>
-        <li>
-          <i class="fas fa-question-circle" style="color: var(--blue);"></i>
-          <span><strong>Apakah sinyalnya SOS, No Service, atau Searching?</strong></span>
-        </li>
-        <li>
-          <i class="fas fa-question-circle" style="color: var(--blue);"></i>
-          <span><strong>Apakah iPhone terkunci operator (SIM Lock)?</strong></span>
-        </li>
-        <li>
-          <i class="fas fa-question-circle" style="color: var(--blue);"></i>
-          <span><strong>Apakah ada kerusakan mesin / bypass iCloud?</strong></span>
-        </li>
-      </ul>
+      <!-- PERTANYAAN 1: RIWAYAT UNBLOCK (LAMPU HIJAU UTAMA) -->
+      <div class="traffic-box green">
+        <div class="traffic-header">
+          <span class="traffic-pill"><i class="fas fa-check-circle"></i> LAMPU HIJAU</span>
+          <div class="traffic-title">Pertanyaan Pertama: Pernah Di-Unblock?</div>
+        </div>
+        <p class="traffic-desc">
+          Tanyakan ke pelanggan: <strong>"Apakah iPhone ini pernah menggunakan jasa unblock IMEI sebelumnya dan berhasil menyala?"</strong>
+        </p>
+        <div style="background: #fff; border-radius: 8px; padding: 10px 12px; border: 1px solid var(--green-border);">
+          <strong style="color: #15803d; font-size: 0.88rem; display: block; margin-bottom: 2px;">
+            ✅ JIKA JAWABANNYA PERNAH & BERHASIL:
+          </strong>
+          <span style="font-size: 0.84rem; color: #166534;">
+            Ini pertanda <strong>LAMPU HIJAU!</strong> Artinya perangkat tersebut sudah terbukti cocok dengan sistem. Unit ini 100% aman, Kakak tinggal minta nomor IMEI 1 dan langsung order ke admin!
+          </span>
+        </div>
+      </div>
 
-      <h3 style="font-size: 0.98rem; font-weight: 800; margin: 18px 0 8px; color: #0f172a;">
-        📸 Contoh Foto Layar Asli iPhone:
+      <!-- PERTANYAAN 2: JIKA BELUM PERNAH (FILTER 3 PENYAKIT) -->
+      <div class="traffic-box red">
+        <div class="traffic-header">
+          <span class="traffic-pill"><i class="fas fa-ban"></i> LAMPU MERAH</span>
+          <div class="traffic-title">Jika Belum Pernah: Cek 3 Hal Ini!</div>
+        </div>
+        <p class="traffic-desc">
+          Jika pelanggan menjawab <strong>"Belum pernah di-unblock"</strong>, tanyakan 3 pertanyaan filter berikut:
+        </p>
+        
+        <ul class="traffic-checklist">
+          <li>
+            <i class="fas fa-times-circle" style="color: #dc2626; margin-top: 3px;"></i>
+            <span><strong>1. Apakah iPhone SIM Lock (terkunci operator luar negeri)?</strong></span>
+          </li>
+          <li>
+            <i class="fas fa-times-circle" style="color: #dc2626; margin-top: 3px;"></i>
+            <span><strong>2. Apakah ada kerusakan mesin/hardware (misal IC baseband rusak)?</strong></span>
+          </li>
+          <li>
+            <i class="fas fa-times-circle" style="color: #dc2626; margin-top: 3px;"></i>
+            <span><strong>3. Apakah iPhone Bypass iCloud?</strong></span>
+          </li>
+        </ul>
+
+        <div style="background: #fff; border-radius: 8px; padding: 10px 12px; border: 1px solid var(--red-border); margin-top: 10px;">
+          <strong style="color: #b91c1c; font-size: 0.88rem; display: block; margin-bottom: 2px;">
+            ⛔ JIKA SALAH SATU DI ATAS TERJADI = LAMPU MERAH!
+          </strong>
+          <span style="font-size: 0.84rem; color: #991b1b;">
+            iPhone <strong>TIDAK BISA di-unblock</strong>. Jangan diterima uangnya. Jika Kakak atau pelanggan merasa bingung/ragu, tanyakan fotonya ke admin terlebih dahulu!
+          </span>
+        </div>
+      </div>
+
+      <!-- FOTO BUKTI VISUAL -->
+      <h3 style="font-size: 0.96rem; font-weight: 900; margin: 18px 0 8px; color: #0f172a;">
+        📸 Contoh Foto Layar Nyata (Aman vs Bahaya):
       </h3>
 
-      <!-- 1. Foto No Service -->
-      <div class="img-box">
-        <img src="img-no-service.jpg" alt="Status Sinyal No Service iPhone">
-        <div class="img-box-cap">
-          <strong style="color: var(--blue);"><i class="fas fa-signal"></i> 1. Ciri Sinyal Hilang (No Service / Tidak Ada Layanan)</strong>
-          <span>Kartu SIM sudah masuk, tapi di pojok atas tertulis "No Service". Ini tanda umum IMEI terblokir.</span>
+      <!-- Foto 1: Aman No SIM restrictions -->
+      <div class="img-card">
+        <img src="img-no-sim-restriction.jpg" alt="Contoh iPhone Aman No SIM Restrictions">
+        <div class="img-cap">
+          <strong style="color: var(--green);"><i class="fas fa-check-circle"></i> CONTOH AMAN: "No SIM restrictions" (Lampu Hijau)</strong>
+          <span>Masuk Settings &rarr; General &rarr; About. Pada baris Carrier Lock tertulis "No SIM restrictions" (Bebas Kunci). Ini iPhone Ex-Inter standar yang aman diproses!</span>
         </div>
       </div>
 
-      <!-- 2. Foto No SIM Restrictions -->
-      <div class="img-box">
-        <img src="img-no-sim-restriction.jpg" alt="Carrier Lock No SIM Restrictions">
-        <div class="img-box-cap">
-          <strong style="color: var(--green);"><i class="fas fa-check-circle"></i> 2. Contoh iPhone AMAN (No SIM restrictions)</strong>
-          <span>Bagian Carrier Lock tertulis "No SIM restrictions" (Bebas Kunci Operator). Ini unit Ex-Inter yang aman diproses!</span>
+      <!-- Foto 2: Bahaya SIM Dikunci -->
+      <div class="img-card">
+        <img src="img-sim-dikunci.jpg" alt="Contoh iPhone SIM Dikunci">
+        <div class="img-cap">
+          <strong style="color: var(--red);"><i class="fas fa-exclamation-triangle"></i> CONTOH BAHAYA: "SIM dikunci" (Lampu Merah)</strong>
+          <span>Kunci Operator menunjukkan "SIM dikunci". Artinya iPhone terikat kontrak provider luar negeri. JANGAN langsung janjikan unblock biasa pasti bisa!</span>
         </div>
       </div>
 
-      <!-- 3. Foto SIM Dikunci -->
-      <div class="img-box">
-        <img src="img-sim-dikunci.jpg" alt="Kunci Operator SIM Dikunci">
-        <div class="img-box-cap">
-          <strong style="color: var(--red);"><i class="fas fa-exclamation-triangle"></i> 3. PERINGATAN: Status "SIM dikunci"</strong>
-          <span>Kunci Operator tertulis "SIM dikunci". Artinya iPhone masih terikat operator luar negeri. Jangan langsung janjikan bisa, kirim fotonya ke admin dulu!</span>
-        </div>
-      </div>
-
-      <!-- 4. Foto SIM Not Supported -->
-      <div class="img-box">
+      <!-- Foto 3: Bahaya SIM Not Supported -->
+      <div class="img-card">
         <img src="img-sim-not-supported.jpg" alt="Layar SIM Not Supported">
-        <div class="img-box-cap">
-          <strong style="color: var(--red);"><i class="fas fa-ban"></i> 4. PERINGATAN: Layar "SIM Not Supported"</strong>
-          <span>Layar aktivasi menolak kartu SIM lokal karena lock operator luar negeri. Konsultasikan ke admin terlebih dahulu.</span>
+        <div class="img-cap">
+          <strong style="color: var(--red);"><i class="fas fa-ban"></i> CONTOH BAHAYA: Layar "SIM Not Supported" (Lampu Merah)</strong>
+          <span>Layar aktivasi menolak kartu SIM lokal karena lock operator luar negeri. Wajib konsultasikan ke admin dulu sebelum menerima orderan!</span>
         </div>
       </div>
     </section>
 
-    <!-- 4. CARA CEK IMEI IPHONE: ADA 2 CARA -->
+    <!-- 4. CARA CEK IMEI: WAJIB IMEI 1 -->
     <section class="card">
       <h2 class="card-title">
         <span class="num">4</span> Cara Cek IMEI iPhone (Ada 2 Cara)
       </h2>
       <p class="p-desc">
-        Bantu pelanggan menemukan nomor IMEI yang diminta admin menggunakan salah satu cara berikut:
+        Bantu pelanggan menemukan nomor IMEI yang diminta menggunakan salah satu cara mudah ini:
       </p>
 
       <!-- CARA 1 -->
-      <div style="margin-bottom: 16px;">
-        <strong style="font-size: 0.92rem; color: #0f172a;">CARA PERTAMA: MELALUI KODE TELEPON</strong>
-        <p style="font-size: 0.86rem; color: var(--text-muted); margin-top: 4px;">
-          Buka aplikasi Telepon &rarr; Masuk ke menu keypad &rarr; Ketik kode ini:
+      <div style="margin-bottom: 14px;">
+        <strong style="font-size: 0.9rem; color: #0f172a;">CARA PERTAMA: MELALUI KODE TELEPON</strong>
+        <p style="font-size: 0.86rem; color: var(--text-muted); margin-top: 3px;">
+          Buka aplikasi Telepon &rarr; Masuk ke menu keypad &rarr; Ketik kode:
         </p>
-        <div class="dial-card">
-          <div class="dial-num">*#06#</div>
+        <div class="dial-box">
+          <div class="dial-code">*#06#</div>
           <span style="font-size: 0.84rem; color: var(--text-muted);">
             Layar akan langsung memunculkan pop-up nomor IMEI. Minta pelanggan screenshot layarnya.
           </span>
@@ -664,35 +868,35 @@
       </div>
 
       <!-- CARA 2 -->
-      <div>
-        <strong style="font-size: 0.92rem; color: #0f172a;">CARA KEDUA: MELALUI PENGATURAN IPHONE</strong>
-        <p style="font-size: 0.86rem; color: var(--text-muted); margin-top: 4px;">
-          1. Buka <strong>Pengaturan (Settings)</strong><br>
-          2. Pilih <strong>Umum (General)</strong><br>
-          3. Pilih <strong>Mengenai (About)</strong><br>
-          4. Gulir ke bawah sampai menemukan bagian <strong>IMEI</strong>.
+      <div style="margin-bottom: 14px;">
+        <strong style="font-size: 0.9rem; color: #0f172a;">CARA KEDUA: MELALUI PENGATURAN IPHONE</strong>
+        <p style="font-size: 0.86rem; color: var(--text-muted); margin-top: 3px;">
+          Buka <strong>Pengaturan (Settings)</strong> &rarr; Pilih <strong>Umum (General)</strong> &rarr; Pilih <strong>Mengenai (About)</strong> &rarr; Gulir ke bawah sampai menemukan bagian <strong>IMEI</strong>.
         </p>
 
-        <!-- Foto Panduan 3 Step -->
-        <div class="img-box" style="margin-top: 10px;">
-          <img src="img-cek-imei.jpg" alt="Tutorial Cek IMEI di Pengaturan iPhone">
-          <div class="img-box-cap">
-            <strong><i class="fas fa-image"></i> Panduan Langkah di Menu Settings</strong>
-            <span>Settings &rarr; General &rarr; About &rarr; Scroll ke bagian IMEI & IMEI 2</span>
+        <!-- Foto Panduan Cek IMEI -->
+        <div class="img-card" style="margin-top: 10px;">
+          <img src="img-cek-imei.jpg" alt="Panduan Langkah Cek IMEI di Settings iPhone">
+          <div class="img-cap">
+            <strong><i class="fas fa-image"></i> Langkah: General &rarr; About &rarr; Scroll ke baris IMEI</strong>
+            <span>Lihat nomor IMEI 15 digit yang tercantum di baris IMEI fisik.</span>
           </div>
         </div>
       </div>
 
-      <div class="alert red">
-        <i class="fas fa-exclamation-circle"></i>
-        <div>
-          <strong>JANGAN SALAH MEMILIH IMEI!</strong><br>
-          iPhone biasanya memiliki <strong>IMEI 1</strong> dan <strong>IMEI 2</strong>. Jika admin meminta IMEI 1, jangan mengirimkan IMEI 2 atau nomor lain. Ikuti instruksi admin!
-        </div>
+      <!-- PERINGATAN KERAS: WAJIB IMEI 1 BUKAN IMEI 2 -->
+      <div class="imei1-banner">
+        <span class="tag"><i class="fas fa-triangle-exclamation"></i> PERATURAN MUTLAK</span>
+        <h3>WAJIB IMEI 1, BUKAN IMEI 2!</h3>
+        <p>
+          iPhone modern umumnya memiliki IMEI 1 (SIM Fisik) dan IMEI 2 (eSIM).<br>
+          <strong>APAPUN KONDISINYA, WAJIB KIRIM IMEI 1!</strong><br>
+          Jangan pernah mengirim IMEI 2 atau nomor seri acak agar orderan tidak salah proses!
+        </p>
       </div>
     </section>
 
-    <!-- 5. CARA MELAKUKAN ORDER -->
+    <!-- 5. CARA MELAKUKAN ORDER (7 LANGKAH PASTI) -->
     <section class="card">
       <h2 class="card-title">
         <span class="num">5</span> Cara Melakukan Order (7 Langkah)
@@ -702,147 +906,105 @@
       </p>
 
       <div class="step-list">
-        <div class="step-row">
-          <div class="step-badge">1</div>
+        <div class="step-item">
+          <div class="step-num">1</div>
           <div class="step-info">
             <strong>Dapatkan Calon Pelanggan</strong>
-            <p>Cari calon pembeli lewat status WA, grup Facebook, TikTok, atau teman sekitar.</p>
+            <p>Promosi lewat status WA, Facebook komunitas iPhone, TikTok, atau teman sekitar.</p>
           </div>
         </div>
 
-        <div class="step-row">
-          <div class="step-badge">2</div>
+        <div class="step-item">
+          <div class="step-num">2</div>
           <div class="step-info">
             <strong>Tanyakan Riwayat Perangkat</strong>
-            <p>Tanyakan apakah iPhone pernah di-unblock IMEI sebelumnya dan pastikan bukan unit SIM Lock.</p>
+            <p>Gunakan logika Lampu Hijau: tanyakan apakah pernah di-unblock sebelumnya dan pastikan bukan SIM Lock.</p>
           </div>
         </div>
 
-        <div class="step-row">
-          <div class="step-badge">3</div>
+        <div class="step-item">
+          <div class="step-num">3</div>
           <div class="step-info">
-            <strong>Kumpulkan Data & Foto IMEI</strong>
-            <p>Minta foto layar Settings > About yang menunjukkan nomor IMEI 1.</p>
+            <strong>Kumpulkan Foto IMEI 1</strong>
+            <p>Minta screenshot menu <em>Settings > General > About</em>. Ingat, wajib IMEI 1!</p>
           </div>
         </div>
 
-        <div class="step-row">
-          <div class="step-badge">4</div>
+        <div class="step-item">
+          <div class="step-num">4</div>
           <div class="step-info">
-            <strong>Kirim Data ke Admin SinyalBalik.id</strong>
-            <p>Teruskan data ke admin via WhatsApp untuk dicek kelayakan sistem & harga aktif.</p>
+            <strong>Kirim Data ke Admin WhatsApp</strong>
+            <p>Kirimkan tipe iPhone, nomor IMEI 1, dan fotonya ke WhatsApp Admin SinyalBalik.id.</p>
           </div>
         </div>
 
-        <div class="step-row">
-          <div class="step-badge">5</div>
+        <div class="step-item">
+          <div class="step-num">5</div>
           <div class="step-info">
             <strong>Konfirmasi Harga ke Pelanggan</strong>
-            <p>Sampaikan harga jual Kakak ke pelanggan beserta masa pengerjaan dan garansi 3 bulan.</p>
+            <p>Sampaikan harga jual Kakak ke pelanggan beserta waktu pengerjaan dan garansi 3 bulan.</p>
           </div>
         </div>
 
-        <div class="step-row">
-          <div class="step-badge">6</div>
+        <div class="step-item">
+          <div class="step-num">6</div>
           <div class="step-info">
             <strong>Lakukan Pembayaran</strong>
-            <p>Gunakan QRIS resmi yang diberikan admin. Kirim bukti transfer untuk diverifikasi.</p>
+            <p>Gunakan QRIS resmi yang dikonfirmasi admin. Kirim bukti transfer untuk diverifikasi.</p>
           </div>
         </div>
 
-        <div class="step-row">
-          <div class="step-badge">7</div>
+        <div class="step-item">
+          <div class="step-num">7</div>
           <div class="step-info">
-            <strong>Tunggu Proses Selesai</strong>
-            <p>Admin memproses antrean server. Begitu selesai, customer restart HP dan sinyal langsung menyala!</p>
+            <strong>Tunggu Proses Sampai Menyala!</strong>
+            <p>Admin memproses aktivasi. Begitu selesai, minta pelanggan restart iPhone dan sinyal langsung muncul normal!</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. SKRIP CHAT SIAP SALIN -->
+    <!-- 6. GARANSI & HAL WAJIB DIPERHATIKAN -->
     <section class="card">
       <h2 class="card-title">
-        <span class="num">6</span> Skrip Chat Siap Pakai (Tinggal Salin)
-      </h2>
-      <p class="p-desc">
-        Tinggal klik <strong>"Salin"</strong> dan tempel di WhatsApp saat chat dengan customer atau admin:
-      </p>
-
-      <!-- Template Tanya Customer -->
-      <div class="copy-card">
-        <div class="copy-card-head">
-          <span>Skrip Balas Calon Pelanggan</span>
-          <button class="btn-copy" onclick="copySnippet('textCust')">Salin</button>
-        </div>
-        <pre class="copy-text" id="textCust">Halo Kak! Iya benar, kami melayani aktivasi sinyal iPhone Ex-Inter yang terblokir IMEI / No Service.
-
-Biar bisa kami bantu cek apakah unitnya bisa langsung diproses, boleh minta tolong kirimkan:
-1. Tipe iPhone berapa?
-2. Screenshot menu: Pengaturan (Settings) > Umum (General) > Mengenai (About).
-3. Apakah sebelumnya pernah di-unblock IMEI atau belum pernah?
-
-Nanti langsung kami bantu cek kelayakannya ya Kak!</pre>
-      </div>
-
-      <!-- Template Format Order ke Admin -->
-      <div class="copy-card">
-        <div class="copy-card-head">
-          <span>Format Order ke WhatsApp Admin</span>
-          <button class="btn-copy" onclick="copySnippet('textAdmin')">Salin</button>
-        </div>
-        <pre class="copy-text" id="textAdmin">Halo Admin SinyalBalik.id!
-Mau order aktivasi sinyal iPhone:
-
-• Tipe iPhone: [Contoh: iPhone 11 128GB]
-• Nomor IMEI 1: [35xxxxxxxxxxxxxx]
-• Pernah Unblock Sebelumnya?: [Belum / Pernah]
-• Status Carrier Lock: [No SIM restrictions]
-• Pilihan Paket: [Paket Fast / Slow]
-
-Foto menu About saya lampirkan ya Min. Mohon dicek kelayakannya & info total pembayaran QRIS-nya. Terima kasih!</pre>
-      </div>
-    </section>
-
-    <!-- 7. GARANSI & SOP WAJIB -->
-    <section class="card">
-      <h2 class="card-title">
-        <span class="num">7</span> Garansi & Hal Wajib Diperhatikan
+        <span class="num">6</span> Garansi & Hal Wajib Diperhatikan
       </h2>
 
-      <strong style="display: block; font-size: 0.92rem; margin-bottom: 6px; color: var(--text);">
-        🛡️ Ketentuan Garansi 3 Bulan Real:
-      </strong>
-      <p class="p-desc">
-        Jika sinyal padam dalam kurun waktu 3 bulan karena faktor jaringan/server, admin bantu aktivasi ulang secara <strong>GRATIS</strong>. Garansi tidak berlaku apabila kendala disebabkan oleh kerusakan fisik mesin/hardware iPhone atau unit bypass.
-      </p>
+      <div style="background: #f8fafc; border: 1.5px solid var(--border); border-radius: 12px; padding: 14px; margin-bottom: 14px;">
+        <strong style="font-size: 0.92rem; color: #0f172a; display: block; margin-bottom: 4px;">
+          🛡️ Ketentuan Garansi 3 Bulan Real:
+        </strong>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
+          Jika sinyal padam dalam kurun waktu 3 bulan karena faktor jaringan/sistem, admin bantu aktivasi ulang secara <strong>GRATIS</strong> sampai sinyal normal kembali. Garansi tidak berlaku apabila kegagalan disebabkan oleh kerusakan mesin/hardware HP atau unit bypass.
+        </p>
+      </div>
 
-      <strong style="display: block; font-size: 0.92rem; margin-top: 16px; margin-bottom: 8px; color: var(--text);">
-        ⚠️ Hal yang Wajib Diperhatikan Reseller:
+      <strong style="font-size: 0.92rem; color: #0f172a; display: block; margin-bottom: 8px;">
+        ⚠️ Aturan Penting Reseller:
       </strong>
-      <ul class="clean-list">
-        <li>✅ Selalu cek harga terbaru via WhatsApp Status Admin.</li>
-        <li>✅ Periksa foto Settings > About sebelum meneruskan order ke admin.</li>
-        <li>✅ Jangan menjanjikan semua perangkat pasti bisa diproses sebelum dicek admin.</li>
-        <li>❌ <strong>Dilarang keras</strong> meminta password Apple ID, sandi layar, atau kode OTP pelanggan!</li>
-        <li>❌ <strong>Dilarang</strong> mengubah atau memanipulasi nomor IMEI perangkat.</li>
-        <li>✅ Jaga kerahasiaan data nomor IMEI pelanggan.</li>
-        <li>✅ Selalu gunakan QRIS resmi yang dikonfirmasi admin SinyalBalik.id.</li>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+        <li>✅ Selalu pantau harga terbaru di WhatsApp Status Admin.</li>
+        <li>✅ Cek foto Settings > About sebelum meneruskan orderan.</li>
+        <li>✅ Jangan menjanjikan semua perangkat pasti bisa sebelum dikonfirmasi admin.</li>
+        <li>❌ <strong>DILARANG KERAS</strong> meminta password Apple ID, PIN, passcode, atau kode OTP pelanggan!</li>
+        <li>❌ <strong>DILARANG</strong> mengubah atau memanipulasi nomor IMEI perangkat.</li>
+        <li>✅ Jaga kerahasiaan data pelanggan Kakak.</li>
+        <li>✅ Pembayaran hanya via QRIS resmi yang diberikan admin SinyalBalik.id.</li>
       </ul>
     </section>
 
-    <!-- 8. KONTAK RESMI & PENUTUP -->
-    <section class="card" style="text-align: center; background: #0f172a; color: #fff; padding: 24px 16px; border: none;">
-      <h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 8px;">Mulai Sekarang & Raih Penghasilan!</h3>
+    <!-- 7. HUBUNGI ADMIN & MULAI SEKARANG -->
+    <section class="card" style="text-align: center; background: #0f172a; color: #fff; padding: 26px 16px; border: none;">
+      <h3 style="font-size: 1.3rem; font-weight: 900; margin-bottom: 8px;">Siap Mulai Menghasilkan Cuan?</h3>
       <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 18px; line-height: 1.5;">
-        Kakak tidak harus langsung mahir soal iPhone. Fokus pada mencari calon pembeli dan kumpulkan data IMEI dengan benar, sisanya biar admin yang bantu pandu!
+        Kakak tidak perlu menunggu mahir. Kumpulkan calon pelanggan dan foto IMEI-nya, sisanya biar admin yang memandu setiap langkah orderan pertama Kakak!
       </p>
 
       <a href="https://wa.me/6285142938392?text=Halo%20Admin%20SinyalBalik%2C%20saya%20sudah%20baca%20panduan%20reseller%20dan%20siap%20gabung" target="_blank" rel="noopener" class="btn-wa-action" style="font-size: 0.95rem; padding: 12px 24px; margin-bottom: 12px;">
-        <i class="fab fa-whatsapp"></i> Hubungi WhatsApp Admin (0851-4293-8392)
+        <i class="fab fa-whatsapp"></i> Chat WhatsApp Admin (0851-4293-8392)
       </a>
 
-      <div style="font-size: 0.78rem; color: #94a3b8;">
+      <div style="font-size: 0.8rem; color: #94a3b8;">
         Website Resmi: <a href="https://sinyalbalik.id" style="color: #38bdf8; text-decoration: none;">https://sinyalbalik.id/</a>
       </div>
     </section>
@@ -852,7 +1014,7 @@ Foto menu About saya lampirkan ya Min. Mohon dicek kelayakannya & info total pem
   <!-- Sticky Bottom Bar WhatsApp -->
   <aside class="bottom-bar">
     <div class="bottom-bar-inner">
-      <div class="bottom-text">
+      <div class="text">
         <span>Ada customer atau mau cek harga?</span>
         <strong>WhatsApp Admin SinyalBalik</strong>
       </div>
@@ -862,34 +1024,19 @@ Foto menu About saya lampirkan ya Min. Mohon dicek kelayakannya & info total pem
     </div>
   </aside>
 
-  <!-- Toast -->
-  <div class="toast" id="toast">Teks berhasil disalin!</div>
-
   <script>
-    function copySnippet(id) {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const text = el.innerText || el.textContent;
+    function setMargin(amount, btn) {
+      document.querySelectorAll('.btn-preset').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-      navigator.clipboard.writeText(text).then(() => {
-        showToast();
-      }).catch(() => {
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        showToast();
-      });
-    }
+      const profitFormatted = 'Rp' + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      document.getElementById('profitVal').textContent = profitFormatted;
 
-    function showToast() {
-      const toast = document.getElementById('toast');
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 2500);
+      const p1 = amount * 30;
+      const p3 = amount * 30 * 3;
+
+      document.getElementById('profit1HP').textContent = 'Rp' + p1.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' /bln';
+      document.getElementById('profit3HP').textContent = 'Rp' + p3.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' /bln';
     }
   </script>
 
