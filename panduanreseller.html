@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>Panduan Reseller SinyalBalik.id | Dari Nol Sampai Closing Order</title>
   
-  <meta name="description" content="Panduan resmi reseller SinyalBalik.id. Belajar cara cek kelayakan iPhone, cek IMEI 1, dan alur order aktivasi sinyal dengan mudah.">
+  <meta name="description" content="Panduan resmi reseller SinyalBalik.id. Belajar cara cek kelayakan iPhone, cek IMEI 1, pilihan paket Fast & Slow, dan alur order dengan mudah.">
   <meta property="og:title" content="Panduan Reseller SinyalBalik.id">
   <meta property="og:description" content="Belajar dari nol sampai bisa mendapatkan pelanggan dan melakukan order.">
   <meta property="og:url" content="https://sinyalbalik.id/panduanreseller">
@@ -240,13 +240,13 @@
       line-height: 1.55;
     }
 
-    /* Kalkulator Simpel */
-    .calc-card {
+    /* Kalkulator Interaktif Cuan HP */
+    .calc-box {
       background: #f8fafc;
       border: 1.5px solid var(--border);
       border-radius: var(--radius-md);
       padding: 16px;
-      margin: 12px 0 16px;
+      margin: 14px 0;
     }
 
     .preset-label {
@@ -285,23 +285,69 @@
       border-color: var(--blue);
     }
 
+    .calc-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .calc-input-item {
+      background: #fff;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .calc-input-item label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .calc-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .calc-input-wrap span {
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .calc-input-wrap input {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: var(--text);
+      font-family: inherit;
+    }
+
     .calc-display {
-      background: #0f172a;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: #fff;
       border-radius: 12px;
-      padding: 16px;
+      padding: 18px 16px;
       text-align: center;
     }
 
     .calc-display .head {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #94a3b8;
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .calc-display .profit-num {
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 900;
       color: #38bdf8;
       margin: 2px 0 8px;
@@ -310,26 +356,99 @@
 
     .calc-display .month-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
       border-top: 1px solid rgba(255, 255, 255, 0.12);
-      padding-top: 10px;
-      margin-top: 4px;
+      padding-top: 12px;
+      margin-top: 6px;
     }
 
     .month-item {
       background: rgba(255, 255, 255, 0.06);
-      padding: 8px;
+      padding: 8px 4px;
       border-radius: 8px;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
+      color: #cbd5e1;
     }
 
     .month-item strong {
       display: block;
       color: #4ade80;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 900;
       margin-top: 2px;
+    }
+
+    /* Paket Fast vs Slow Cards */
+    .package-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 14px 0 16px;
+    }
+
+    .pkg-card {
+      border-radius: var(--radius-md);
+      padding: 16px 14px;
+      border: 1.5px solid transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pkg-card.fast {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    .pkg-card.slow {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+
+    .pkg-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 900;
+      padding: 3px 8px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .pkg-card.fast .pkg-tag {
+      background: #0071e3;
+      color: #fff;
+    }
+
+    .pkg-card.slow .pkg-tag {
+      background: #475569;
+      color: #fff;
+    }
+
+    .pkg-title {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .pkg-time {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .pkg-card.slow .pkg-time {
+      color: #334155;
+    }
+
+    .pkg-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin: 0;
     }
 
     /* Traffic Light Logic Cards */
@@ -668,7 +787,7 @@
         <div>
           <h4>Kakak Pakai HP Android? Gak Masalah Sama Sekali!</h4>
           <p>
-            Kakak tidak wajib punya iPhone dan tidak perlu paham teknis mesin/server. Tugas Kakak cukup minta foto layar customer, kirimkan ke admin, dan nikmati keuntungan selisih harganya!
+            Kakak tidak harus punya iPhone dan tidak perlu paham teknis mesin/server. Tugas Kakak cukup minta nomor salinan IMEI 1 atau screenshot-nya, kirimkan ke admin, dan nikmati keuntungan selisih harganya!
           </p>
         </div>
       </div>
@@ -683,26 +802,26 @@
         Pengguna iPhone di Indonesia sangat banyak. Banyak yang membeli <strong>iPhone Ex-Inter (dari luar negeri)</strong> karena harganya jauh lebih terjangkau dibanding unit resmi iBox.
       </p>
       <p class="p-desc">
-        Kendala utamanya: Sebagian iPhone inter mengalami masalah sinyal mati, muncul tulisan <em>"No Service"</em> atau <em>"SOS"</em> karena aturan IMEI. Mereka butuh bantuan agar iPhone-nya bisa dipakai internetan & telepon lagi.
+        Kendala utamanya: Sebagian iPhone inter mengalami masalah sinyal mati, muncul tulisan <strong>"No Service"</strong> atau <strong>"Tidak Ada Layanan"</strong> karena aturan IMEI. Mereka butuh bantuan agar iPhone-nya bisa dipakai internetan & telepon lagi.
       </p>
 
       <!-- Foto Contoh No Service -->
       <div class="img-card">
         <img src="img-no-service.jpg" alt="Contoh Sinyal Hilang No Service di iPhone">
         <div class="img-cap">
-          <strong style="color: var(--blue);"><i class="fas fa-signal"></i> Contoh Gejala: Sinyal Hilang (No Service / Tidak Ada Layanan)</strong>
+          <strong style="color: var(--blue);"><i class="fas fa-signal"></i> Contoh Gejala: Status "No Service" (Tidak Ada Layanan)</strong>
           <span>Kartu SIM sudah terpasang, tapi sinyal tetap No Service. Ini ciri umum nomor IMEI butuh aktivasi sistem.</span>
         </div>
       </div>
 
       <div style="background: #f8fafc; border-radius: 12px; padding: 14px; border: 1px solid var(--border);">
         <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
-          💡 <strong>Fokus Kakak:</strong> Cari calon pelanggan, kumpulkan foto layarnya, dan teruskan ke admin. Proses teknis aktivasi server 100% dikerjakan oleh admin SinyalBalik.id!
+          💡 <strong>Fokus Kakak:</strong> Cari calon pelanggan, dapatkan nomor IMEI 1 mereka, dan teruskan ke admin. Proses teknis aktivasi server 100% dikerjakan oleh admin SinyalBalik.id!
         </p>
       </div>
     </section>
 
-    <!-- 2. CARA MENDAPATKAN KEUNTUNGAN (KALKULATOR SIMPEL) -->
+    <!-- 2. CARA MENDAPATKAN KEUNTUNGAN (KALKULATOR PROFESIONAL & SIMPLE) -->
     <section class="card">
       <h2 class="card-title">
         <span class="num">2</span> Cara Mendapatkan Keuntungan
@@ -711,14 +830,31 @@
         Keuntungan Kakak didapat langsung dari <strong>selisih harga modal reseller dengan harga jual ke pelanggan</strong>. Kakak bebas menentukan harga jual sendiri!
       </p>
 
-      <!-- Kalkulator Cuan Simpel -->
-      <div class="calc-card">
-        <span class="preset-label">Pilih Margin Keuntungan Per 1 HP:</span>
+      <!-- Kalkulator Cuan -->
+      <div class="calc-box">
+        <span class="preset-label">Pilih Margin Keuntungan Cepat:</span>
         <div class="preset-group">
-          <button type="button" class="btn-preset" onclick="setMargin(30000, this)">+Rp30rb</button>
-          <button type="button" class="btn-preset active" onclick="setMargin(50000, this)">+Rp50rb</button>
-          <button type="button" class="btn-preset" onclick="setMargin(75000, this)">+Rp75rb</button>
-          <button type="button" class="btn-preset" onclick="setMargin(100000, this)">+Rp100rb</button>
+          <button type="button" class="btn-preset" onclick="setPresetMargin(30000, this)">+Rp30rb</button>
+          <button type="button" class="btn-preset active" onclick="setPresetMargin(50000, this)">+Rp50rb</button>
+          <button type="button" class="btn-preset" onclick="setPresetMargin(75000, this)">+Rp75rb</button>
+          <button type="button" class="btn-preset" onclick="setPresetMargin(100000, this)">+Rp100rb</button>
+        </div>
+
+        <div class="calc-inputs">
+          <div class="calc-input-item">
+            <label>Modal Reseller</label>
+            <div class="calc-input-wrap">
+              <span>Rp</span>
+              <input type="number" id="inModal" value="155000" step="5000" oninput="hitungProfit()">
+            </div>
+          </div>
+          <div class="calc-input-item">
+            <label>Harga Jual Pelanggan</label>
+            <div class="calc-input-wrap">
+              <span>Rp</span>
+              <input type="number" id="inJual" value="205000" step="5000" oninput="hitungProfit()">
+            </div>
+          </div>
         </div>
 
         <div class="calc-display">
@@ -727,12 +863,19 @@
           
           <div class="month-grid">
             <div class="month-item">
-              <div>Closing 1 HP/Hari:</div>
-              <strong id="profit1HP">Rp1.500.000 /bln</strong>
+              <div>Closing 1 HP/Hari</div>
+              <strong id="profit1HP">Rp1.500.000</strong>
+              <span style="font-size: 0.65rem; color: #94a3b8;">/ bulan</span>
             </div>
             <div class="month-item">
-              <div>Closing 3 HP/Hari:</div>
-              <strong id="profit3HP">Rp4.500.000 /bln</strong>
+              <div>Closing 3 HP/Hari</div>
+              <strong id="profit3HP">Rp4.500.000</strong>
+              <span style="font-size: 0.65rem; color: #94a3b8;">/ bulan</span>
+            </div>
+            <div class="month-item">
+              <div>Closing 5 HP/Hari</div>
+              <strong id="profit5HP">Rp7.500.000</strong>
+              <span style="font-size: 0.65rem; color: #94a3b8;">/ bulan</span>
             </div>
           </div>
         </div>
@@ -748,10 +891,46 @@
       </div>
     </section>
 
-    <!-- 3. KENALI KONDISI IPHONE PELANGGAN (LOGIKA LAMPU HIJAU VS LAMPU MERAH) -->
+    <!-- 3. PILIHAN PAKET PENGERJAAN: FAST VS SLOW -->
     <section class="card">
       <h2 class="card-title">
-        <span class="num">3</span> Kenali Kondisi iPhone Pelanggan
+        <span class="num">3</span> Pilihan Paket: Fast & Slow
+      </h2>
+      <p class="p-desc">
+        Admin SinyalBalik.id menyediakan 2 pilihan paket aktivasi sesuai kebutuhan dan kecepatan yang diinginkan pelanggan:
+      </p>
+
+      <div class="package-grid">
+        <!-- Paket Fast -->
+        <div class="pkg-card fast">
+          <div>
+            <span class="pkg-tag"><i class="fas fa-bolt"></i> Prioritas Utama</span>
+            <div class="pkg-title">Paket Fast</div>
+            <div class="pkg-time">&lt; 1 Jam (&lt; 60 Menit)</div>
+            <p class="pkg-desc">
+              Masuk ke antrean prioritas super cepat. Rata-rata selesai hanya dalam hitungan menit (di bawah 1 jam). Sangat cocok untuk pelanggan yang butuh sinyal menyala instan hari ini juga!
+            </p>
+          </div>
+        </div>
+
+        <!-- Paket Slow -->
+        <div class="pkg-card slow">
+          <div>
+            <span class="pkg-tag"><i class="fas fa-clock"></i> Reguler Hemat</span>
+            <div class="pkg-title">Paket Slow</div>
+            <div class="pkg-time">1 s/d 2 Hari Kerja</div>
+            <p class="pkg-desc">
+              Pilihan reguler dengan modal reseller yang lebih hemat. Waktu pengerjaan standar 1-2 hari (namun jika antrean server sedang kosong atau hoki, bisa selesai dalam beberapa jam saja).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. KENALI KONDISI IPHONE PELANGGAN (LOGIKA LAMPU HIJAU VS LAMPU MERAH) -->
+    <section class="card">
+      <h2 class="card-title">
+        <span class="num">4</span> Kenali Kondisi iPhone Pelanggan
       </h2>
       <p class="p-desc">
         Sebelum menerima orderan, gunakan panduan logika <strong>Lampu Hijau</strong> vs <strong>Lampu Merah</strong> berikut:
@@ -844,10 +1023,10 @@
       </div>
     </section>
 
-    <!-- 4. CARA CEK IMEI: WAJIB IMEI 1 -->
+    <!-- 5. CARA CEK IMEI: WAJIB IMEI 1 -->
     <section class="card">
       <h2 class="card-title">
-        <span class="num">4</span> Cara Cek IMEI iPhone (Ada 2 Cara)
+        <span class="num">5</span> Cara Cek IMEI iPhone (Ada 2 Cara)
       </h2>
       <p class="p-desc">
         Bantu pelanggan menemukan nomor IMEI yang diminta menggunakan salah satu cara mudah ini:
@@ -862,7 +1041,7 @@
         <div class="dial-box">
           <div class="dial-code">*#06#</div>
           <span style="font-size: 0.84rem; color: var(--text-muted);">
-            Layar akan langsung memunculkan pop-up nomor IMEI. Minta pelanggan screenshot layarnya.
+            Layar akan langsung memunculkan pop-up nomor IMEI. Pelanggan bisa screenshot atau salin nomornya.
           </span>
         </div>
       </div>
@@ -891,15 +1070,15 @@
         <p>
           iPhone modern umumnya memiliki IMEI 1 (SIM Fisik) dan IMEI 2 (eSIM).<br>
           <strong>APAPUN KONDISINYA, WAJIB KIRIM IMEI 1!</strong><br>
-          Jangan pernah mengirim IMEI 2 atau nomor seri acak agar orderan tidak salah proses!
+          Bisa berupa teks salinan nomor IMEI 1 atau foto screenshot layar IMEI. Jangan pernah mengirim IMEI 2 agar tidak salah proses!
         </p>
       </div>
     </section>
 
-    <!-- 5. CARA MELAKUKAN ORDER (7 LANGKAH PASTI) -->
+    <!-- 6. CARA MELAKUKAN ORDER (7 LANGKAH PASTI) -->
     <section class="card">
       <h2 class="card-title">
-        <span class="num">5</span> Cara Melakukan Order (7 Langkah)
+        <span class="num">6</span> Cara Melakukan Order (7 Langkah)
       </h2>
       <p class="p-desc">
         Ikuti alur praktis berikut saat Kakak sudah dapat calon pelanggan:
@@ -910,7 +1089,7 @@
           <div class="step-num">1</div>
           <div class="step-info">
             <strong>Dapatkan Calon Pelanggan</strong>
-            <p>Promosi lewat status WA, Facebook komunitas iPhone, TikTok, atau teman sekitar.</p>
+            <p>Promosi lewat status WA, Facebook komunitas iPhone, TikTok, atau teman sekitar yang HP-nya No Service.</p>
           </div>
         </div>
 
@@ -925,16 +1104,16 @@
         <div class="step-item">
           <div class="step-num">3</div>
           <div class="step-info">
-            <strong>Kumpulkan Foto IMEI 1</strong>
-            <p>Minta screenshot menu <em>Settings > General > About</em>. Ingat, wajib IMEI 1!</p>
+            <strong>Dapatkan Nomor IMEI 1</strong>
+            <p>Minta pelanggan mengirimkan nomor salinan IMEI 1 atau screenshot layarnya (wajib IMEI 1!).</p>
           </div>
         </div>
 
         <div class="step-item">
           <div class="step-num">4</div>
           <div class="step-info">
-            <strong>Kirim Data ke Admin WhatsApp</strong>
-            <p>Kirimkan tipe iPhone, nomor IMEI 1, dan fotonya ke WhatsApp Admin SinyalBalik.id.</p>
+            <strong>Pilih Paket & Kirim ke WhatsApp Admin</strong>
+            <p>Tentukan pilihan Paket Fast (<60 menit) atau Slow (1-2 hari), lalu kirimkan tipe iPhone dan nomor IMEI 1 ke admin.</p>
           </div>
         </div>
 
@@ -942,7 +1121,7 @@
           <div class="step-num">5</div>
           <div class="step-info">
             <strong>Konfirmasi Harga ke Pelanggan</strong>
-            <p>Sampaikan harga jual Kakak ke pelanggan beserta waktu pengerjaan dan garansi 3 bulan.</p>
+            <p>Sampaikan harga jual Kakak ke pelanggan beserta estimasi waktu pengerjaan dan garansi 3 bulan.</p>
           </div>
         </div>
 
@@ -957,17 +1136,17 @@
         <div class="step-item">
           <div class="step-num">7</div>
           <div class="step-info">
-            <strong>Tunggu Proses Sampai Menyala!</strong>
+            <strong>Tunggu Proses Sampai Sinyal Menyala!</strong>
             <p>Admin memproses aktivasi. Begitu selesai, minta pelanggan restart iPhone dan sinyal langsung muncul normal!</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. GARANSI & HAL WAJIB DIPERHATIKAN -->
+    <!-- 7. GARANSI & HAL WAJIB DIPERHATIKAN -->
     <section class="card">
       <h2 class="card-title">
-        <span class="num">6</span> Garansi & Hal Wajib Diperhatikan
+        <span class="num">7</span> Garansi & Hal Wajib Diperhatikan
       </h2>
 
       <div style="background: #f8fafc; border: 1.5px solid var(--border); border-radius: 12px; padding: 14px; margin-bottom: 14px;">
@@ -983,8 +1162,7 @@
         ⚠️ Aturan Penting Reseller:
       </strong>
       <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
-        <li>✅ Selalu pantau harga terbaru di WhatsApp Status Admin.</li>
-        <li>✅ Cek foto Settings > About sebelum meneruskan orderan.</li>
+        <li>✅ Selalu pantau harga terbaru di WhatsApp Status Admin sebelum deal dengan pelanggan.</li>
         <li>✅ Jangan menjanjikan semua perangkat pasti bisa sebelum dikonfirmasi admin.</li>
         <li>❌ <strong>DILARANG KERAS</strong> meminta password Apple ID, PIN, passcode, atau kode OTP pelanggan!</li>
         <li>❌ <strong>DILARANG</strong> mengubah atau memanipulasi nomor IMEI perangkat.</li>
@@ -993,11 +1171,11 @@
       </ul>
     </section>
 
-    <!-- 7. HUBUNGI ADMIN & MULAI SEKARANG -->
+    <!-- 8. HUBUNGI ADMIN & MULAI SEKARANG -->
     <section class="card" style="text-align: center; background: #0f172a; color: #fff; padding: 26px 16px; border: none;">
       <h3 style="font-size: 1.3rem; font-weight: 900; margin-bottom: 8px;">Siap Mulai Menghasilkan Cuan?</h3>
       <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 18px; line-height: 1.5;">
-        Kakak tidak perlu menunggu mahir. Kumpulkan calon pelanggan dan foto IMEI-nya, sisanya biar admin yang memandu setiap langkah orderan pertama Kakak!
+        Kakak tidak perlu menunggu mahir. Kumpulkan calon pelanggan dan salinan IMEI 1-nya, sisanya biar admin yang memandu setiap langkah orderan pertama Kakak!
       </p>
 
       <a href="https://wa.me/6285142938392?text=Halo%20Admin%20SinyalBalik%2C%20saya%20sudah%20baca%20panduan%20reseller%20dan%20siap%20gabung" target="_blank" rel="noopener" class="btn-wa-action" style="font-size: 0.95rem; padding: 12px 24px; margin-bottom: 12px;">
@@ -1025,19 +1203,40 @@
   </aside>
 
   <script>
-    function setMargin(amount, btn) {
+    const inModal = document.getElementById('inModal');
+    const inJual = document.getElementById('inJual');
+    const profitVal = document.getElementById('profitVal');
+    const profit1HP = document.getElementById('profit1HP');
+    const profit3HP = document.getElementById('profit3HP');
+    const profit5HP = document.getElementById('profit5HP');
+
+    function formatRupiah(n) {
+      return 'Rp' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
+    function hitungProfit() {
+      const modal = parseInt(inModal.value) || 0;
+      const jual = parseInt(inJual.value) || 0;
+      let margin = jual - modal;
+      if (margin < 0) margin = 0;
+
+      profitVal.textContent = formatRupiah(margin);
+      profit1HP.textContent = formatRupiah(margin * 30);
+      profit3HP.textContent = formatRupiah(margin * 30 * 3);
+      profit5HP.textContent = formatRupiah(margin * 30 * 5);
+    }
+
+    function setPresetMargin(amount, btn) {
       document.querySelectorAll('.btn-preset').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      const profitFormatted = 'Rp' + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-      document.getElementById('profitVal').textContent = profitFormatted;
-
-      const p1 = amount * 30;
-      const p3 = amount * 30 * 3;
-
-      document.getElementById('profit1HP').textContent = 'Rp' + p1.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' /bln';
-      document.getElementById('profit3HP').textContent = 'Rp' + p3.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' /bln';
+      const modal = parseInt(inModal.value) || 155000;
+      inJual.value = modal + amount;
+      hitungProfit();
     }
+
+    // Init
+    hitungProfit();
   </script>
 
 </body>
