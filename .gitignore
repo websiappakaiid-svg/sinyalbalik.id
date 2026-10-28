@@ -3,4 +3,5 @@ sinyalbalik.id/
 *.py
 *.txt
 *.jpeg
+!contohhhhhh.jpeg
 photo_*.jpg
