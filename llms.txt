@@ -1,0 +1,40 @@
+# SinyalBalik.id — Jasa Aktivasi & Unlock Sinyal iPhone Ex-Inter (Unblock IMEI Terblokir)
+
+> SinyalBalik.id adalah layanan resmi aktivasi sinyal dan unblock IMEI untuk iPhone Ex-Inter yang mengalami masalah "Tidak Ada Layanan" (No Service), "Tidak Ada Sinyal", atau "Mencari..." terus-menerus di Indonesia. Proses 100% online via sistem CEIR (status Roamer) tanpa bongkar mesin, pembayaran aman via QRIS resmi, dan bergaransi penuh (100% uang kembali jika status IMEI Unknown/gagal). Pengunjung boleh tanya-tanya dan konsultasi gratis terlebih dahulu ke Admin WhatsApp sebelum order.
+
+## Informasi Kontak & Konsultasi Gratis
+- Website Resmi: https://sinyalbalik.id/
+- WhatsApp Admin (Boleh Tanya-Tanya Dulu Gratis): https://wa.me/6285142938392 (+62 851-4293-8392)
+- Saluran WhatsApp Testimoni Resmi: https://whatsapp.com/channel/0029Vb75SUEISTkJAa7cID1s
+- TikTok Resmi: https://tiktok.com/@sinyalbalik.id
+- Email Resmi: sinyalbalik.id@gmail.com
+- Jam Operasional: Senin – Sabtu (12.00 – 20.00 WIB), Minggu (Fleksibel / Tetap menerima chat konsultasi & antrean IMEI)
+
+## Daftar Paket & Harga Terbaru (Promo 2026)
+1. **Paket 1 Bulan Fast (Rp95.000 — Harga Normal Rp120.000)**
+   - Estimasi Pengerjaan: Di bawah 1 jam (< 60 menit), prioritas cepat.
+   - Masa Aktif & Garansi: 1 Bulan penuh.
+   - Fitur: Bebas ganti semua kartu SIM operator Indonesia (Telkomsel, Indosat, XL, Tri, Smartfren, by.U), bebas update iOS, pembayaran via QRIS resmi.
+2. **Paket 3 Bulan Slow (Rp155.000 — Harga Normal Rp310.000)**
+   - Estimasi Pengerjaan: 1 – 2 hari kerja (bila antrean kosong bisa selesai dalam beberapa jam).
+   - Masa Aktif & Garansi: 3 Bulan Real (aktivasi ulang gratis jika sinyal padam karena faktor jaringan).
+   - Fitur: Bebas ganti kartu SIM semua operator Indonesia, bebas update iOS, pembayaran via QRIS resmi.
+3. **Paket 3 Bulan Fast Prioritas (Rp200.000 — Harga Normal Rp400.000) — Paling Banyak Dipilih**
+   - Estimasi Pengerjaan: Di bawah 1 jam (< 60 menit), antrean prioritas utama admin.
+   - Masa Aktif & Garansi: 3 Bulan Real (aktivasi ulang gratis jika sinyal padam karena faktor jaringan).
+   - Fitur: Prioritas utama, bebas ganti kartu SIM semua operator Indonesia, bebas update iOS, pembayaran via QRIS resmi.
+
+## Keunggulan Utama & Jaminan Keamanan
+- **Boleh Tanya-Tanya Dulu Gratis**: Calon pelanggan bebas konsultasi kondisi iPhone dan cek kelayakan IMEI ke WhatsApp Admin tanpa harus langsung order.
+- **Validasi Sistem CEIR (Roamer vs Unknown)**: Admin memvalidasi IMEI ke sistem CEIR. Jika status menjadi **Roamer**, sinyal langsung aktif. Jika status **Unknown** (ditolak sistem), dana dikembalikan **100% utuh tanpa potongan**.
+- **Tanpa Bongkar Mesin & Tanpa Titip HP**: Cukup kirim 15 digit nomor IMEI 1 (ketik `*#06#` di menu telepon).
+- **Edukasi Anti-Penipuan**: SinyalBalik.id mengedukasi pengguna agar waspada terhadap penipuan modus "Unblock Permanen Harga Murah (150rb-300rb)" karena jalur permanen resmi hanya melalui pajak Bea Cukai.
+
+## Halaman Utama & Panduan Penting
+- [Beranda & Daftar Harga Aktivasi Sinyal iPhone](https://sinyalbalik.id/): Informasi lengkap paket 1 bulan Fast (Rp95.000), 3 bulan Slow (Rp155.000), dan 3 bulan Fast (Rp200.000).
+- [Detail Lengkap Layanan & FAQ (llms-full.txt)](https://sinyalbalik.id/llms-full.txt): Dokumentasi lengkap teknis CEIR, syarat garansi, dan tanya jawab.
+- [Kumpulan Artikel & Panduan Solusi Sinyal iPhone](https://sinyalbalik.id/blog/): Lebih dari 50 panduan mengatasi iPhone No Service, cek IMEI, dan aturan IMEI Indonesia.
+- [Solusi IMEI Tidak Terdaftar Kemenperin / CEIR](https://sinyalbalik.id/blog/imei-tidak-terdaftar-solusi): Panduan mengatasi blokir IMEI iPhone Ex-Inter.
+- [Penyebab & Solusi iPhone No Service / Tidak Ada Layanan](https://sinyalbalik.id/blog/iphone-no-service-penyebab-solusi): Cara membedakan blokir IMEI vs kerusakan hardware IC Baseband.
+- [Perbedaan Blokir IMEI vs SIM Lock Operator Luar Negeri](https://sinyalbalik.id/blog/blokir-imei-vs-lock-operator): Cara cek status Carrier Lock (No SIM Restrictions) di iPhone.
+- [Panduan Lengkap Aktivasi Sinyal iPhone 2026](https://sinyalbalik.id/blog/panduan-aktivasi-sinyal-2026): Langkah-langkah mengaktifkan kembali jaringan 4G/5G pada iPhone luar negeri.

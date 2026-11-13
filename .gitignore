@@ -2,6 +2,9 @@
 sinyalbalik.id/
 *.py
 *.txt
+!robots.txt
+!llms.txt
+!llms-full.txt
 *.jpeg
 !contohhhhhh.jpeg
 photo_*.jpg

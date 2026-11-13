@@ -1,3 +1,49 @@
+# robots.txt for https://sinyalbalik.id/
+# Optimized for Google Search, Bing, ChatGPT Search, Google Gemini, Claude AI, and Perplexity
+
 User-agent: *
 Allow: /
+
+# OpenAI / ChatGPT Search & Assistant
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Google Search & Google Gemini / AI Overviews
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic / Claude AI
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI Search
+User-agent: PerplexityBot
+Allow: /
+
+# Apple Siri & Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Bing / Copilot
+User-agent: bingbot
+Allow: /
+
 Sitemap: https://sinyalbalik.id/sitemap.xml
