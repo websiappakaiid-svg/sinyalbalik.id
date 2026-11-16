@@ -24,12 +24,15 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Aktivasi & Unlock Sinyal iPhone Ex-Inter | sinyalbalik.id">
-  <meta name="twitter:description" content="Atasi iPhone Ex-Inter Tidak Ada Layanan / No Service mulai Rp95.000. Proses cepat < 1 jam, tanpa bongkar mesin, garansi resmi.">
+  <meta name="twitter:description"
+    content="Atasi iPhone Ex-Inter Tidak Ada Layanan / No Service mulai Rp95.000. Proses cepat < 1 jam, tanpa bongkar mesin, garansi resmi.">
   <meta name="twitter:image" content="https://sinyalbalik.id/logo.webp">
 
   <!-- GEO / LLM Discovery Links (ChatGPT, Claude, Gemini, Perplexity) -->
-  <link rel="alternate" type="text/plain" href="https://sinyalbalik.id/llms.txt" title="Ringkasan Layanan SinyalBalik.id untuk AI (LLMs.txt)">
-  <link rel="alternate" type="text/plain" href="https://sinyalbalik.id/llms-full.txt" title="Dokumentasi Lengkap SinyalBalik.id untuk AI (LLMs-Full.txt)">
+  <link rel="alternate" type="text/plain" href="https://sinyalbalik.id/llms.txt"
+    title="Ringkasan Layanan SinyalBalik.id untuk AI (LLMs.txt)">
+  <link rel="alternate" type="text/plain" href="https://sinyalbalik.id/llms-full.txt"
+    title="Dokumentasi Lengkap SinyalBalik.id untuk AI (LLMs-Full.txt)">
 
   <!-- Preload Critical Hero Image for Instant LCP -->
   <link rel="preload" as="image" href="hero-3d.webp" type="image/webp" fetchpriority="high">
@@ -1004,6 +1007,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 16px;
+      align-items: start;
     }
 
     .info-card {
@@ -1024,7 +1028,7 @@
       gap: 8px;
     }
 
-    .info-card > p {
+    .info-card>p {
       font-size: 0.88rem;
       color: var(--text-muted);
       margin-bottom: 14px;
@@ -1070,6 +1074,302 @@
       font-size: 0.83rem;
       color: var(--text-secondary);
       line-height: 1.45;
+    }
+
+    .type-row--interactive {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .type-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 12px 14px;
+      text-align: left;
+      font-family: inherit;
+      cursor: pointer;
+      display: block;
+    }
+
+    .type-toggle-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+
+    .type-toggle-head h4 {
+      margin-bottom: 0;
+      flex: 1 1 180px;
+    }
+
+    .type-check-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 5px 11px;
+      border-radius: var(--radius-pill);
+      background: #ffffff;
+      border: 1px solid currentColor;
+      white-space: nowrap;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .type-row.ok .type-check-pill {
+      color: #15803d;
+    }
+
+    .type-row.warn .type-check-pill {
+      color: #b45309;
+    }
+
+    .type-row.no .type-check-pill {
+      color: #b91c1c;
+    }
+
+    .type-check-pill i {
+      font-size: 0.7rem;
+      transition: transform 0.2s ease;
+    }
+
+    .type-row.open .type-check-pill i {
+      transform: rotate(180deg);
+    }
+
+    .type-detail {
+      display: none;
+      padding: 12px 14px 14px;
+      background: #ffffff;
+      border-top: 1px dashed var(--border-strong);
+      font-size: 0.83rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .type-row.open .type-detail {
+      display: block;
+    }
+
+    .type-detail-block+.type-detail-block {
+      margin-top: 10px;
+    }
+
+    .type-detail-title {
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+      font-size: 0.84rem;
+    }
+
+    .type-detail-steps {
+      margin: 4px 0 0 18px;
+      padding: 0;
+      display: grid;
+      gap: 4px;
+    }
+
+    .type-detail-photos {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 480px) {
+      .type-detail-photos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .type-detail-photos figure {
+      margin: 0;
+      border: 1.5px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: #ffffff;
+      position: relative;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .type-detail-photos figure:hover {
+      border-color: var(--blue);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .figure-zoom-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .type-detail-photos img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      background: #f8fafc;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .type-detail-photos figure:hover img {
+      transform: scale(1.02);
+    }
+
+    .type-detail-photos.single img {
+      height: auto;
+      max-height: 250px;
+    }
+
+    .type-detail-photos figcaption {
+      padding: 8px 10px;
+      font-size: 0.77rem;
+      color: var(--text-secondary);
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    /* LIGHTBOX MODAL PREVIEW HD */
+    .img-lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    .img-lightbox.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .img-lightbox-backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .img-lightbox-dialog {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+      width: 100%;
+      max-height: 94vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .img-lightbox-close {
+      position: absolute;
+      top: -14px;
+      right: -8px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #0f172a;
+      border: 2px solid #e2e8f0;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+      z-index: 3;
+      transition: transform 0.15s, background 0.15s;
+    }
+
+    .img-lightbox-close:hover {
+      background: #f1f5f9;
+      transform: scale(1.08);
+    }
+
+    .img-lightbox-body {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+      max-height: 88vh;
+    }
+
+    .img-lightbox-body img {
+      max-width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      display: block;
+      background: #0f172a;
+    }
+
+    .img-lightbox-caption {
+      padding: 12px 18px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text);
+      text-align: center;
+      background: #ffffff;
+      width: 100%;
+      border-top: 1px solid var(--border);
+      line-height: 1.45;
+    }
+
+    .type-detail-cta {
+      margin-top: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.81rem;
+      font-weight: 800;
+      padding: 8px 13px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #ffffff;
+      background: var(--wa-dark);
+    }
+
+    .type-detail-cta:hover {
+      background: #0e7165;
     }
 
     /* SCAM WARNING CARD */
@@ -1390,7 +1690,9 @@
             </h1>
 
             <p class="hero-lead">
-              Solusi resmi <strong>aktivasi &amp; unlock sinyal iPhone Ex-Inter</strong> yang terkena blokir IMEI (<em>No Service / Mencari...</em>). Proses 100% online via sistem CEIR tanpa bongkar mesin, pembayaran via <strong>QRIS resmi</strong>, dan bergaransi penuh.
+              Solusi resmi <strong>aktivasi &amp; unlock sinyal iPhone Ex-Inter</strong> yang terkena blokir IMEI
+              (<em>No Service / Mencari...</em>). Proses 100% online via sistem CEIR tanpa bongkar mesin, pembayaran via
+              <strong>QRIS resmi</strong>, dan bergaransi penuh.
             </p>
 
             <div class="hero-ctas">
@@ -1405,13 +1707,15 @@
 
             <div class="hero-microcopy">
               <i class="fas fa-circle-check"></i>
-              <span>Boleh konsultasi &amp; cek kondisi iPhone dulu ke Admin (100% Gratis, gak harus langsung order!)</span>
+              <span>Boleh konsultasi &amp; cek kondisi iPhone dulu ke Admin (100% Gratis, gak harus langsung
+                order!)</span>
             </div>
           </div>
 
           <div class="hero-visual-card">
             <div class="hero-visual-top">
-              <img src="hero-3d.webp" alt="Jasa Aktivasi dan Unlock Sinyal iPhone Ex-Inter" class="hero-img" width="96" height="96" fetchpriority="high" decoding="async">
+              <img src="hero-3d.webp" alt="Jasa Aktivasi dan Unlock Sinyal iPhone Ex-Inter" class="hero-img" width="96"
+                height="96" fetchpriority="high" decoding="async">
               <div class="hero-visual-meta">
                 <span class="tag-pill"><i class="fas fa-shield-halved"></i> TERVERIFIKASI CEIR</span>
                 <h2>Jaringan 4G/5G Kembali Normal</h2>
@@ -1422,19 +1726,23 @@
             <ul class="trust-points">
               <li>
                 <i class="fas fa-check-circle"></i>
-                <span><strong>Garansi Penuh:</strong> Sinyal padam di masa aktif? Kami bantu aktivasi ulang gratis.</span>
+                <span><strong>Garansi Penuh:</strong> Sinyal padam di masa aktif? Kami bantu aktivasi ulang
+                  gratis.</span>
               </li>
               <li>
                 <i class="fas fa-check-circle"></i>
-                <span><strong>Jaminan 100% Refund:</strong> Jika status IMEI terbaca <em>Unknown</em> (ditolak sistem), uang kembali utuh.</span>
+                <span><strong>Jaminan 100% Refund:</strong> Jika status IMEI terbaca <em>Unknown</em> (ditolak sistem),
+                  uang kembali utuh.</span>
               </li>
               <li>
                 <i class="fas fa-check-circle"></i>
-                <span><strong>Bebas Ganti Kartu &amp; Update iOS:</strong> Mendukung Telkomsel, Indosat, XL, Smartfren, Tri, by.U.</span>
+                <span><strong>Bebas Ganti Kartu &amp; Update iOS:</strong> Mendukung Telkomsel, Indosat, XL, Smartfren,
+                  Tri, by.U.</span>
               </li>
               <li>
                 <i class="fas fa-check-circle"></i>
-                <span><strong>Pembayaran QRIS Resmi:</strong> Mendukung seluruh E-Wallet &amp; Mobile Banking Indonesia.</span>
+                <span><strong>Pembayaran QRIS Resmi:</strong> Mendukung seluruh E-Wallet &amp; Mobile Banking
+                  Indonesia.</span>
               </li>
             </ul>
           </div>
@@ -1452,7 +1760,8 @@
           </div>
           <h2 class="h-title">Pilih Paket Sesuai Kebutuhan Anda</h2>
           <p class="p-subtitle">
-            Tersedia paket hemat <strong>1 Bulan Fast (Rp95.000)</strong> maupun paket <strong>3 Bulan (Rp155.000 – Rp200.000)</strong>. Transparan tanpa biaya tambahan tersembunyi.
+            Tersedia paket hemat <strong>1 Bulan Fast (Rp95.000)</strong> maupun paket <strong>3 Bulan (Rp155.000 –
+              Rp200.000)</strong>. Transparan tanpa biaya tambahan tersembunyi.
           </p>
         </div>
 
@@ -1522,8 +1831,10 @@
 
               <ul class="tier-features">
                 <li><i class="fas fa-check-circle"></i> <span><strong>Prioritas Utama Antrean Admin</strong></span></li>
-                <li><i class="fas fa-check-circle"></i> <span>Masa Aktif Sinyal <strong>3 Bulan Penuh</strong></span></li>
-                <li><i class="fas fa-check-circle"></i> <span><strong>Garansi 3 Bulan Real</strong> (S&amp;K Berlaku)</span></li>
+                <li><i class="fas fa-check-circle"></i> <span>Masa Aktif Sinyal <strong>3 Bulan Penuh</strong></span>
+                </li>
+                <li><i class="fas fa-check-circle"></i> <span><strong>Garansi 3 Bulan Real</strong> (S&amp;K
+                    Berlaku)</span></li>
                 <li><i class="fas fa-check-circle"></i> <span>Bebas ganti semua kartu SIM operator</span></li>
                 <li><i class="fas fa-check-circle"></i> <span>Bebas update iOS versi terbaru</span></li>
                 <li><i class="fas fa-check-circle"></i> <span>Pembayaran instan via QRIS resmi</span></li>
@@ -1560,8 +1871,10 @@
               </div>
 
               <ul class="tier-features">
-                <li><i class="fas fa-check-circle"></i> <span>Masa Aktif Sinyal <strong>3 Bulan Penuh</strong></span></li>
-                <li><i class="fas fa-check-circle"></i> <span><strong>Garansi 3 Bulan Real</strong> (S&amp;K Berlaku)</span></li>
+                <li><i class="fas fa-check-circle"></i> <span>Masa Aktif Sinyal <strong>3 Bulan Penuh</strong></span>
+                </li>
+                <li><i class="fas fa-check-circle"></i> <span><strong>Garansi 3 Bulan Real</strong> (S&amp;K
+                    Berlaku)</span></li>
                 <li><i class="fas fa-check-circle"></i> <span>Bebas ganti semua kartu SIM operator</span></li>
                 <li><i class="fas fa-check-circle"></i> <span>Bebas update iOS versi terbaru</span></li>
                 <li><i class="fas fa-check-circle"></i> <span>Pembayaran instan via QRIS resmi</span></li>
@@ -1581,7 +1894,8 @@
           <span class="ask-first-badge"><i class="fas fa-comments"></i> KONSULTASI GRATIS TANPA SYARAT</span>
           <h3>Masih Ragu atau Mau Tanya-Tanya Dulu ke Admin? Boleh Banget!</h3>
           <p>
-            Belum yakin iPhone Anda Ex-Inter biasa atau Simlock? Atau mau tanya detail proses sebelum memutuskan order? Jangan sungkan, langsung chat Admin kami dulu. <strong>Tanya-tanya 100% gratis dan ramah!</strong>
+            Belum yakin iPhone Anda Ex-Inter biasa atau Simlock? Atau mau tanya detail proses sebelum memutuskan order?
+            Jangan sungkan, langsung chat Admin kami dulu. <strong>Tanya-tanya 100% gratis dan ramah!</strong>
           </p>
           <a href="https://wa.me/6285142938392?text=Halo%20Admin%20SinyalBalik%2C%20saya%20mau%20tanya-tanya%20dulu%20soal%20aktivasi%20sinyal%20iPhone%20boleh%3F"
             class="btn btn-wa-solid" style="max-width: 360px; width: 100%;" target="_blank" rel="noopener">
@@ -1610,7 +1924,9 @@
             <div class="step-number">1</div>
             <div class="step-body">
               <h3>Ketik *#06# &amp; Kirim Nomor IMEI 1</h3>
-              <p>Buka menu panggilan telepon, ketik <strong>*#06#</strong>, lalu salin atau screenshot 15 digit nomor <strong>IMEI 1</strong> dan kirim ke WhatsApp Admin.</p>
+              <p>Buka menu panggilan telepon, ketik <strong>*#06#</strong>, lalu salin atau screenshot 15 digit nomor
+                <strong>IMEI 1</strong> dan kirim ke WhatsApp Admin.
+              </p>
             </div>
           </div>
 
@@ -1618,7 +1934,8 @@
             <div class="step-number">2</div>
             <div class="step-body">
               <h3>Pilih Paket Sesuai Kebutuhan</h3>
-              <p>Tentukan paket pilihan Anda: <strong>1 Bulan Fast (Rp95rb)</strong>, <strong>3 Bulan Slow (Rp155rb)</strong>, atau <strong>3 Bulan Fast Prioritas (Rp200rb)</strong>.</p>
+              <p>Tentukan paket pilihan Anda: <strong>1 Bulan Fast (Rp95rb)</strong>, <strong>3 Bulan Slow
+                  (Rp155rb)</strong>, atau <strong>3 Bulan Fast Prioritas (Rp200rb)</strong>.</p>
             </div>
           </div>
 
@@ -1626,7 +1943,8 @@
             <div class="step-number">3</div>
             <div class="step-body">
               <h3>Bayar Praktis via QRIS Resmi</h3>
-              <p>Admin mengirimkan barcode QRIS resmi. Bisa di-scan menggunakan seluruh E-Wallet (DANA, GoPay, OVO, ShopeePay) maupun semua Mobile Banking.</p>
+              <p>Admin mengirimkan barcode QRIS resmi. Bisa di-scan menggunakan seluruh E-Wallet (DANA, GoPay, OVO,
+                ShopeePay) maupun semua Mobile Banking.</p>
             </div>
           </div>
 
@@ -1634,7 +1952,8 @@
             <div class="step-number">4</div>
             <div class="step-body">
               <h3>Admin Proses &amp; Sinyal Menyala</h3>
-              <p>Admin memproses IMEI hingga berstatus <strong>Roamer</strong>. Begitu dikabari selesai, nyalakan lalu matikan Mode Pesawat dan sinyal 4G/5G langsung keluar!</p>
+              <p>Admin memproses IMEI hingga berstatus <strong>Roamer</strong>. Begitu dikabari selesai, nyalakan lalu
+                matikan Mode Pesawat dan sinyal 4G/5G langsung keluar!</p>
             </div>
           </div>
         </div>
@@ -1656,22 +1975,28 @@
 
         <div class="testi-track">
           <div class="testi-item">
-            <img src="testi-1.webp" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 1" loading="lazy" decoding="async" width="400" height="300">
+            <img src="testi-1.webp" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 1" loading="lazy"
+              decoding="async" width="400" height="300">
           </div>
           <div class="testi-item">
-            <img src="testi-2.webp" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 2" loading="lazy" decoding="async" width="400" height="300">
+            <img src="testi-2.webp" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 2" loading="lazy"
+              decoding="async" width="400" height="300">
           </div>
           <div class="testi-item">
-            <img src="testi-3.webp" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 3" loading="lazy" decoding="async" width="400" height="300">
+            <img src="testi-3.webp" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 3" loading="lazy"
+              decoding="async" width="400" height="300">
           </div>
           <div class="testi-item">
-            <img src="testi-4.jpg" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 4" loading="lazy" decoding="async" width="400" height="300">
+            <img src="testi-4.jpg" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 4" loading="lazy"
+              decoding="async" width="400" height="300">
           </div>
           <div class="testi-item">
-            <img src="testi-5.jpg" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 5" loading="lazy" decoding="async" width="400" height="300">
+            <img src="testi-5.jpg" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 5" loading="lazy"
+              decoding="async" width="400" height="300">
           </div>
           <div class="testi-item">
-            <img src="testi-7.jpg" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 6" loading="lazy" decoding="async" width="400" height="300">
+            <img src="testi-7.jpg" alt="Bukti Testimoni Aktivasi dan Unlock Sinyal iPhone 6" loading="lazy"
+              decoding="async" width="400" height="300">
           </div>
         </div>
 
@@ -1682,14 +2007,16 @@
             Cek Lebih Banyak Bukti di Saluran WhatsApp Testimoni
           </h3>
           <p>
-            Gambar di atas hanya sebagian dari dokumentasi pengerjaan kami. Biar makin yakin dan tidak ragu, silakan lihat update testimoni pengerjaan lainnya langsung di Saluran WhatsApp resmi kami!
+            Gambar di atas hanya sebagian dari dokumentasi pengerjaan kami. Biar makin yakin dan tidak ragu, silakan
+            lihat update testimoni pengerjaan lainnya langsung di Saluran WhatsApp resmi kami!
           </p>
           <div class="wa-channel-note">
-            🙏 <em>"Mohon bergabung &amp; ikuti saluran ya Kak! Maaf saluran WA kita masih baru dibuat jadi member/pengikutnya masih sedikit, member lain segera menyusul!"</em>
+            🙏 <em>"Mohon bergabung &amp; ikuti saluran ya Kak! Maaf saluran WA kita masih baru dibuat jadi
+              member/pengikutnya masih sedikit, member lain segera menyusul!"</em>
           </div>
           <div>
-            <a href="https://whatsapp.com/channel/0029Vb75SUEISTkJAa7cID1s"
-              class="btn btn-wa-solid" style="max-width: 380px; width: 100%;" target="_blank" rel="noopener">
+            <a href="https://whatsapp.com/channel/0029Vb75SUEISTkJAa7cID1s" class="btn btn-wa-solid"
+              style="max-width: 380px; width: 100%;" target="_blank" rel="noopener">
               <i class="fab fa-whatsapp"></i> Lihat &amp; Gabung Saluran WA Testimoni
             </a>
           </div>
@@ -1713,25 +2040,159 @@
 
         <div class="info-grid-2">
 
-          <!-- CARD A: 3 TIPE IPHONE -->
+          <!-- CARD A: 3 TIPE IPHONE (DENGAN KLIK UNTUK CEK & PENJELASAN) -->
           <div class="info-card">
             <h3><i class="fas fa-mobile-screen" style="color: var(--blue);"></i> Kenali 3 Tipe iPhone Sebelum Order</h3>
-            <p>Cek di menu <em>Pengaturan &gt; Umum &gt; Mengenai &gt; Kunci Operator (Carrier Lock)</em>:</p>
+            <p>Cek menu <em>Pengaturan &gt; Umum &gt; Mengenai &gt; Kunci Operator</em>, lalu tap tiap opsi di bawah
+              untuk cek arti &amp; contoh layarnya:</p>
 
             <div class="type-list">
-              <div class="type-row ok">
-                <h4 style="color: #15803d;"><i class="fas fa-circle-check"></i> 1. iPhone Ex-Inter Biasa (Aman Diproses)</h4>
-                <p>Tertulis <strong>"Tidak ada pembatasan SIM" (No SIM restrictions)</strong> dan Modem Firmware terbaca normal. Unit ini 100% siap langsung diproses!</p>
+              <!-- 1. INTER -->
+              <div class="type-row ok type-row--interactive" id="tipe-inter">
+                <button type="button" class="type-toggle" aria-expanded="false" aria-controls="detail-inter">
+                  <div class="type-toggle-head">
+                    <h4 style="color: #15803d;"><i class="fas fa-circle-check"></i> 1. iPhone Ex-Inter Biasa (Aman
+                      Diproses)</h4>
+                    <span class="type-check-pill">Klik untuk cek <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  <p>Kunci Operator wajib tertulis <strong>"Tidak ada pembatasan SIM"</strong> (atau <em>"No SIM restrictions"</em>) &amp; Firmware Modem ada angkanya. 100% aman diproses!</p>
+                </button>
+                <div class="type-detail" id="detail-inter">
+                  <div class="type-detail-block">
+                    <div class="type-detail-title">Apa itu iPhone Ex-Inter?</div>
+                    <p>iPhone original keluaran luar negeri (seperti Singapura, US, Jepang, Hong Kong) yang legal &amp;
+                      mesinnya normal, hanya saja IMEI-nya diblokir sistem CEIR Indonesia karena belum bayar pajak Bea
+                      Cukai. Kartu SIM lokal tetap terbaca namanya, namun indikator sinyal hanya <strong>No Service /
+                        Tidak Ada Layanan / Mencari</strong>.</p>
+                  </div>
+                  <div class="type-detail-block">
+                    <div class="type-detail-title">Cara Cek Sendiri di iPhone Kamu:</div>
+                    <ol class="type-detail-steps">
+                      <li>Buka <strong>Pengaturan &gt; Umum &gt; Mengenai</strong>, gulir ke <strong>Kunci Operator (Carrier Lock)</strong> &rarr; wajib tertulis <strong>"Tidak ada pembatasan SIM"</strong> (atau <em>"No SIM restrictions"</em> jika iPhone memakai bahasa Inggris).</li>
+                      <li>Tekan <strong>*#06#</strong> di papan telepon &rarr; angka <strong>IMEI 1 &amp; IMEI 2</strong> tampil jelas dan bagian <strong>Firmware Modem</strong> terisi angka.</li>
+                      <li>Setelah diaktifkan di SinyalBalik.id, cukup Mode Pesawat 15 detik &amp; sinyal 4G/5G semua operator Indonesia langsung keluar.</li>
+                    </ol>
+                  </div>
+                  <div class="type-detail-photos">
+                    <figure>
+                      <span class="figure-zoom-badge"><i class="fas fa-magnifying-glass-plus"></i> Tap / Klik HD</span>
+                      <img src="img-no-service.jpg" alt="Contoh status No Service pada iPhone Ex-Inter terblokir IMEI"
+                        loading="lazy" decoding="async">
+                      <figcaption>Tanda awal blokir IMEI: status <strong>No Service / Tidak Ada Layanan</strong> meski kartu SIM lokal masuk.</figcaption>
+                    </figure>
+                    <figure>
+                      <span class="figure-zoom-badge"><i class="fas fa-magnifying-glass-plus"></i> Tap / Klik HD</span>
+                      <img src="img-no-sim-restriction.jpg"
+                        alt="Contoh Pengaturan Kunci Operator bertuliskan No SIM restrictions" loading="lazy"
+                        decoding="async">
+                      <figcaption>Wajib tertulis <strong>"Tidak ada pembatasan SIM"</strong> (atau <em>No SIM restrictions</em>) — unit aman langsung diproses!</figcaption>
+                    </figure>
+                  </div>
+                  <a href="https://wa.me/6285142938392?text=Halo%20Admin%20SinyalBalik%2C%20iPhone%20saya%20Ex-Inter%20No%20SIM%20Restrictions%2C%20mau%20cek%20%26%20konsultasi%20paket."
+                    class="type-detail-cta" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Unit Saya Ex-Inter, Konsultasi ke Admin
+                  </a>
+                </div>
               </div>
 
-              <div class="type-row warn">
-                <h4 style="color: #b45309;"><i class="fas fa-lock"></i> 2. iPhone SIM Lock (Tanya Admin Dulu)</h4>
-                <p>Tertulis <strong>"SIM Dikunci"</strong> (terikat operator luar negeri seperti Docomo, Softbank, AT&amp;T). Wajib konsultasikan ke Admin terlebih dahulu.</p>
+              <!-- 2. SIM LOCK -->
+              <div class="type-row warn type-row--interactive" id="tipe-simlock">
+                <button type="button" class="type-toggle" aria-expanded="false" aria-controls="detail-simlock">
+                  <div class="type-toggle-head">
+                    <h4 style="color: #b45309;"><i class="fas fa-lock"></i> 2. iPhone SIM Lock (Tanya Admin Dulu)</h4>
+                    <span class="type-check-pill">Klik untuk cek <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  <p>Tertulis <strong>"SIM Dikunci"</strong> (terikat kontrak operator luar seperti Docomo, Softbank,
+                    AT&amp;T). Wajib konsultasi Admin dulu.</p>
+                </button>
+                <div class="type-detail" id="detail-simlock">
+                  <div class="type-detail-block">
+                    <div class="type-detail-title">Apa itu iPhone SIM Lock (Carrier Lock)?</div>
+                    <p>iPhone tersebut masih terkunci kontrak operator negara asal (misalnya Softbank/AU/Docomo Jepang
+                      atau T-Mobile/AT&amp;T Amerika). Jadi slot SIM-nya dikunci oleh sistem operator luar agar hanya
+                      bisa memakai kartu asal negara tersebut—berbeda dengan blokir IMEI Indonesia.</p>
+                  </div>
+                  <div class="type-detail-block">
+                    <div class="type-detail-title">Cara Cek &amp; Ciri-Cirinya:</div>
+                    <ol class="type-detail-steps">
+                      <li>Di <strong>Pengaturan &gt; Umum &gt; Mengenai &gt; Kunci Operator</strong> tertulis
+                        <strong>"SIM dikunci"</strong> (<em>SIM Locked</em>).
+                      </li>
+                      <li>Saat memasukkan kartu Telkomsel / XL / Indosat / Tri / Smartfren, muncul layar putih
+                        bertuliskan <strong>"SIM Not Supported"</strong> atau "Kartu SIM Tidak Didukung".</li>
+                      <li>Jangan langsung transfer paket IMEI sebelum dicek—kirim screenshot menu Mengenai ke Admin
+                        untuk dibantu cek gratis.</li>
+                    </ol>
+                  </div>
+                  <div class="type-detail-photos">
+                    <figure>
+                      <span class="figure-zoom-badge"><i class="fas fa-magnifying-glass-plus"></i> Tap / Klik HD</span>
+                      <img src="img-sim-dikunci.jpg" alt="Contoh menu Pengaturan Kunci Operator bertuliskan SIM dikunci"
+                        loading="lazy" decoding="async">
+                      <figcaption>Kunci Operator tertulis <strong>"SIM dikunci"</strong> (terikat kontrak operator luar negeri).</figcaption>
+                    </figure>
+                    <figure>
+                      <span class="figure-zoom-badge"><i class="fas fa-magnifying-glass-plus"></i> Tap / Klik HD</span>
+                      <img src="img-sim-not-supported.jpg" alt="Contoh layar iPhone bertuliskan SIM Not Supported"
+                        loading="lazy" decoding="async">
+                      <figcaption>Muncul notifikasi <strong>"SIM Not Supported"</strong> saat dipasang kartu operator lokal.</figcaption>
+                    </figure>
+                  </div>
+                  <a href="https://wa.me/6285142938392?text=Halo%20Admin%20SinyalBalik%2C%20di%20iPhone%20saya%20tertulis%20SIM%20Dikunci%20%2F%20SIM%20Not%20Supported%2C%20mohon%20bantu%20cek%20gratis."
+                    class="type-detail-cta" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Tanya &amp; Cek SIM Lock ke Admin Gratis
+                  </a>
+                </div>
               </div>
 
-              <div class="type-row no">
-                <h4 style="color: #b91c1c;"><i class="fas fa-ban"></i> 3. iPhone Bypass / Rusak Mesin (Tidak Dilayani)</h4>
-                <p>Unit bekas bypass iCloud atau rusak hardware IC Baseband (Modem Firmware kosong) tidak dapat diaktifkan via sistem IMEI.</p>
+              <!-- 3. BYPASS & IC BASEBAND -->
+              <div class="type-row no type-row--interactive" id="tipe-bypass">
+                <button type="button" class="type-toggle" aria-expanded="false" aria-controls="detail-bypass">
+                  <div class="type-toggle-head">
+                    <h4 style="color: #b91c1c;"><i class="fas fa-ban"></i> 3. iPhone Bypass / IC Baseband (Tidak
+                      Dilayani)</h4>
+                    <span class="type-check-pill">Klik untuk cek <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  <p>Unit bekas <strong>bypass iCloud</strong> atau rusak hardware <strong>IC Baseband</strong> (IMEI /
+                    Firmware Modem kosong) tidak bisa diaktifkan via IMEI.</p>
+                </button>
+                <div class="type-detail" id="detail-bypass">
+                  <div class="type-detail-block">
+                    <div class="type-detail-title">Apa itu iPhone Bypass &amp; Apa itu IC Baseband?</div>
+                    <p>
+                      • <strong>iPhone Bypass:</strong> Unit yang dulunya terkunci iCloud (<em>Activation Lock</em>)
+                      lalu dijebol memakai tool software agar masuk menu utama, atau memakai chip R-SIM/iCard. Umumnya
+                      jalur selulernya dimatikan/tidak resmi (Wi-Fi only) dan dilarang reset ulang.<br>
+                      • <strong>Rusak IC Baseband:</strong> IC Baseband adalah chip modem seluler fisik di dalam mesin
+                      (logic board) iPhone. Jika chip ini rusak (biasanya karena jatuh/air/servis), mesin HP memang mati
+                      fungsi sinyalnya—didaftarkan IMEI pun tetap tidak akan menangkap sinyal sebelum diperbaiki servis
+                      mesin.
+                    </p>
+                  </div>
+                  <div class="type-detail-block">
+                    <div class="type-detail-title">Cara Cek Supaya Kamu Tidak Salah Beli:</div>
+                    <ol class="type-detail-steps">
+                      <li>Dial <strong>*#06#</strong> &rarr; jika layar kosong / nomor <strong>IMEI tidak
+                          muncul</strong> sama sekali, kemungkinan besar IC Baseband bermasalah.</li>
+                      <li>Buka <strong>Pengaturan &gt; Umum &gt; Mengenai</strong> &rarr; cek baris <strong>Firmware
+                          Modem</strong> (lihat panduan gambar). Jika kosong atau muncul peringatan <em>Pembaruan
+                          Seluler Gagal</em>, berarti hardware baseband rusak.</li>
+                      <li>Kami sengaja menolak unit bypass/baseband demi menjaga keamanan dana pembeli agar tidak
+                        membayar sia-sia.</li>
+                    </ol>
+                  </div>
+                  <div class="type-detail-photos single">
+                    <figure>
+                      <span class="figure-zoom-badge"><i class="fas fa-magnifying-glass-plus"></i> Tap / Klik HD</span>
+                      <img src="img-cek-imei.jpg" alt="Panduan membuka Settings General About untuk memeriksa IMEI dan Firmware Modem iPhone" loading="lazy" decoding="async">
+                      <figcaption>Buka Settings &gt; General &gt; About: baris <strong>IMEI</strong> &amp; <strong>Firmware Modem</strong> wajib ada angkanya (tidak boleh kosong).</figcaption>
+                    </figure>
+                  </div>
+                  <a href="https://wa.me/6285142938392?text=Halo%20Admin%20SinyalBalik%2C%20saya%20ragu%20apakah%20iPhone%20saya%20normal%20atau%20bypass%2Fbaseband%2C%20boleh%20minta%20bantu%20cek%20screenshot%3F"
+                    class="type-detail-cta" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Ragu? Kirim Screenshot About ke Admin Gratis
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1743,21 +2204,28 @@
 
             <div class="type-list">
               <div class="type-row ok">
-                <h4 style="color: #15803d;"><i class="fas fa-check-circle"></i> Status ROAMER = Sinyal Aktif Menyala</h4>
-                <p>IMEI berhasil terdaftar aktif di sistem jaringan. Cukup hidupkan &amp; matikan Mode Pesawat, sinyal langsung keluar.</p>
+                <h4 style="color: #15803d;"><i class="fas fa-check-circle"></i> Status ROAMER = Sinyal Aktif Menyala
+                </h4>
+                <p>IMEI berhasil terdaftar aktif di sistem jaringan. Cukup hidupkan &amp; matikan Mode Pesawat, sinyal
+                  langsung keluar.</p>
               </div>
 
               <div class="type-row no">
                 <h4 style="color: #b91c1c;"><i class="fas fa-rotate-left"></i> Status UNKNOWN = Refund Utuh 100%</h4>
-                <p>Jika nomor IMEI ditolak server pusat (terbaca Unknown), transaksi batal dan <strong>uang Anda dikembalikan 100% utuh tanpa potongan</strong>.</p>
+                <p>Jika nomor IMEI ditolak server pusat (terbaca Unknown), transaksi batal dan <strong>uang Anda
+                    dikembalikan 100% utuh tanpa potongan</strong>.</p>
               </div>
 
               <div class="type-row" style="background: var(--surface-subtle);">
-                <h4 style="color: var(--text);"><i class="fas fa-shield-heart" style="color: var(--blue);"></i> Aturan Garansi &amp; Jam Operasional</h4>
+                <h4 style="color: var(--text);"><i class="fas fa-shield-heart" style="color: var(--blue);"></i> Aturan
+                  Garansi &amp; Jam Operasional</h4>
                 <p>
-                  • <strong>Garansi Dicover:</strong> Jika sinyal padam karena faktor sistem jaringan dalam masa garansi, kami bantu aktivasi ulang gratis.<br>
-                  • <strong>Garansi Hangus:</strong> Jika HP mengalami kerusakan mesin/IC Baseband, jatuh/kena air, atau unit bypass.<br>
-                  • <strong>Jam Admin:</strong> Senin–Sabtu (12.00–20.00 WIB), Minggu santai/fleksibel (chat di luar jam kerja tetap masuk antrean).
+                  • <strong>Garansi Dicover:</strong> Jika sinyal padam karena faktor sistem jaringan dalam masa
+                  garansi, kami bantu aktivasi ulang gratis.<br>
+                  • <strong>Garansi Hangus:</strong> Jika HP mengalami kerusakan mesin/IC Baseband, jatuh/kena air, atau
+                  unit bypass.<br>
+                  • <strong>Jam Admin:</strong> Senin–Sabtu (12.00–20.00 WIB), Minggu santai/fleksibel (chat di luar jam
+                  kerja tetap masuk antrean).
                 </p>
               </div>
             </div>
@@ -1768,7 +2236,8 @@
         <!-- WASPADA PENIPUAN UNBLOCK PERMANEN MURAH -->
         <div class="scam-alert-card">
           <div>
-            <img src="scam-warning.webp" alt="Waspada Penipuan Unblock IMEI Permanen Murah" class="scam-img" loading="lazy" decoding="async" width="500" height="300">
+            <img src="scam-warning.webp" alt="Waspada Penipuan Unblock IMEI Permanen Murah" class="scam-img"
+              loading="lazy" decoding="async" width="500" height="300">
           </div>
           <div>
             <span class="save-pill" style="display: inline-block; margin-bottom: 8px;">EDUKASI ANTI PENIPUAN</span>
@@ -1776,8 +2245,11 @@
               Waspada Modus "Unblock Permanen Harga 150rb – 300rb"
             </h3>
             <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
-              Banyak oknum menawarkan janji manis <strong>"Unblock IMEI Permanen cuma 150rb – 300rb"</strong>. Faktanya, jalur resmi permanen hanya melalui pembayaran pajak Bea Cukai resmi yang biayanya jutaan rupiah.<br><br>
-              Di <strong>SinyalBalik.id</strong>, kami jujur dan transparan dari awal: layanan sistem kami berdurasi <strong>1 Bulan (Rp95rb)</strong> dan <strong>3 Bulan (Rp155rb – Rp200rb)</strong> lengkap dengan garansi resmi selama masa aktif.
+              Banyak oknum menawarkan janji manis <strong>"Unblock IMEI Permanen cuma 150rb – 300rb"</strong>. Faktanya,
+              jalur resmi permanen hanya melalui pembayaran pajak Bea Cukai resmi yang biayanya jutaan rupiah.<br><br>
+              Di <strong>SinyalBalik.id</strong>, kami jujur dan transparan dari awal: layanan sistem kami berdurasi
+              <strong>1 Bulan (Rp95rb)</strong> dan <strong>3 Bulan (Rp155rb – Rp200rb)</strong> lengkap dengan garansi
+              resmi selama masa aktif.
             </p>
           </div>
         </div>
@@ -1805,9 +2277,12 @@
               <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-body">
-              • <strong>Paket 1 Bulan Fast (Rp95.000):</strong> Masa aktif &amp; garansi 1 bulan, diproses kilat di bawah 1 jam (&lt; 60 menit). Cocok untuk yang butuh cepat dengan budget hemat di bawah 100rb.<br>
-              • <strong>Paket 3 Bulan Slow (Rp155.000):</strong> Masa aktif &amp; garansi 3 bulan penuh dengan estimasi pengerjaan 1–2 hari kerja (jika antrean kosong bisa beberapa jam).<br>
-              • <strong>Paket 3 Bulan Fast (Rp200.000):</strong> Masa aktif &amp; garansi 3 bulan penuh + masuk antrean prioritas utama admin yang selesai di bawah 1 jam (&lt; 60 menit).
+              • <strong>Paket 1 Bulan Fast (Rp95.000):</strong> Masa aktif &amp; garansi 1 bulan, diproses kilat di
+              bawah 1 jam (&lt; 60 menit). Cocok untuk yang butuh cepat dengan budget hemat di bawah 100rb.<br>
+              • <strong>Paket 3 Bulan Slow (Rp155.000):</strong> Masa aktif &amp; garansi 3 bulan penuh dengan estimasi
+              pengerjaan 1–2 hari kerja (jika antrean kosong bisa beberapa jam).<br>
+              • <strong>Paket 3 Bulan Fast (Rp200.000):</strong> Masa aktif &amp; garansi 3 bulan penuh + masuk antrean
+              prioritas utama admin yang selesai di bawah 1 jam (&lt; 60 menit).
             </div>
           </div>
 
@@ -1817,7 +2292,8 @@
               <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-body">
-              Sangat boleh! Anda bebas menghubungi WhatsApp Admin kami untuk konsultasi kondisi iPhone, bertanya cara cek IMEI, atau menanyakan ketersediaan antrean secara gratis tanpa harus langsung memesan.
+              Sangat boleh! Anda bebas menghubungi WhatsApp Admin kami untuk konsultasi kondisi iPhone, bertanya cara
+              cek IMEI, atau menanyakan ketersediaan antrean secara gratis tanpa harus langsung memesan.
             </div>
           </div>
 
@@ -1827,7 +2303,10 @@
               <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-body">
-              Jika sinyal iPhone Anda yang telah berstatus Roamer tiba-tiba padam dalam masa garansi (1 bulan atau 3 bulan sesuai paket) karena faktor sistem jaringan/database, kami bantu proses aktivasi ulang secara gratis sampai normal kembali. Garansi tidak berlaku apabila kerusakan berasal dari hardware/mesin HP (IC Baseband rusak) atau unit bypass.
+              Jika sinyal iPhone Anda yang telah berstatus Roamer tiba-tiba padam dalam masa garansi (1 bulan atau 3
+              bulan sesuai paket) karena faktor sistem jaringan/database, kami bantu proses aktivasi ulang secara gratis
+              sampai normal kembali. Garansi tidak berlaku apabila kerusakan berasal dari hardware/mesin HP (IC Baseband
+              rusak) atau unit bypass.
             </div>
           </div>
 
@@ -1837,7 +2316,9 @@
               <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-body">
-              Admin kami yang memvalidasi status IMEI Anda di sistem CEIR. Status <strong>Roamer</strong> menandakan IMEI berhasil aktif dan sinyal langsung menyala. Sedangkan status <strong>Unknown</strong> berarti IMEI tidak dapat diproses oleh sistem pusat, dan uang pembayaran Anda kami kembalikan utuh 100%.
+              Admin kami yang memvalidasi status IMEI Anda di sistem CEIR. Status <strong>Roamer</strong> menandakan
+              IMEI berhasil aktif dan sinyal langsung menyala. Sedangkan status <strong>Unknown</strong> berarti IMEI
+              tidak dapat diproses oleh sistem pusat, dan uang pembayaran Anda kami kembalikan utuh 100%.
             </div>
           </div>
 
@@ -1847,7 +2328,9 @@
               <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-body">
-              Sangat aman. Karena unit Anda adalah iPhone Ex-Inter biasa (No SIM Restrictions), Anda bebas berganti-ganti kartu SIM semua operator lokal (Telkomsel, Indosat, XL, Tri, Smartfren, by.U) dan bebas melakukan update versi iOS.
+              Sangat aman. Karena unit Anda adalah iPhone Ex-Inter biasa (No SIM Restrictions), Anda bebas
+              berganti-ganti kartu SIM semua operator lokal (Telkomsel, Indosat, XL, Tri, Smartfren, by.U) dan bebas
+              melakukan update versi iOS.
             </div>
           </div>
 
@@ -1857,7 +2340,9 @@
               <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-body">
-              Kami hanya melayani pembayaran melalui <strong>QRIS resmi</strong> SinyalBalik.id. Anda bisa melakukan pembayaran dari seluruh aplikasi E-Wallet (DANA, GoPay, OVO, ShopeePay, LinkAja) maupun Mobile Banking (BCA, Mandiri, BRI, BNI, BSI, SeaBank, Jago, dll).
+              Kami hanya melayani pembayaran melalui <strong>QRIS resmi</strong> SinyalBalik.id. Anda bisa melakukan
+              pembayaran dari seluruh aplikasi E-Wallet (DANA, GoPay, OVO, ShopeePay, LinkAja) maupun Mobile Banking
+              (BCA, Mandiri, BRI, BNI, BSI, SeaBank, Jago, dll).
             </div>
           </div>
         </div>
@@ -1873,7 +2358,8 @@
           </div>
           <h2 class="h-title">Panduan &amp; Solusi Sinyal iPhone Terpopuler</h2>
           <p class="p-subtitle">
-            Pelajari lebih lanjut mengenai penyebab sinyal hilang, cara cek IMEI, dan solusi iPhone Ex-Inter di Indonesia:
+            Pelajari lebih lanjut mengenai penyebab sinyal hilang, cara cek IMEI, dan solusi iPhone Ex-Inter di
+            Indonesia:
           </p>
         </div>
 
@@ -1926,7 +2412,8 @@
       </p>
 
       <div class="footer-soc">
-        <a href="https://wa.me/6285142938392?text=Halo%20Admin%20SinyalBalik%2C%20saya%20mau%20tanya-tanya%20soal%20aktivasi%20sinyal%20iPhone" target="_blank" rel="noopener">
+        <a href="https://wa.me/6285142938392?text=Halo%20Admin%20SinyalBalik%2C%20saya%20mau%20tanya-tanya%20soal%20aktivasi%20sinyal%20iPhone"
+          target="_blank" rel="noopener">
           <i class="fab fa-whatsapp" style="color: #25d366;"></i> WhatsApp Admin
         </a>
         <a href="https://whatsapp.com/channel/0029Vb75SUEISTkJAa7cID1s" target="_blank" rel="noopener">
@@ -1954,6 +2441,18 @@
     <span>Tanya Admin</span>
   </a>
 
+  <!-- LIGHTBOX MODAL PREVIEW HD -->
+  <div id="img-lightbox" class="img-lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau Gambar HD" hidden>
+    <div class="img-lightbox-backdrop"></div>
+    <div class="img-lightbox-dialog">
+      <button type="button" class="img-lightbox-close" aria-label="Tutup gambar">&times;</button>
+      <div class="img-lightbox-body">
+        <img id="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Pratinjau HD">
+        <p id="lightbox-caption" class="img-lightbox-caption"></p>
+      </div>
+    </div>
+  </div>
+
   <script>
     document.querySelectorAll('.faq-head').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1963,6 +2462,69 @@
         if (!isOpen) item.classList.add('open');
       });
     });
+
+    document.querySelectorAll('.type-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const row = btn.closest('.type-row');
+        const wasOpen = row.classList.contains('open');
+        document.querySelectorAll('.type-row--interactive').forEach(el => {
+          el.classList.remove('open');
+          const t = el.querySelector('.type-toggle');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        });
+        if (!wasOpen) {
+          row.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Lightbox modal logic
+    (function() {
+      const lightbox = document.getElementById('img-lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const lbCaption = document.getElementById('lightbox-caption');
+      const lbClose = document.querySelector('.img-lightbox-close');
+      const lbBackdrop = document.querySelector('.img-lightbox-backdrop');
+
+      function openLightbox(src, alt, captionText) {
+        if (!lightbox || !lbImg) return;
+        lbImg.src = src;
+        lbImg.alt = alt || 'Pratinjau HD';
+        if (lbCaption) lbCaption.innerHTML = captionText || alt || '';
+        lightbox.hidden = false;
+        requestAnimationFrame(() => {
+          lightbox.classList.add('active');
+        });
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove('active');
+        setTimeout(() => {
+          lightbox.hidden = true;
+          if (lbImg) lbImg.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E";
+        }, 200);
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('.type-detail-photos figure').forEach(fig => {
+        fig.addEventListener('click', (e) => {
+          const img = fig.querySelector('img');
+          const cap = fig.querySelector('figcaption');
+          if (img) {
+            openLightbox(img.getAttribute('src'), img.getAttribute('alt'), cap ? cap.innerHTML : '');
+          }
+        });
+      });
+
+      if (lbClose) lbClose.addEventListener('click', closeLightbox);
+      if (lbBackdrop) lbBackdrop.addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox && !lightbox.hidden) closeLightbox();
+      });
+    })();
   </script>
 </body>
 

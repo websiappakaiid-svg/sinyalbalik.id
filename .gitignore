@@ -8,3 +8,8 @@ sinyalbalik.id/
 *.jpeg
 !contohhhhhh.jpeg
 photo_*.jpg
+project motion graph promosi tiktok/
+node_modules/
+dist/
+output/
+.agents/
