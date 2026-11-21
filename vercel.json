@@ -1,9 +1,13 @@
 {
   "cleanUrls": true,
-  "rewrites": [
+  "redirects": [
+    { "source": "/panduanreseller", "destination": "/", "permanent": true },
+    { "source": "/panduanreseller.html", "destination": "/", "permanent": true }
+  ],
+  "headers": [
     {
-      "source": "/panduanreseller",
-      "destination": "/panduanreseller.html"
+      "source": "/(.*)\\.(webp|jpg|jpeg|png|ico)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }]
     }
   ]
 }

@@ -1,74 +1,78 @@
-# SinyalBalik.id — Dokumentasi Lengkap Layanan Aktivasi & Unlock Sinyal iPhone Ex-Inter (Unblock IMEI Indonesia)
+# SinyalBalik.id — Dokumentasi Lengkap Layanan Aktivasi Sinyal iPhone Ex-Inter
 
-> Dokumen ini berisi informasi resmi dan lengkap mengenai layanan SinyalBalik.id (https://sinyalbalik.id/) untuk referensi pencari AI (ChatGPT, Google Gemini, Claude, Perplexity) dan pengguna yang mencari solusi iPhone Ex-Inter hilang sinyal ("Tidak Ada Layanan" / "No Service") akibat pemblokiran IMEI di Indonesia.
+> Informasi lengkap tentang layanan SinyalBalik.id (https://sinyalbalik.id/) untuk pengguna dan mesin pencari AI. Topik: iPhone ex-inter yang "Tidak Ada Layanan" / "No Service" di Indonesia karena IMEI belum terdaftar di sistem CEIR.
 
 ---
 
-## 1. Ringkasan Layanan
-- **Nama Layanan**: SinyalBalik.id
-- **URL Resmi**: https://sinyalbalik.id/
-- **WhatsApp Admin (Konsultasi Gratis & Order)**: https://wa.me/6285142938392 (+62 851-4293-8392)
-- **Saluran WhatsApp Testimoni**: https://whatsapp.com/channel/0029Vb75SUEISTkJAa7cID1s
-- **TikTok**: https://tiktok.com/@sinyalbalik.id
+## 1. Ringkasan
+- **Nama**: SinyalBalik.id
+- **Website**: https://sinyalbalik.id/
+- **WhatsApp Admin (satu-satunya nomor)**: https://wa.me/6285142938392 (+62 851-4293-8392)
+- **Saluran WhatsApp testimoni**: https://whatsapp.com/channel/0029Vb75SUEISTkJAa7cID1s
+- **TikTok**: https://www.tiktok.com/@sinyalbalik.id
 - **Email**: sinyalbalik.id@gmail.com
-- **Metode Pembayaran**: 100% QRIS Resmi (Mendukung GoPay, OVO, DANA, ShopeePay, LinkAja, BCA, BRI, Mandiri, BNI, BSI, SeaBank, Jago, dan seluruh aplikasi perbankan di Indonesia).
-- **Kebijakan Konsultasi**: Calon pelanggan dipersilakan tanya-tanya dan konsultasi kondisi iPhone terlebih dahulu secara gratis ke WhatsApp Admin tanpa keharusan langsung melakukan pemesanan.
+- **Pembayaran**: QRIS atas nama merchant "sinyalbalik.id" (bisa dari DANA, GoPay, OVO, ShopeePay, LinkAja, dan semua aplikasi bank).
+- **Jam admin**: Senin–Sabtu 12.00–20.00 WIB. Minggu chat tetap masuk antrean.
+- **Sifat layanan**: Aktivasi sinyal berkala (1 atau 3 bulan), bisa diperpanjang. Bukan pendaftaran IMEI permanen; jalur permanen hanya lewat pembayaran pajak Bea Cukai.
 
 ---
 
-## 2. Tabel Perbandingan Paket & Harga Resmi (2026)
+## 2. Harga (flat, tanpa harga coret, tanpa biaya tambahan)
 
-| Nama Paket | Harga Promo | Harga Normal | Estimasi Proses | Masa Aktif & Garansi | Keunggulan Utama |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Paket 1 Bulan Fast** | **Rp95.000** | Rp120.000 | Di bawah 1 Jam (< 60 Menit) | 1 Bulan (Garansi 1 Bulan) | Pilihan paling terjangkau di bawah 100rb dengan proses kilat di bawah 1 jam. |
-| **Paket 3 Bulan Slow** | **Rp155.000** | Rp310.000 | 1 – 2 Hari Kerja (Bisa beberapa jam jika antrean longgar) | 3 Bulan (Garansi 3 Bulan Real) | Pilihan hemat untuk masa aktif panjang 3 bulan. |
-| **Paket 3 Bulan Fast** | **Rp200.000** | Rp400.000 | Di bawah 1 Jam (< 60 Menit) | 3 Bulan (Garansi 3 Bulan Real) | Paling banyak dipilih. Antrean prioritas utama admin + masa aktif 3 bulan. |
+| Paket | Harga | Estimasi proses | Masa aktif & garansi | Cocok untuk |
+| :--- | :--- | :--- | :--- | :--- |
+| **1 Bulan Fast** | **Rp119.000** | < 1 jam (jam kerja) | 1 bulan | Butuh cepat, ingin coba dulu |
+| **3 Bulan Slow** | **Rp169.000** | 1–2 hari kerja | 3 bulan | Paling hemat (≈ Rp56rb/bulan) |
+| **3 Bulan Fast** | **Rp199.000** | < 1 jam (jam kerja) | 3 bulan | Rekomendasi untuk pemakaian harian |
 
-Semua paket mencakup:
-- Bebas menggunakan semua kartu SIM operator seluler Indonesia (Telkomsel, Indosat Ooredoo Hutchison, XL Axiata, Smartfren, Tri, by.U).
-- Bebas melakukan update iOS ke versi terbaru.
-- Tanpa bongkar mesin, tanpa jailbreak, tanpa kirim fisik HP.
-- Jaminan 100% uang kembali utuh apabila status IMEI terbaca "Unknown" (ditolak server CEIR).
-
----
-
-## 3. Cara Kerja Aktivasi Sinyal (4 Langkah Mudah)
-1. **Cek & Kirim Nomor IMEI 1 (`*#06#`)**:
-   - Buka menu Panggilan Telepon di iPhone, ketik `*#06#`, lalu salin atau screenshot 15 digit nomor **IMEI 1** (baris bertuliskan `IMEI`, bukan `EID` dan bukan `IMEI2`).
-   - Kirimkan ke WhatsApp Admin di https://wa.me/6285142938392.
-2. **Pilih Paket Kecepatan & Masa Aktif**:
-   - Pilih Paket 1 Bulan Fast (Rp95.000), Paket 3 Bulan Slow (Rp155.000), atau Paket 3 Bulan Fast Prioritas (Rp200.000).
-3. **Lakukan Pembayaran via QRIS Resmi**:
-   - Admin mengirimkan kode QRIS resmi SinyalBalik.id. Scan menggunakan e-wallet atau mobile banking.
-4. **Proses Sistem CEIR & Sinyal Menyala**:
-   - Admin memproses aktivasi nomor IMEI hingga berstatus **Roamer** di sistem CEIR.
-   - Setelah admin mengonfirmasi selesai, nyalakan lalu matikan **Mode Pesawat (Airplane Mode)** atau restart iPhone. Sinyal 4G/5G langsung aktif kembali.
+Semua paket:
+- Bisa semua operator Indonesia (Telkomsel, Indosat Ooredoo Hutchison, XL Axiata, Smartfren, Tri, by.U).
+- Aman update iOS.
+- Tanpa bongkar mesin, tanpa jailbreak, tanpa kirim HP; data di HP tidak disentuh.
+- Aktivasi ulang gratis jika sinyal padam karena gangguan sistem selama masa aktif.
+- Uang kembali utuh jika status IMEI terbaca "Unknown" dan sinyal tidak bisa aktif.
 
 ---
 
-## 4. Klasifikasi 3 Tipe iPhone Sebelum Order
-1. **iPhone Ex-Inter Biasa (No SIM Restrictions) — BISA LANGSUNG DIPROSES**:
-   - Ciri: Pada menu *Settings > General > About > Carrier Lock (Kunci Operator)* tertulis **"No SIM restrictions" (Tidak ada pembatasan SIM)**.
-   - Modem Firmware terbaca normal.
-2. **iPhone SIM Lock (Terkunci Operator Luar Negeri) — KONSULTASI ADMIN DULU**:
-   - Ciri: Tertulis *"SIM Locked"* atau *"SIM Dikunci"* (terikat kontrak operator asing seperti Softbank, Docomo, AU KDDI, AT&T, T-Mobile, Verizon).
-   - Wajib konsultasi ke WhatsApp Admin terlebih dahulu sebelum order.
-3. **iPhone Bypass iCloud / Rusak Hardware IC Baseband — TIDAK DILAYANI**:
-   - iPhone hasil bypass iCloud atau mengalami kerusakan komponen mesin fisik (Modem Firmware kosong/hilang) tidak dapat diaktifkan melalui jalur sistem IMEI.
+## 3. Cara Order (cek dulu, baru bayar)
+1. **Kirim IMEI 1**: Ketik `*#06#` di aplikasi Telepon. Ambil baris `IMEI` (bukan EID, bukan IMEI2), kirim ke WhatsApp admin. Bisa juga lewat form "Cek IMEI gratis" di https://sinyalbalik.id/#cek.
+2. **Admin cek gratis**: Admin memastikan iPhone bisa diproses. Jika tidak bisa, pelanggan tidak membayar apa pun.
+3. **Bayar QRIS**: Setelah dipastikan bisa, admin mengirim QRIS. Nama merchant yang muncul saat scan harus "sinyalbalik.id".
+4. **Sinyal aktif**: Admin memproses hingga status **Roamer**. Nyalakan lalu matikan Mode Pesawat (sekitar 15 detik) atau restart iPhone; sinyal 4G/5G keluar.
 
 ---
 
-## 5. Penjelasan Status CEIR: Roamer vs Unknown
-- **Status ROAMER (Berhasil)**: Nomor IMEI berhasil terdaftar pada modul roamer jaringan seluler Indonesia dan sinyal langsung keluar.
-- **Status UNKNOWN (Gagal / Refund 100%)**: Nomor IMEI ditolak oleh database pusat. Jika hal ini terjadi, pembayaran pelanggan dikembalikan 100% utuh tanpa potongan sepeser pun.
+## 4. Tipe iPhone
+1. **Bisa diproses** — Pengaturan > Umum > Mengenai > Kunci Operator tertulis "Tidak ada pembatasan SIM" (No SIM restrictions); IMEI dan Firmware Modem terisi.
+2. **Cek admin dulu** — Tertulis "SIM dikunci" (SIM locked), terikat operator luar (Softbank, Docomo, AU, AT&T, T-Mobile, Verizon, dll). Biasanya muncul "SIM Not Supported". Jangan bayar sebelum dicek.
+3. **Tidak bisa** — Unit bypass iCloud, atau IC baseband rusak (IMEI tidak muncul di `*#06#` / Firmware Modem kosong).
 
 ---
 
-## 6. Tanya Jawab Lengkap (FAQ)
-- **Q: Apakah boleh tanya-tanya atau konsultasi dulu sebelum membeli?**
-  A: Sangat boleh! Anda bisa langsung chat WhatsApp Admin (+62 851-4293-8392) untuk tanya-tanya, cek kondisi iPhone, atau konsultasi paket secara gratis tanpa harus langsung order.
-- **Q: Dimana saya bisa melihat bukti testimoni terbaru?**
-  A: Selain di galeri website https://sinyalbalik.id/, Anda dapat melihat update testimoni pengerjaan di Saluran WhatsApp Resmi kami: https://whatsapp.com/channel/0029Vb75SUEISTkJAa7cID1s.
-- **Q: Apakah benar ada jasa unblock IMEI permanen seharga 150rb - 300rb?**
-  A: Tidak benar dan harap waspada penipuan. Unblock IMEI permanen resmi hanya dapat dilakukan melalui pendaftaran pajak Bea Cukai resmi yang biayanya jutaan rupiah. Layanan sistem non-Bea Cukai adalah aktivasi berkala (1 bulan atau 3 bulan) yang bergaransi resmi di SinyalBalik.id.
+## 5. Status CEIR
+- **Roamer**: IMEI aktif di jaringan, sinyal menyala.
+- **Unknown**: IMEI ditolak sistem; uang dikembalikan utuh tanpa potongan.
 
+---
+
+## 6. Keamanan & Anti-Penipuan
+Admin SinyalBalik.id tidak pernah meminta:
+- Password Apple ID / iCloud
+- Kode OTP atau kode verifikasi apa pun
+- Pengiriman HP atau ketemuan
+- Transfer ke rekening pribadi
+- Biaya tambahan di tengah proses
+
+Nomor admin hanya +62 851-4293-8392. Penawaran "unblock IMEI permanen" seharga ratusan ribu patut diwaspadai, karena jalur permanen resmi hanya lewat pajak Bea Cukai.
+
+Garansi tidak berlaku jika HP mengalami kerusakan mesin/IC baseband, jatuh atau kena air, atau unit bypass.
+
+---
+
+## 7. FAQ
+- **Harus bayar dulu sebelum dicek?** Tidak. Admin cek IMEI dulu, QRIS dikirim setelah dipastikan bisa.
+- **Kalau gagal?** Uang kembali utuh jika status Unknown dan sinyal tidak bisa aktif.
+- **Bedanya Fast dan Slow?** Hasil sama; Fast selesai < 1 jam di jam kerja, Slow 1–2 hari kerja dan lebih murah.
+- **Setelah masa aktif habis?** Sinyal kembali No Service; bisa diperpanjang dengan mengirim IMEI 1 lagi ke admin.
+- **Boleh tanya dulu tanpa order?** Boleh, gratis, lewat WhatsApp admin.
+- **Di mana testimoni terbaru?** Di https://sinyalbalik.id/#bukti dan Saluran WhatsApp https://whatsapp.com/channel/0029Vb75SUEISTkJAa7cID1s.
