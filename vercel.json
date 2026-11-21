@@ -2,16 +2,19 @@
   "cleanUrls": true,
   "redirects": [
     { "source": "/panduanreseller", "destination": "/", "permanent": true },
-    { "source": "/panduanreseller.html", "destination": "/", "permanent": true },
-    { "source": "/blog", "destination": "/blog/", "permanent": true }
+    { "source": "/panduanreseller.html", "destination": "/", "permanent": true }
   ],
   "headers": [
     {
-      "source": "/(.*)\.(webp|jpg|jpeg|png|ico)",
+      "source": "/(.*)\\.(webp|jpg|jpeg|png|ico)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }]
     },
     {
-      "source": "/(llms|llms-full)\.txt",
+      "source": "/llms.txt",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+    },
+    {
+      "source": "/llms-full.txt",
       "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
     }
   ]
