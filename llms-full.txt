@@ -35,7 +35,7 @@ Semua paket:
 ---
 
 ## 3. Cara Order (cek dulu, baru bayar)
-1. **Kirim IMEI 1**: Ketik `*#06#` di aplikasi Telepon. Ambil baris `IMEI` (bukan EID, bukan IMEI2), kirim ke WhatsApp admin. Bisa juga lewat form "Cek IMEI gratis" di https://sinyalbalik.id/#cek.
+1. **Kirim IMEI 1**: Ketik `*#06#` di aplikasi Telepon. Ambil baris `IMEI` (bukan EID, bukan IMEI2), kirim ke WhatsApp admin. Bisa juga lewat form "Konsultasi gratis" di https://sinyalbalik.id/#cek.
 2. **Admin cek gratis**: Admin memastikan iPhone bisa diproses. Jika tidak bisa, pelanggan tidak membayar apa pun.
 3. **Bayar QRIS**: Setelah dipastikan bisa, admin mengirim QRIS. Nama merchant yang muncul saat scan harus "sinyalbalik.id".
 4. **Sinyal aktif**: Admin memproses hingga status **Roamer**. Nyalakan lalu matikan Mode Pesawat (sekitar 15 detik) atau restart iPhone; sinyal 4G/5G keluar.

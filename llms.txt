@@ -34,7 +34,7 @@ Semua paket: semua operator Indonesia (Telkomsel, Indosat, XL, Tri, Smartfren, b
 Admin tidak pernah meminta password Apple ID/iCloud, kode OTP, pengiriman HP, transfer ke rekening pribadi, atau biaya tambahan di tengah proses.
 
 ## Halaman penting
-- [Beranda, harga, dan form cek IMEI](https://sinyalbalik.id/)
+- [Beranda, harga, dan form konsultasi gratis](https://sinyalbalik.id/)
 - [Dokumentasi lengkap](https://sinyalbalik.id/llms-full.txt)
 - [Blog: 50+ panduan sinyal iPhone](https://sinyalbalik.id/blog/)
 - [IMEI tidak terdaftar CEIR: solusi](https://sinyalbalik.id/blog/imei-tidak-terdaftar-solusi)
