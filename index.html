@@ -208,7 +208,11 @@ code,kbd{font-family:ui-monospace,Menlo,Consolas,monospace;background:var(--bg-2
 section[id]{scroll-margin-top:58px}
 .plan-top{display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:26px}
 .badge{font-size:12px;font-weight:700;color:var(--brand);background:var(--brand-soft);padding:4px 10px;border-radius:99px}
-.price{font-size:36px;font-weight:800;letter-spacing:-.02em;margin:10px 0 2px}
+.price{font-size:36px;font-weight:800;letter-spacing:-.02em;margin:0 0 2px;line-height:1.1}
+.was{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:15px;color:var(--ink-3)}
+.was s{text-decoration-color:var(--bad);text-decoration-thickness:2px}
+.cut{font-size:12px;font-weight:700;color:var(--bad);background:var(--bad-soft);border-radius:6px;padding:2px 7px}
+.opt b s{color:var(--ink-3);font-weight:500;text-decoration-color:var(--bad);text-decoration-thickness:1.5px;margin-right:2px}
 .price small{font-size:15px;font-weight:600;color:var(--ink-3)}
 .permonth{font-size:14px;color:var(--ok);font-weight:600}
 .plan ul{list-style:none;margin:16px 0 20px;display:grid;gap:8px;font-size:15px;color:var(--ink-2);flex:1}
@@ -357,8 +361,8 @@ footer .brand{color:#fff}
     <div>
       <p class="live" data-live><span class="ldot"></span><span class="live-txt">Admin: Senin–Sabtu 12.00–20.00 WIB</span></p>
       <p class="kicker">SinyalBalik.id · Aktivasi sinyal iPhone inter</p>
-      <h1>iPhone inter <span>"Tidak Ada Layanan"</span>? Sinyalnya bisa nyala lagi tanpa kirim HP.</h1>
-      <p class="lead">Tanya admin dulu, gratis. Kamu baru bayar setelah admin pastikan iPhone-mu bisa. Kalau ternyata gagal, uang kembali utuh.</p>
+      <h1>iPhone inter kamu <span>"Tidak Ada Layanan"</span>? Bisa kita aktifin lagi, cukup dari rumah.</h1>
+      <p class="lead">Chat admin dulu, gratis. Bayarnya nanti kalau udah dicek bisa. Gagal? Uang balik full.</p>
       <div class="hero-cta">
         <a class="btn btn-wa" href="#cek">
           <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Konsultasi gratis dulu
@@ -387,7 +391,7 @@ footer .brand{color:#fff}
           <div class="ph-line" data-step="4"><span class="ph-dot"></span>Mode Pesawat on → off</div>
         </div>
       </div>
-      <p class="ph-cap">Simulasi alur — bukan rekaman pelanggan</p>
+      <p class="ph-cap">Contoh prosesnya</p>
       <div class="facts">
         <div><b>&lt; 1 jam</b><span>paket Fast</span></div>
         <div><b>Rp99rb</b><span>mulai dari</span></div>
@@ -402,7 +406,7 @@ footer .brand{color:#fff}
   <div class="wrap">
     <p class="kicker">Bukti pengerjaan</p>
     <h2>Chat asli pelanggan</h2>
-    <p class="lead">Beberapa testi dari pelanggan kami. Foto profil, nomor IMEI, dan data pembayaran pelanggan disensor demi privasi. Tap gambar buat lihat ukuran penuh.</p>
+    <p class="lead">Data pribadi pelanggan disensor. Tap buat lihat jelas.</p>
 
     <div class="quotes">
       <blockquote>Diproses jam 10.41, jaringan udah masuk jam 10.46.<cite>pelanggan · paket Fast</cite></blockquote>
@@ -433,8 +437,8 @@ footer .brand{color:#fff}
 <section id="cara" class="alt">
   <div class="wrap">
     <p class="kicker">Cara order</p>
-    <h2>4 langkah. Bayarnya belakangan.</h2>
-    <p class="lead">Gak perlu ngerti teknis. Semua lewat chat WhatsApp, kamu cukup ikuti arahan admin.</p>
+    <h2>Cara ordernya gampang</h2>
+    <p class="lead">Semua lewat chat WA, admin yang pandu.</p>
     <div class="steps">
       <div class="step">
         <h3>Konsultasi gratis</h3>
@@ -461,12 +465,13 @@ footer .brand{color:#fff}
 <section id="harga">
   <div class="wrap">
     <p class="kicker">Harga</p>
-    <h2>Harga flat. Tanpa harga coret, tanpa biaya tambahan.</h2>
-    <p class="lead">Semua paket: bisa semua kartu (Telkomsel, Indosat, XL, Tri, Smartfren, by.U), aman update iOS, dan uang kembali utuh kalau gagal.</p>
+    <h2>Harga</h2>
+    <p class="lead">Gak ada biaya tambahan di tengah jalan. Semua paket bisa semua kartu (Telkomsel, Indosat, XL, Tri, Smartfren, by.U), aman update iOS, dan uang kembali utuh kalau gagal.</p>
 
     <div class="plans">
       <div class="plan">
         <div class="plan-top"><h3>1 Bulan Fast</h3></div>
+        <p class="was"><s>Rp119.000</s><span class="cut">turun 20rb</span></p>
         <p class="price">Rp99.000</p>
         <p class="muted">Buat yang butuh cepat, coba dulu sebulan</p>
         <ul>
@@ -479,8 +484,9 @@ footer .brand{color:#fff}
 
       <div class="plan rec">
         <div class="plan-top"><h3>3 Bulan Fast</h3><span class="badge">Rekomendasi</span></div>
+        <p class="was"><s>Rp199.000</s><span class="cut">turun 30rb</span></p>
         <p class="price">Rp169.000</p>
-        <p class="permonth">≈ Rp56rb per bulan — jauh lebih hemat</p>
+        <p class="permonth">≈ Rp56rb per bulan, paling worth it</p>
         <ul>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Selesai &lt; 1 jam, antrean prioritas</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Aktif &amp; bergaransi 3 bulan</li>
@@ -491,8 +497,9 @@ footer .brand{color:#fff}
 
       <div class="plan">
         <div class="plan-top"><h3>3 Bulan Slow</h3></div>
+        <p class="was"><s>Rp169.000</s><span class="cut">turun 30rb</span></p>
         <p class="price">Rp139.000</p>
-        <p class="permonth">≈ Rp46rb per bulan — paling murah</p>
+        <p class="permonth">≈ Rp46rb per bulan, paling murah</p>
         <ul>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Selesai 1–2 hari kerja (sering lebih cepat)</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Aktif &amp; bergaransi 3 bulan</li>
@@ -509,8 +516,8 @@ footer .brand{color:#fff}
 <section id="cek" class="alt">
   <div class="wrap">
     <p class="kicker">Konsultasi gratis</p>
-    <h2>Tanya admin dulu, gratis — gak harus order</h2>
-    <p class="lead">Pilih jawabannya, pesan WhatsApp-nya tersusun otomatis. Admin bales iPhone-mu bisa atau nggak. Belum bayar apa-apa di tahap ini.</p>
+    <h2>Konsultasi gratis</h2>
+    <p class="lead">Isi 3 pertanyaan, nanti langsung kebuka chat WA ke admin. Belum bayar apa-apa.</p>
 
     <form class="checker" id="checker" novalidate>
       <fieldset class="field">
@@ -525,9 +532,9 @@ footer .brand{color:#fff}
       <fieldset class="field">
         <legend>2. Paket yang diminati</legend>
         <div class="opts">
-          <label class="opt"><input type="radio" name="plan" value="3 Bulan Fast (Rp169.000)" data-k="3f" checked><div><b>3 Bulan Fast — Rp169.000</b><span>&lt; 1 jam, rekomendasi</span></div></label>
-          <label class="opt"><input type="radio" name="plan" value="3 Bulan Slow (Rp139.000)" data-k="3s"><div><b>3 Bulan Slow — Rp139.000</b><span>1–2 hari kerja</span></div></label>
-          <label class="opt"><input type="radio" name="plan" value="1 Bulan Fast (Rp99.000)" data-k="1b"><div><b>1 Bulan Fast — Rp99.000</b><span>&lt; 1 jam</span></div></label>
+          <label class="opt"><input type="radio" name="plan" value="3 Bulan Fast (Rp169.000)" data-k="3f" checked><div><b>3 Bulan Fast · <s>Rp199rb</s> Rp169.000</b><span>&lt; 1 jam, rekomendasi</span></div></label>
+          <label class="opt"><input type="radio" name="plan" value="3 Bulan Slow (Rp139.000)" data-k="3s"><div><b>3 Bulan Slow · <s>Rp169rb</s> Rp139.000</b><span>1–2 hari kerja</span></div></label>
+          <label class="opt"><input type="radio" name="plan" value="1 Bulan Fast (Rp99.000)" data-k="1b"><div><b>1 Bulan Fast · <s>Rp119rb</s> Rp99.000</b><span>&lt; 1 jam</span></div></label>
           <label class="opt"><input type="radio" name="plan" value="Belum tahu, mau tanya dulu" data-k="x"><div><b>Belum tahu</b><span>Mau tanya-tanya dulu</span></div></label>
         </div>
       </fieldset>
@@ -594,7 +601,7 @@ footer .brand{color:#fff}
 <section id="aman" class="alt">
   <div class="wrap">
     <p class="kicker">Kenapa aman</p>
-    <h2>Banyak yang pernah ketipu. Ini cara kami bikin kamu gak perlu nebak-nebak.</h2>
+    <h2>Kenapa aman order di sini</h2>
 
     <div class="trust">
       <div class="card">
@@ -602,11 +609,11 @@ footer .brand{color:#fff}
         <p>QRIS baru dikirim setelah admin pastikan iPhone-mu bisa diproses. Gak ada "DP dulu" atau "bayar biar diantrikan".</p>
       </div>
       <div class="card">
-        <h3>Gagal = uang kembali utuh</h3>
+        <h3>Gagal? Uang balik full</h3>
         <p>Kalau status IMEI terbaca <b>Unknown</b> (ditolak sistem) dan sinyal gak bisa aktif, uangmu dikembalikan penuh tanpa potongan.</p>
       </div>
       <div class="card">
-        <h3>QRIS atas nama usaha, bukan pribadi</h3>
+        <h3>Bayar QRIS a.n. sinyalbalik.id</h3>
         <p>Saat scan, nama merchant yang muncul harus <span class="merchant">sinyalbalik.id</span>. Kalau yang muncul nama orang atau toko lain, jangan bayar dan lapor ke kami.</p>
       </div>
       <div class="card">
@@ -624,13 +631,13 @@ footer .brand{color:#fff}
         </ul>
       </div>
       <div class="card">
-        <h3>Satu nomor resmi</h3>
+        <h3>Admin cuma 1 nomor</h3>
         <p>Admin hanya <b>0851-4293-8392</b>. Akun yang ngaku-ngaku SinyalBalik dengan nomor lain bukan kami. Cek juga TikTok resmi <a href="https://www.tiktok.com/@sinyalbalik.id" rel="noopener" target="_blank">@sinyalbalik.id</a>.</p>
       </div>
     </div>
 
     <div class="honest">
-      <h3>Biar jelas dari awal</h3>
+      <h3>Perlu kamu tahu</h3>
       <p>Layanan ini <b>bukan</b> pendaftaran IMEI permanen. Jalur permanen cuma lewat bayar pajak Bea Cukai (biayanya jutaan). Kami mengaktifkan sinyal sesuai masa paket: 1 atau 3 bulan, dan bisa diperpanjang. Kalau ada yang nawarin "unblock permanen" cuma ratusan ribu, hati-hati.</p>
     </div>
   </div>
@@ -640,8 +647,8 @@ footer .brand{color:#fff}
 <section id="tanya" class="alt">
   <div class="wrap">
     <p class="kicker">Tanya admin</p>
-    <h2>Masih ragu? Tanya apa aja, gak harus order.</h2>
-    <p class="lead">Admin jawab orang beneran, bukan bot. Pertanyaan "awam" juga gapapa — tinggal tap salah satu, pesannya langsung kebuka di WhatsApp.</p>
+    <h2>Masih bingung? Tanya aja</h2>
+    <p class="lead">Admin yang bales, bukan bot. Tap pertanyaan di bawah, langsung kebuka di WA.</p>
 
     <div class="chips">
       <a class="chip wa-link" href="#" data-msg="Halo Admin, iPhone saya Tidak Ada Layanan. Bisa dibantu cek bisa diaktifkan gak?">iPhone saya bisa gak?</a>
@@ -675,7 +682,7 @@ footer .brand{color:#fff}
 <section id="faq">
   <div class="wrap">
     <p class="kicker">FAQ</p>
-    <h2>Pertanyaan yang sering masuk</h2>
+    <h2>Yang sering ditanyain</h2>
     <div class="faq">
       <details><summary>Apakah saya harus bayar dulu sebelum konsultasi?</summary><div class="a">Tidak. Konsultasi ke admin gratis, admin cek dulu apakah iPhone-mu bisa diproses. QRIS baru dikirim setelah admin bilang bisa.</div></details>
       <details><summary>Kalau gagal, uang saya kembali?</summary><div class="a">Ya. Kalau status IMEI terbaca <b>Unknown</b> (ditolak sistem) dan sinyal tidak bisa aktif, uang dikembalikan utuh tanpa potongan.</div></details>
