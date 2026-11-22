@@ -315,6 +315,12 @@ footer .brand{color:#fff}
 @media(min-width:760px){.quotes{grid-template-columns:repeat(3,1fr)}}
 .quotes blockquote{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px}
 .quotes cite{display:block;font-style:normal;font-size:13px;color:var(--ink-3);margin-top:6px}
+.see-testi{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;font-weight:700;font-size:15px;color:var(--ink);text-decoration:none}
+.see-testi span:last-child{display:inline-flex;align-items:center;gap:4px;border-bottom:2px solid var(--wa);padding-bottom:1px}
+.st-imgs{display:flex}
+.st-imgs img{width:34px;height:46px;object-fit:cover;object-position:50% 55%;border:2px solid #fff;border-radius:5px;margin-left:-9px;box-shadow:0 2px 6px rgba(15,23,42,.18)}
+.st-imgs img:first-child{margin-left:0}
+.st-arr{width:16px;height:16px;color:var(--wa)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 </style>
 </head>
@@ -332,10 +338,10 @@ footer .brand{color:#fff}
       <img src="logo-64.webp" alt="" width="30" height="30">SinyalBalik.id
     </a>
     <nav class="nav-links" aria-label="Menu utama">
+      <a href="#bukti">Testi</a>
       <a href="#cara">Cara order</a>
       <a href="#harga">Harga</a>
       <a href="#aman">Keamanan</a>
-      <a href="#bukti">Bukti</a>
       <a href="#faq">FAQ</a>
       <a href="/blog/">Blog</a>
     </nav>
@@ -359,6 +365,7 @@ footer .brand{color:#fff}
         </a>
         <a class="btn btn-ghost" href="#harga">Lihat harga</a>
       </div>
+      <a class="see-testi" href="#bukti"><span class="st-imgs" aria-hidden="true"><img src="testi-01.webp" alt="" width="34" height="46"><img src="testi-05.webp" alt="" width="34" height="46"><img src="testi-03.webp" alt="" width="34" height="46"></span><span>Lihat testi pelanggan<svg class="st-arr" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
       <ul class="assure">
         <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Tanya-tanya dulu boleh, gak harus order</li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>HP tetap di tanganmu, data gak disentuh sama sekali</li>
@@ -386,6 +393,38 @@ footer .brand{color:#fff}
         <div><b>Rp99rb</b><span>mulai dari</span></div>
         <div><b>100%</b><span>refund kalau gagal</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUKTI -->
+<section id="bukti">
+  <div class="wrap">
+    <p class="kicker">Bukti pengerjaan</p>
+    <h2>Chat asli pelanggan</h2>
+    <p class="lead">Beberapa testi dari pelanggan kami. Foto profil, nomor IMEI, dan data pembayaran pelanggan disensor demi privasi. Tap gambar buat lihat ukuran penuh.</p>
+
+    <div class="quotes">
+      <blockquote>Diproses jam 10.41, jaringan udah masuk jam 10.46.<cite>pelanggan · paket Fast</cite></blockquote>
+      <blockquote>IMEI dikirim 21.58, jam 22.02 udah bisa dipakai.<cite>pelanggan · 3 Nov</cite></blockquote>
+      <blockquote>Konter HP yang nemu kami dari Google, sekarang order berulang.<cite>konter HP · langganan</cite></blockquote>
+    </div>
+
+    <!-- CARA TAMBAH TESTI: copy satu blok <figure> di bawah, ganti nama file gambar & keterangan. -->
+    <div class="testi">
+      <figure><a href="testi-01.webp" target="_blank" rel="noopener"><img src="testi-01.webp" alt="Chat pelanggan: diproses jam 10.41, jaringan sudah masuk jam 10.46" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Jaringan masuk 5 menit setelah diproses</figcaption></figure>
+      <figure><a href="testi-02.webp" target="_blank" rel="noopener"><img src="testi-02.webp" alt="Chat pelanggan paket Slow: diproses siang, sore sudah done" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Paket Slow, selesai hari itu juga</figcaption></figure>
+      <figure><a href="testi-03.webp" target="_blank" rel="noopener"><img src="testi-03.webp" alt="Chat pelanggan: sinyal 5G aktif dan konfirmasi garansi 3 bulan" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>5G aktif, garansi 3 bulan</figcaption></figure>
+      <figure><a href="testi-04.webp" target="_blank" rel="noopener"><img src="testi-04.webp" alt="Chat pelanggan: done dalam 20 menit, sinyal muncul" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Sinyal muncul, 21 Okt</figcaption></figure>
+      <figure><a href="testi-05.webp" target="_blank" rel="noopener"><img src="testi-05.webp" alt="Chat pelanggan: IMEI dikirim 21.58, sudah bisa 22.02" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Selesai 3 menit, 3 Nov</figcaption></figure>
+      <figure><a href="testi-06.webp" target="_blank" rel="noopener"><img src="testi-06.webp" alt="Chat konter HP yang order berulang kali" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Konter HP langganan</figcaption></figure>
+      <figure><a href="testi-07.webp" target="_blank" rel="noopener"><img src="testi-07.webp" alt="Chat konter HP: sinyal aktif, menemukan sinyalbalik.id dari Google" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Konter HP, nemu dari Google</figcaption></figure>
+      <figure><a href="testi-08.webp" target="_blank" rel="noopener"><img src="testi-08.webp" alt="Bukti bayar QRIS atas nama merchant sinyalbalik.id" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>QRIS a.n. sinyalbalik.id</figcaption></figure>
+    </div>
+    <p class="swipe-hint">← Geser untuk lihat lainnya →</p>
+
+    <div class="testi-cta">
+      <a class="btn btn-ghost" href="https://www.tiktok.com/@sinyalbalik.id" target="_blank" rel="noopener">Lihat video di TikTok</a>
     </div>
   </div>
 </section>
@@ -593,38 +632,6 @@ footer .brand{color:#fff}
     <div class="honest">
       <h3>Biar jelas dari awal</h3>
       <p>Layanan ini <b>bukan</b> pendaftaran IMEI permanen. Jalur permanen cuma lewat bayar pajak Bea Cukai (biayanya jutaan). Kami mengaktifkan sinyal sesuai masa paket: 1 atau 3 bulan, dan bisa diperpanjang. Kalau ada yang nawarin "unblock permanen" cuma ratusan ribu, hati-hati.</p>
-    </div>
-  </div>
-</section>
-
-<!-- BUKTI -->
-<section id="bukti">
-  <div class="wrap">
-    <p class="kicker">Bukti pengerjaan</p>
-    <h2>Chat asli pelanggan</h2>
-    <p class="lead">Beberapa testi dari pelanggan kami. Foto profil, nomor IMEI, dan data pembayaran pelanggan disensor demi privasi. Tap gambar buat lihat ukuran penuh.</p>
-
-    <div class="quotes">
-      <blockquote>Diproses jam 10.41, jaringan udah masuk jam 10.46.<cite>pelanggan · paket Fast</cite></blockquote>
-      <blockquote>IMEI dikirim 21.58, jam 22.02 udah bisa dipakai.<cite>pelanggan · 3 Nov</cite></blockquote>
-      <blockquote>Konter HP yang nemu kami dari Google, sekarang order berulang.<cite>konter HP · langganan</cite></blockquote>
-    </div>
-
-    <!-- CARA TAMBAH TESTI: copy satu blok <figure> di bawah, ganti nama file gambar & keterangan. -->
-    <div class="testi">
-      <figure><a href="testi-01.webp" target="_blank" rel="noopener"><img src="testi-01.webp" alt="Chat pelanggan: diproses jam 10.41, jaringan sudah masuk jam 10.46" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Jaringan masuk 5 menit setelah diproses</figcaption></figure>
-      <figure><a href="testi-02.webp" target="_blank" rel="noopener"><img src="testi-02.webp" alt="Chat pelanggan paket Slow: diproses siang, sore sudah done" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Paket Slow, selesai hari itu juga</figcaption></figure>
-      <figure><a href="testi-03.webp" target="_blank" rel="noopener"><img src="testi-03.webp" alt="Chat pelanggan: sinyal 5G aktif dan konfirmasi garansi 3 bulan" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>5G aktif, garansi 3 bulan</figcaption></figure>
-      <figure><a href="testi-04.webp" target="_blank" rel="noopener"><img src="testi-04.webp" alt="Chat pelanggan: done dalam 20 menit, sinyal muncul" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Sinyal muncul, 21 Okt</figcaption></figure>
-      <figure><a href="testi-05.webp" target="_blank" rel="noopener"><img src="testi-05.webp" alt="Chat pelanggan: IMEI dikirim 21.58, sudah bisa 22.02" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Selesai 3 menit, 3 Nov</figcaption></figure>
-      <figure><a href="testi-06.webp" target="_blank" rel="noopener"><img src="testi-06.webp" alt="Chat konter HP yang order berulang kali" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Konter HP langganan</figcaption></figure>
-      <figure><a href="testi-07.webp" target="_blank" rel="noopener"><img src="testi-07.webp" alt="Chat konter HP: sinyal aktif, menemukan sinyalbalik.id dari Google" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>Konter HP, nemu dari Google</figcaption></figure>
-      <figure><a href="testi-08.webp" target="_blank" rel="noopener"><img src="testi-08.webp" alt="Bukti bayar QRIS atas nama merchant sinyalbalik.id" width="720" height="1558" loading="lazy" decoding="async"></a><figcaption>QRIS a.n. sinyalbalik.id</figcaption></figure>
-    </div>
-    <p class="swipe-hint">← Geser untuk lihat lainnya →</p>
-
-    <div class="testi-cta">
-      <a class="btn btn-ghost" href="https://www.tiktok.com/@sinyalbalik.id" target="_blank" rel="noopener">Lihat video di TikTok</a>
     </div>
   </div>
 </section>
