@@ -8,7 +8,6 @@
 - **Nama**: SinyalBalik.id
 - **Website**: https://sinyalbalik.id/
 - **WhatsApp Admin (satu-satunya nomor)**: https://wa.me/6285142938392 (+62 851-4293-8392)
-- **Saluran WhatsApp testimoni**: https://whatsapp.com/channel/0029Vb75SUEISTkJAa7cID1s
 - **TikTok**: https://www.tiktok.com/@sinyalbalik.id
 - **Email**: sinyalbalik.id@gmail.com
 - **Pembayaran**: QRIS atas nama merchant "sinyalbalik.id" (bisa dari DANA, GoPay, OVO, ShopeePay, LinkAja, dan semua aplikasi bank).
@@ -21,9 +20,9 @@
 
 | Paket | Harga | Estimasi proses | Masa aktif & garansi | Cocok untuk |
 | :--- | :--- | :--- | :--- | :--- |
-| **1 Bulan Fast** | **Rp119.000** | < 1 jam (jam kerja) | 1 bulan | Butuh cepat, ingin coba dulu |
-| **3 Bulan Slow** | **Rp169.000** | 1–2 hari kerja | 3 bulan | Paling hemat (≈ Rp56rb/bulan) |
-| **3 Bulan Fast** | **Rp199.000** | < 1 jam (jam kerja) | 3 bulan | Rekomendasi untuk pemakaian harian |
+| **1 Bulan Fast** | **Rp99.000** | < 1 jam (jam kerja) | 1 bulan | Butuh cepat, ingin coba dulu |
+| **3 Bulan Slow** | **Rp139.000** | 1–2 hari kerja | 3 bulan | Paling hemat (≈ Rp46rb/bulan) |
+| **3 Bulan Fast** | **Rp169.000** | < 1 jam (jam kerja) | 3 bulan | Rekomendasi untuk pemakaian harian |
 
 Semua paket:
 - Bisa semua operator Indonesia (Telkomsel, Indosat Ooredoo Hutchison, XL Axiata, Smartfren, Tri, by.U).
@@ -75,4 +74,4 @@ Garansi tidak berlaku jika HP mengalami kerusakan mesin/IC baseband, jatuh atau 
 - **Bedanya Fast dan Slow?** Hasil sama; Fast selesai < 1 jam di jam kerja, Slow 1–2 hari kerja dan lebih murah.
 - **Setelah masa aktif habis?** Sinyal kembali No Service; bisa diperpanjang dengan mengirim IMEI 1 lagi ke admin.
 - **Boleh tanya dulu tanpa order?** Boleh, gratis, lewat WhatsApp admin.
-- **Di mana testimoni terbaru?** Di https://sinyalbalik.id/#bukti dan Saluran WhatsApp https://whatsapp.com/channel/0029Vb75SUEISTkJAa7cID1s.
+- **Di mana testimoni terbaru?** Di https://sinyalbalik.id/#bukti dan TikTok https://www.tiktok.com/@sinyalbalik.id.
