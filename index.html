@@ -73,9 +73,9 @@
       "provider": { "@id": "https://sinyalbalik.id/#business" },
       "areaServed": { "@type": "Country", "name": "Indonesia" },
       "offers": [
-        { "@type": "Offer", "name": "1 Bulan Fast", "description": "Masa aktif 1 bulan, proses di bawah 1 jam pada jam kerja.", "price": "99000", "priceCurrency": "IDR", "availability": "https://schema.org/InStock", "url": "https://sinyalbalik.id/#harga" },
-        { "@type": "Offer", "name": "3 Bulan Slow", "description": "Masa aktif 3 bulan, proses 1–2 hari kerja.", "price": "139000", "priceCurrency": "IDR", "availability": "https://schema.org/InStock", "url": "https://sinyalbalik.id/#harga" },
-        { "@type": "Offer", "name": "3 Bulan Fast", "description": "Masa aktif 3 bulan, proses di bawah 1 jam pada jam kerja.", "price": "169000", "priceCurrency": "IDR", "availability": "https://schema.org/InStock", "url": "https://sinyalbalik.id/#harga" }
+        { "@type": "Offer", "name": "1 Bulan Fast", "description": "Masa aktif 1 bulan, proses biasanya 1–15 menit, maksimal 1 jam.", "price": "99000", "priceCurrency": "IDR", "availability": "https://schema.org/InStock", "url": "https://sinyalbalik.id/#harga" },
+        { "@type": "Offer", "name": "3 Bulan Slow", "description": "Masa aktif 3 bulan, proses maksimal 24 jam, kalau antrean sepi bisa beres sekitar 2 jam.", "price": "139000", "priceCurrency": "IDR", "availability": "https://schema.org/InStock", "url": "https://sinyalbalik.id/#harga" },
+        { "@type": "Offer", "name": "3 Bulan Fast", "description": "Masa aktif 3 bulan, proses biasanya 1–15 menit, maksimal 1 jam.", "price": "169000", "priceCurrency": "IDR", "availability": "https://schema.org/InStock", "url": "https://sinyalbalik.id/#harga" }
       ]
     },
     {
@@ -86,7 +86,7 @@
         { "@type": "Question", "name": "Kalau gagal, uang saya kembali?", "acceptedAnswer": { "@type": "Answer", "text": "Ya. Kalau status IMEI terbaca Unknown (ditolak sistem) dan sinyal tidak bisa aktif, uang dikembalikan utuh tanpa potongan." } },
         { "@type": "Question", "name": "Apakah HP harus dikirim atau dibongkar?", "acceptedAnswer": { "@type": "Answer", "text": "Tidak. Cukup nomor IMEI 1 (ketik *#06#). HP tetap di tangan Anda dan data tidak disentuh." } },
         { "@type": "Question", "name": "Apakah ini sama dengan daftar IMEI di Bea Cukai?", "acceptedAnswer": { "@type": "Answer", "text": "Bukan. Pendaftaran permanen hanya lewat pembayaran pajak Bea Cukai. Layanan ini mengaktifkan sinyal sesuai masa aktif paket (1 atau 3 bulan) dan bisa diperpanjang." } },
-        { "@type": "Question", "name": "Berapa harga aktivasi sinyal iPhone inter di SinyalBalik.id?", "acceptedAnswer": { "@type": "Answer", "text": "1 Bulan Fast Rp99.000, 3 Bulan Slow Rp139.000 (1–2 hari kerja), 3 Bulan Fast Rp169.000 (di bawah 1 jam). Harga flat, tanpa biaya tambahan." } },
+        { "@type": "Question", "name": "Berapa harga aktivasi sinyal iPhone inter di SinyalBalik.id?", "acceptedAnswer": { "@type": "Answer", "text": "1 Bulan Fast Rp99.000, 3 Bulan Slow Rp139.000 (maksimal 24 jam), 3 Bulan Fast Rp169.000 (biasanya 1–15 menit, maksimal 1 jam). Harga flat, tanpa biaya tambahan." } },
         { "@type": "Question", "name": "iPhone seperti apa yang bisa diproses?", "acceptedAnswer": { "@type": "Answer", "text": "iPhone ex-inter yang di Pengaturan > Umum > Mengenai > Kunci Operator tertulis 'Tidak ada pembatasan SIM' dan IMEI serta Firmware Modem terisi. iPhone SIM dikunci perlu dicek admin dulu. Unit bypass iCloud atau IC baseband rusak tidak bisa." } },
         { "@type": "Question", "name": "Setelah masa aktif habis bagaimana?", "acceptedAnswer": { "@type": "Answer", "text": "Sinyal akan kembali No Service. Anda bisa perpanjang dengan chat admin, prosesnya sama: kirim IMEI 1 lagi." } }
       ]
@@ -393,7 +393,7 @@ footer .brand{color:#fff}
       </div>
       <p class="ph-cap">Contoh prosesnya</p>
       <div class="facts">
-        <div><b>&lt; 1 jam</b><span>paket Fast</span></div>
+        <div><b>1–15 mnt</b><span>paket Fast</span></div>
         <div><b>Rp99rb</b><span>mulai dari</span></div>
         <div><b>100%</b><span>refund kalau gagal</span></div>
       </div>
@@ -475,7 +475,7 @@ footer .brand{color:#fff}
         <p class="price">Rp99.000</p>
         <p class="muted">Buat yang butuh cepat, coba dulu sebulan</p>
         <ul>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Selesai &lt; 1 jam (saat admin online)</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Biasanya beres 1–15 menit, maks. 1 jam</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Aktif &amp; bergaransi 1 bulan</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Padam di masa aktif? Diaktifkan ulang gratis</li>
         </ul>
@@ -488,7 +488,7 @@ footer .brand{color:#fff}
         <p class="price">Rp169.000</p>
         <p class="permonth">≈ Rp56rb per bulan, paling worth it</p>
         <ul>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Selesai &lt; 1 jam, antrean prioritas</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Biasanya beres 1–15 menit, maks. 1 jam · antrean prioritas</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Aktif &amp; bergaransi 3 bulan</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Padam di masa aktif? Diaktifkan ulang gratis</li>
         </ul>
@@ -501,7 +501,7 @@ footer .brand{color:#fff}
         <p class="price">Rp139.000</p>
         <p class="permonth">≈ Rp46rb per bulan, paling murah</p>
         <ul>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Selesai 1–2 hari kerja (sering lebih cepat)</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Maks. 24 jam, kalau lagi sepi bisa beres ±2 jam</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Aktif &amp; bergaransi 3 bulan</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Padam di masa aktif? Diaktifkan ulang gratis</li>
         </ul>
@@ -532,9 +532,9 @@ footer .brand{color:#fff}
       <fieldset class="field">
         <legend>2. Paket yang diminati</legend>
         <div class="opts">
-          <label class="opt"><input type="radio" name="plan" value="3 Bulan Fast (Rp169.000)" data-k="3f" checked><div><b>3 Bulan Fast · <s>Rp199rb</s> Rp169.000</b><span>&lt; 1 jam, rekomendasi</span></div></label>
-          <label class="opt"><input type="radio" name="plan" value="3 Bulan Slow (Rp139.000)" data-k="3s"><div><b>3 Bulan Slow · <s>Rp169rb</s> Rp139.000</b><span>1–2 hari kerja</span></div></label>
-          <label class="opt"><input type="radio" name="plan" value="1 Bulan Fast (Rp99.000)" data-k="1b"><div><b>1 Bulan Fast · <s>Rp119rb</s> Rp99.000</b><span>&lt; 1 jam</span></div></label>
+          <label class="opt"><input type="radio" name="plan" value="3 Bulan Fast (Rp169.000)" data-k="3f" checked><div><b>3 Bulan Fast · <s>Rp199rb</s> Rp169.000</b><span>1–15 menit, rekomendasi</span></div></label>
+          <label class="opt"><input type="radio" name="plan" value="3 Bulan Slow (Rp139.000)" data-k="3s"><div><b>3 Bulan Slow · <s>Rp169rb</s> Rp139.000</b><span>maks. 24 jam</span></div></label>
+          <label class="opt"><input type="radio" name="plan" value="1 Bulan Fast (Rp99.000)" data-k="1b"><div><b>1 Bulan Fast · <s>Rp119rb</s> Rp99.000</b><span>1–15 menit</span></div></label>
           <label class="opt"><input type="radio" name="plan" value="Belum tahu, mau tanya dulu" data-k="x"><div><b>Belum tahu</b><span>Mau tanya-tanya dulu</span></div></label>
         </div>
       </fieldset>
@@ -669,7 +669,7 @@ footer .brand{color:#fff}
         <dt>Email</dt><dd>sinyalbalik.id@gmail.com</dd>
       </dl>
       <div>
-        <p class="muted" style="margin-bottom:12px">Chat di luar jam admin tetap masuk antrean dan diproses berurutan. Paket Fast "&lt; 1 jam" dihitung saat admin online.</p>
+        <p class="muted" style="margin-bottom:12px">Chat di luar jam admin tetap masuk antrean dan diproses berurutan. Paket Fast biasanya beres 1–15 menit, maks. 1 jam.</p>
         <a class="btn btn-wa btn-block wa-link" href="https://wa.me/6285142938392?text=Halo%20Admin%20SinyalBalik%2C%20saya%20mau%20tanya-tanya%20dulu" data-msg="Halo Admin SinyalBalik, saya mau tanya-tanya dulu">
           <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Chat Admin sekarang
         </a>
@@ -688,7 +688,7 @@ footer .brand{color:#fff}
       <details><summary>Kalau gagal, uang saya kembali?</summary><div class="a">Ya. Kalau status IMEI terbaca <b>Unknown</b> (ditolak sistem) dan sinyal tidak bisa aktif, uang dikembalikan utuh tanpa potongan.</div></details>
       <details><summary>HP saya harus dikirim atau dibongkar?</summary><div class="a">Tidak. Cukup nomor IMEI 1 (ketik <kbd>*#06#</kbd>). HP tetap di tanganmu, foto/chat/data tidak disentuh sama sekali.</div></details>
       <details><summary>Ini sama dengan daftar IMEI di Bea Cukai?</summary><div class="a">Bukan. Pendaftaran permanen hanya lewat pembayaran pajak Bea Cukai. Layanan ini mengaktifkan sinyal sesuai masa paket (1 atau 3 bulan) dan bisa diperpanjang.</div></details>
-      <details><summary>Bedanya Fast dan Slow apa?</summary><div class="a">Hasilnya sama. Bedanya cuma kecepatan: <b>Fast</b> selesai di bawah 1 jam (di jam kerja admin), <b>Slow</b> 1–2 hari kerja dan lebih murah.</div></details>
+      <details><summary>Bedanya Fast dan Slow apa?</summary><div class="a">Hasilnya sama. Bedanya cuma kecepatan: <b>Fast</b> biasanya beres 1–15 menit, paling lama 1 jam. <b>Slow</b> maksimal 24 jam, kalau antrean sepi bisa beres sekitar 2 jam, dan lebih murah.</div></details>
       <details><summary>Boleh ganti kartu atau update iOS?</summary><div class="a">Boleh. Bisa semua operator Indonesia (Telkomsel, Indosat, XL, Tri, Smartfren, by.U) dan aman update iOS.</div></details>
       <details><summary>Setelah masa aktif habis bagaimana?</summary><div class="a">Sinyal kembali "Tidak Ada Layanan". Kamu bisa perpanjang lewat chat admin, prosesnya sama: kirim IMEI 1 lagi.</div></details>
       <details><summary>Cara bayarnya gimana?</summary><div class="a">QRIS — bisa dari DANA, GoPay, OVO, ShopeePay, atau aplikasi bank mana pun. Pastikan nama merchant yang muncul <span class="merchant">sinyalbalik.id</span>.</div></details>

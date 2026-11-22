@@ -12,9 +12,9 @@
 ## Harga (flat, tanpa biaya tambahan)
 | Paket | Harga | Proses | Masa aktif & garansi |
 |---|---|---|---|
-| 1 Bulan Fast | Rp99.000 | < 1 jam (jam kerja) | 1 bulan |
-| 3 Bulan Slow | Rp139.000 | 1–2 hari kerja | 3 bulan |
-| 3 Bulan Fast | Rp169.000 | < 1 jam (jam kerja) | 3 bulan |
+| 1 Bulan Fast | Rp99.000 | 1–15 menit, maks. 1 jam | 1 bulan |
+| 3 Bulan Slow | Rp139.000 | maks. 24 jam | 3 bulan |
+| 3 Bulan Fast | Rp169.000 | 1–15 menit, maks. 1 jam | 3 bulan |
 
 Semua paket: semua operator Indonesia (Telkomsel, Indosat, XL, Tri, Smartfren, by.U), aman update iOS, aktivasi ulang gratis jika sinyal padam karena gangguan sistem selama masa aktif.
 
