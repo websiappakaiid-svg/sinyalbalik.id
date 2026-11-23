@@ -356,24 +356,24 @@ html,body{overflow-x:clip}
 /* panduan buat pengunjung TikTok di iPhone */
 .tt{position:fixed;inset:0;z-index:60;background:rgba(8,15,30,.72);display:flex;align-items:flex-end;justify-content:center}
 .tt[hidden],.tt [hidden]{display:none}
-.tt-arr{position:absolute;top:calc(6px + env(safe-area-inset-top));right:10px;width:96px;height:150px;color:#fff}
-.tt-box{position:relative;width:100%;max-width:460px;max-height:calc(100% - 90px);overflow:auto;background:#fff;border-radius:22px 22px 0 0;padding:24px 20px calc(20px + env(safe-area-inset-bottom));outline:0}
+.tt-box{position:relative;width:100%;max-width:460px;max-height:calc(100% - 90px);overflow:auto;background:#fff;border-radius:22px 22px 0 0;padding:20px 20px calc(10px + env(safe-area-inset-bottom));outline:0}
 .tt-box h3{font-size:19px;padding-right:38px;margin-bottom:4px}
 .tt-box p{color:var(--ink-2);font-size:15.5px}
 .tt-x{position:absolute;top:12px;right:12px;width:44px;height:44px;border:0;background:none;color:var(--ink-3);cursor:pointer;display:grid;place-items:center}
 .tt-steps{list-style:none;display:grid;gap:10px;margin:16px 0}
-.tt-steps li{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;background:var(--bg-2);border-radius:14px;padding:13px 12px}
+.tt-steps li{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;background:var(--bg-2);border-radius:12px;padding:8px 12px}
 .tt-steps b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;font-size:15px}
 .tt-steps svg{margin-left:auto;flex:none;width:24px;height:24px;color:var(--ink)}
-.tt-cap{font-weight:700;color:var(--ink)!important;margin-top:16px}
-.tt-cap+.tt-steps{margin:8px 0}
+.tt-cap{font-weight:700;color:var(--ink)!important;margin-top:12px}
+.tt-cap+.tt-steps{margin:8px 0 12px;gap:6px}
+.tt-num+.tt-num{margin-top:0}
 .tt-note{font-size:14.5px!important}
 .tt-num{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1.5px solid var(--line);border-radius:14px;padding:8px 8px 8px 14px;margin:8px 0}
 .tt-num span{font-weight:800;font-size:18px;white-space:nowrap;-webkit-user-select:text;user-select:text}
 .tt-num .btn{min-height:46px;padding:10px 14px;font-size:15px;flex:none}
 .tt-num .btn{min-width:124px}
 .tt-num .tt-pv{font-weight:500;font-size:14px;line-height:1.35;color:var(--ink-2);white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.tt-ok{min-height:22px;margin-top:10px;font-size:14px!important;font-weight:600;color:var(--ok)!important;text-align:center;-webkit-user-select:text;user-select:text}
+.tt-ok{min-height:22px;margin-top:4px;font-size:14px!important;font-weight:600;color:var(--ok)!important;text-align:center;-webkit-user-select:text;user-select:text}
 </style>
 </head>
 <body>
@@ -770,21 +770,21 @@ html,body{overflow-x:clip}
 </footer>
 
 <div class="tt" id="tt" hidden>
-  <svg class="tt-arr" id="ttArr" viewBox="0 0 96 150" aria-hidden="true"><path d="M14 140 C20 92 40 52 78 18" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M46 18 L80 14 L76 49" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
   <div class="tt-box" role="dialog" aria-modal="true" aria-labelledby="ttH" tabindex="-1">
     <button type="button" class="tt-x" id="ttX" aria-label="Tutup"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
     <h3 id="ttH">TikTok nahan WhatsApp-nya</h3>
     <div id="ttA">
-      <p class="tt-cap">Cara gampang</p>
+      <p class="tt-cap">Tenang, cuma 3 pencetan:</p>
       <ol class="tt-steps">
-        <li><b>1</b><span>Pencet titik tiga di kanan atas</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18L18 6M9 6h9v9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-        <li><b>2</b><span>Pilih "Buka di browser"</span></li>
+        <li><b>1</b><span>Pencet "Lanjut ke WhatsApp"</span></li>
+        <li><b>2</b><span>Habis itu, titik tiga di kanan atas</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18L18 6M9 6h9v9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+        <li><b>3</b><span>Pilih "Buka di browser"</span></li>
       </ol>
-      <p class="tt-note">Habis itu langsung lanjut ke WhatsApp admin.</p>
+      <a class="btn btn-wa btn-block" id="ttNext" href="#"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Lanjut ke WhatsApp</a>
       <p class="tt-cap">Cara manual</p>
       <p class="tt-note">Salin dua ini, terus tempel sendiri di WhatsApp.</p>
-      <div class="tt-num"><span>0851-4293-8392</span><button type="button" class="btn btn-wa" id="ttNum">Salin nomor</button></div>
-      <div class="tt-num"><span class="tt-pv" id="ttPv"></span><button type="button" class="btn btn-wa" id="ttMsg">Salin pesan</button></div>
+      <div class="tt-num"><span>0851-4293-8392</span><button type="button" class="btn btn-ghost" id="ttNum">Salin nomor</button></div>
+      <div class="tt-num"><span class="tt-pv" id="ttPv"></span><button type="button" class="btn btn-ghost" id="ttMsg">Salin pesan</button></div>
       <p class="tt-ok" id="ttOk" aria-live="polite"></p>
     </div>
     <div id="ttB" hidden>
@@ -925,15 +925,15 @@ html,body{overflow-x:clip}
   function ttShow(text,inBrowser){
     ttText=text;ttOk.textContent='';document.getElementById('ttPv').textContent=text.replace(/^Halo Admin( SinyalBalik)?, (mau konsultasi dulu ya\.\s*)?/,'').replace(/\n+/g,' · ');ttBack=document.activeElement;
     document.getElementById('ttA').hidden=inBrowser;document.getElementById('ttB').hidden=!inBrowser;
-    document.getElementById('ttArr').style.display=inBrowser?'none':'';
+    document.getElementById('ttNext').href='https://api.whatsapp.com/send?phone='+WA+'&text='+encodeURIComponent(text);
     if(inBrowser){document.getElementById('ttH').textContent='Membuka WhatsApp admin…';document.getElementById('ttGo').href=waUrl(text);setTimeout(function(){location.href=waUrl(text);},700);}
     tt.hidden=false;document.body.style.overflow='hidden';ttBox.focus();
   }
   function ttHide(){tt.hidden=true;document.body.style.overflow='';if(ttBack&&ttBack.focus)ttBack.focus();}
   function ttGuide(key,text){
     try{sessionStorage.setItem('sbMsg',key+'|'+text);}catch(e){}
-    // pindah halaman beneran supaya "Buka di browser" ikut bawa kodenya
-    if(new URLSearchParams(location.search).get('wa')===key)ttShow(text,false);else location.assign(location.pathname+'?wa='+key);
+    history.replaceState(null,'',location.pathname+'?wa='+key); // jaga-jaga kalau "Buka di browser" dipencet duluan
+    ttShow(text,false);
   }
   if(TT)waLinks.forEach(function(a,i){a.addEventListener('click',function(e){e.preventDefault();ttGuide('a'+i,linkMsg(a));});});
   document.getElementById('ttX').addEventListener('click',ttHide);
