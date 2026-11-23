@@ -338,7 +338,8 @@ footer .brand{color:#fff}
 .oy-hero img{width:100%;height:auto;display:block;filter:drop-shadow(0 5px 6px rgba(15,23,42,.2))}
 .oy-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
 .oy-pop{display:flex;align-items:center;gap:8px;flex:none}
-.oy-pop img{width:64px;height:auto;filter:drop-shadow(0 4px 5px rgba(15,23,42,.15));transform-origin:50% 100%}
+.oy-tipe{margin:20px -8px -8px;overflow:hidden}
+.oy-pop img{width:76px;height:auto;filter:drop-shadow(0 4px 5px rgba(15,23,42,.15));transform-origin:50% 100%}
 .oy-bub{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:8px 12px;font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.35}
 .oy-pop .oy-bub{order:-1;max-width:120px}
 .oy-guide{display:flex;align-items:center;gap:12px;margin:-4px -8px 16px;padding:6px 8px;position:sticky;top:62px;z-index:3;background:#fff;border-radius:14px;box-shadow:0 6px 14px -10px rgba(15,23,42,.35)}
@@ -583,9 +584,10 @@ footer .brand{color:#fff}
 <section id="tipe">
   <div class="wrap">
     <p class="kicker">Cek sendiri 30 detik</p>
-    <div class="oy-head"><h2>iPhone kamu masuk yang mana?</h2><div class="oy-pop" aria-hidden="true"><span class="oy-bub" id="oyTipeTxt">Tap salah satu, aku bantu baca</span><img id="oyTipe" src="oyen/oyen-sedih.svg" alt="" width="64" height="75" loading="lazy"></div></div>
+    <h2>iPhone kamu masuk yang mana?</h2>
     <p class="lead">Buka <b>Pengaturan › Umum › Mengenai</b>, lihat baris <b>Kunci Operator</b>. Tap salah satu di bawah buat lihat contohnya.</p>
 
+    <div class="oy-guide oy-tipe" aria-live="polite"><img id="oyTipe" src="oyen/oyen-sedih.svg" alt="" width="64" height="75" loading="lazy"><p class="oy-bub" id="oyTipeTxt">Tap salah satu tipe di bawah, aku bantu baca.</p></div>
     <div class="types">
       <details class="type t-ok">
         <summary><i class="dot"></i><div><b>"Tidak ada pembatasan SIM" — bisa diproses</b><span>iPhone inter biasa, kartu terbaca tapi Tidak Ada Layanan</span></div></summary>
@@ -898,13 +900,14 @@ footer .brand{color:#fff}
   function jump(el,h){ if(reduce||!el.animate)return; el.animate([
     {transform:'translateY(0) scale(1.08,.9)'},{transform:'translateY(-'+h+'px) scale(.95,1.08)',offset:.45},
     {transform:'translateY(0) scale(1.1,.88)',offset:.85},{transform:'none'}],{duration:480,easing:'ease-out'}); }
-  function seen(el,fn){ if(!('IntersectionObserver' in window))return fn();
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){fn();io.unobserve(el);}});},{threshold:.6}); io.observe(el); }
+  function seen(el,fn,again){ if(!('IntersectionObserver' in window))return fn();
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){fn();if(!again)io.unobserve(el);}});},{threshold:.2}); io.observe(el); }
   function visible(el){var r=el.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0;}
 
   // ---- testi: loncat masuk, loncat senang, loncat tiap foto digeser ----
   var ot=document.getElementById('oyTesti');
   if(ot){
+    var tick=null;
     seen(ot,function(){
       if(reduce||!ot.animate){ot.src='oyen/oyen-jempol.svg';return;}
       ot.src='oyen/oyen-loncat.svg';
@@ -912,8 +915,8 @@ footer .brand{color:#fff}
         {transform:'translate(0,0) scale(1.12,.86)',offset:.88},{transform:'none'}],{duration:700,easing:'cubic-bezier(.3,.6,.4,1)'}).finished
       .then(function(){jump(ot,30);return new Promise(function(r){setTimeout(r,520);});})
       .then(function(){jump(ot,22);setTimeout(function(){ot.src='oyen/oyen-jempol.svg';},500);});
-      setInterval(function(){ if(visible(ot)){ot.src='oyen/oyen-loncat.svg';jump(ot,18);setTimeout(function(){ot.src='oyen/oyen-jempol.svg';},500);} },4200);
-    });
+      if(!tick)tick=setInterval(function(){ if(visible(ot)){ot.src='oyen/oyen-loncat.svg';jump(ot,18);setTimeout(function(){ot.src='oyen/oyen-jempol.svg';},500);} },4200);
+    },true);
     var strip=document.querySelector('.testi'),lastHop=0;
     if(strip)strip.addEventListener('scroll',function(){var n=Date.now();if(n-lastHop<650)return;lastHop=n;ot.src='oyen/oyen-loncat.svg';jump(ot,24);setTimeout(function(){ot.src='oyen/oyen-jempol.svg';},500);},{passive:true});
   }
@@ -936,6 +939,16 @@ footer .brand{color:#fff}
       else {oz.src='oyen/oyen-sedih.svg';zt.textContent='Yang ini gak bisa :(';shake(oz);}
     });});
   }
+
+  var fiP=document.getElementById('oyForm'),ftP=document.getElementById('oyFormTxt');
+  document.querySelectorAll('input[name=plan]').forEach(function(r){r.addEventListener('change',function(){
+    var k=r.getAttribute('data-k'),p,t;
+    if(k==='3f'){p='jempol';t='Pilihan paling worth it! Beres 1–15 menit.';}
+    else if(k==='3s'){p='mikir';t='Hemat! Maks 24 jam, kalau beruntung 2 jam nyala.';}
+    else if(k==='1b'){p='loncat';t='Cocok buat coba dulu sebulan.';}
+    else {p='mikir';t='Santai, nanti admin bantu pilihin.';}
+    fiP.src='oyen/oyen-'+p+'.svg';ftP.textContent=t;jump(fiP,26);
+  });});
 
   // form: Oyen ganti pose sesuai jawaban
   var fi=document.getElementById('oyForm'),ft=document.getElementById('oyFormTxt'),imei=document.getElementById('imei'),msg=document.getElementById('imei-msg');
