@@ -331,6 +331,8 @@ footer .brand{color:#fff}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
 /* ---- Oyen ---- */
+html,body{overflow-x:clip}
+@supports not (overflow:clip){html,body{overflow-x:hidden}}
 .hero-copy{position:relative}
 .hero .hero-cta{margin-top:58px}
 .hop{font-style:normal;display:inline-block;transform-origin:50% 100%}
@@ -911,7 +913,7 @@ footer .brand{color:#fff}
     seen(ot,function(){
       if(reduce||!ot.animate){ot.src='oyen/oyen-jempol.svg';return;}
       ot.src='oyen/oyen-loncat.svg';
-      ot.animate([{transform:'translate(140px,-30px) scale(.9)',opacity:0},{transform:'translate(70px,-90px)',opacity:1,offset:.5},
+      ot.animate([{transform:'translateY(-70px) scale(.7)',opacity:0},{transform:'translateY(-40px) scale(.9)',opacity:1,offset:.45},
         {transform:'translate(0,0) scale(1.12,.86)',offset:.88},{transform:'none'}],{duration:700,easing:'cubic-bezier(.3,.6,.4,1)'}).finished
       .then(function(){jump(ot,30);return new Promise(function(r){setTimeout(r,520);});})
       .then(function(){jump(ot,22);setTimeout(function(){ot.src='oyen/oyen-jempol.svg';},500);});
