@@ -10,16 +10,6 @@
       "source": "/panduanreseller.html",
       "destination": "/",
       "permanent": true
-    },
-    {
-      "source": "/ceksebelumpushlpasli",
-      "destination": "/",
-      "permanent": false
-    },
-    {
-      "source": "/ceksebelumpushlpasli.html",
-      "destination": "/",
-      "permanent": false
     }
   ],
   "headers": [
@@ -47,6 +37,15 @@
         {
           "key": "X-Robots-Tag",
           "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/ceksebelumpushlpasli",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
         }
       ]
     }
