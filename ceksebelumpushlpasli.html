@@ -338,16 +338,16 @@ footer .brand{color:#fff}
 .oy-hero img{width:100%;height:auto;display:block;filter:drop-shadow(0 5px 6px rgba(15,23,42,.2))}
 .oy-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
 .oy-pop{display:flex;align-items:center;gap:8px;flex:none}
-.oy-pop img{width:64px;height:auto;filter:drop-shadow(0 4px 5px rgba(15,23,42,.15));animation:oyBob 2.6s ease-in-out infinite}
+.oy-pop img{width:64px;height:auto;filter:drop-shadow(0 4px 5px rgba(15,23,42,.15));transform-origin:50% 100%}
 .oy-bub{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:8px 12px;font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.35}
 .oy-pop .oy-bub{order:-1;max-width:120px}
-.oy-guide{display:flex;align-items:center;gap:12px;margin:-4px 0 16px}
+.oy-guide{display:flex;align-items:center;gap:12px;margin:-4px -8px 16px;padding:6px 8px;position:sticky;top:62px;z-index:3;background:#fff;border-radius:14px;box-shadow:0 6px 14px -10px rgba(15,23,42,.35)}
 .oy-guide img{width:64px;height:auto;flex:none;filter:drop-shadow(0 4px 5px rgba(15,23,42,.15));transition:transform .2s}
 .oy-guide img.pop{animation:oyPop .45s ease-out}
 .oy-guide .oy-bub{flex:1;margin:0;background:var(--bg-2)}
 @keyframes oyBob{50%{transform:translateY(-5px)}}
 @keyframes oyPop{0%{transform:scale(.8) translateY(6px)}60%{transform:scale(1.08) translateY(-6px)}100%{transform:none}}
-@media(max-width:420px){.oy-pop .oy-bub{display:none}}
+@media(max-width:420px){.oy-pop .oy-bub{max-width:96px;font-size:12px;padding:6px 8px}}
 @media(prefers-reduced-motion:reduce){.oy-pop img,.oy-guide img.pop{animation:none}}
 </style>
 </head>
@@ -429,7 +429,7 @@ footer .brand{color:#fff}
 <section id="bukti">
   <div class="wrap">
     <p class="kicker">Bukti pengerjaan</p>
-    <div class="oy-head"><h2>Chat asli pelanggan</h2><div class="oy-pop" aria-hidden="true"><img src="oyen/oyen-loncat.svg" alt="" width="64" height="75" loading="lazy"><span class="oy-bub">Ini yang udah nyala</span></div></div>
+    <div class="oy-head"><h2>Chat asli pelanggan</h2><div class="oy-pop" aria-hidden="true"><img id="oyTesti" src="oyen/oyen-jempol.svg" alt="" width="64" height="75" loading="lazy"><span class="oy-bub">Ini yang udah nyala</span></div></div>
     <p class="lead">Data pribadi pelanggan disensor. Tap buat lihat jelas.</p>
 
     <div class="quotes">
@@ -583,7 +583,7 @@ footer .brand{color:#fff}
 <section id="tipe">
   <div class="wrap">
     <p class="kicker">Cek sendiri 30 detik</p>
-    <div class="oy-head"><h2>iPhone kamu masuk yang mana?</h2><div class="oy-pop" aria-hidden="true"><img src="oyen/oyen-sedih.svg" alt="" width="64" height="75" loading="lazy"></div></div>
+    <div class="oy-head"><h2>iPhone kamu masuk yang mana?</h2><div class="oy-pop" aria-hidden="true"><span class="oy-bub" id="oyTipeTxt">Tap salah satu, aku bantu baca</span><img id="oyTipe" src="oyen/oyen-sedih.svg" alt="" width="64" height="75" loading="lazy"></div></div>
     <p class="lead">Buka <b>Pengaturan › Umum › Mengenai</b>, lihat baris <b>Kunci Operator</b>. Tap salah satu di bawah buat lihat contohnya.</p>
 
     <div class="types">
@@ -868,7 +868,7 @@ footer .brand{color:#fff}
 (function(){
   var force=/putar/.test(location.search);
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches&&!force;
-  ['loncat','jempol','sedih','mikir'].forEach(function(n){new Image().src='oyen/oyen-'+n+'.svg';});
+  ['loncat','jempol','sedih','mikir','jalan1','jalan2'].forEach(function(n){new Image().src='oyen/oyen-'+n+'.svg';});
   var box=document.querySelector('.hero-copy'),oy=document.getElementById('oyHero'),im=oy.querySelector('img');
   var hops=[].slice.call(document.querySelectorAll('.hop')),cta=document.querySelector('.hero-cta .btn');
   var W=60,H=71;
@@ -894,9 +894,52 @@ footer .brand{color:#fff}
   addEventListener('load',function(){run().catch(function(){pose('jempol');set(end());});});
   addEventListener('resize',function(){if(oy.getAnimations)oy.getAnimations().forEach(function(a){a.cancel();});pose('jempol');set(end());});
 
+  // ---- gerakan umum ----
+  function jump(el,h){ if(reduce||!el.animate)return; el.animate([
+    {transform:'translateY(0) scale(1.08,.9)'},{transform:'translateY(-'+h+'px) scale(.95,1.08)',offset:.45},
+    {transform:'translateY(0) scale(1.1,.88)',offset:.85},{transform:'none'}],{duration:480,easing:'ease-out'}); }
+  function seen(el,fn){ if(!('IntersectionObserver' in window))return fn();
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){fn();io.unobserve(el);}});},{threshold:.6}); io.observe(el); }
+  function visible(el){var r=el.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0;}
+
+  // ---- testi: loncat masuk, loncat senang, loncat tiap foto digeser ----
+  var ot=document.getElementById('oyTesti');
+  if(ot){
+    seen(ot,function(){
+      if(reduce||!ot.animate){ot.src='oyen/oyen-jempol.svg';return;}
+      ot.src='oyen/oyen-loncat.svg';
+      ot.animate([{transform:'translate(140px,-30px) scale(.9)',opacity:0},{transform:'translate(70px,-90px)',opacity:1,offset:.5},
+        {transform:'translate(0,0) scale(1.12,.86)',offset:.88},{transform:'none'}],{duration:700,easing:'cubic-bezier(.3,.6,.4,1)'}).finished
+      .then(function(){jump(ot,30);return new Promise(function(r){setTimeout(r,520);});})
+      .then(function(){jump(ot,22);setTimeout(function(){ot.src='oyen/oyen-jempol.svg';},500);});
+      setInterval(function(){ if(visible(ot)){ot.src='oyen/oyen-loncat.svg';jump(ot,18);setTimeout(function(){ot.src='oyen/oyen-jempol.svg';},500);} },4200);
+    });
+    var strip=document.querySelector('.testi'),lastHop=0;
+    if(strip)strip.addEventListener('scroll',function(){var n=Date.now();if(n-lastHop<650)return;lastHop=n;ot.src='oyen/oyen-loncat.svg';jump(ot,24);setTimeout(function(){ot.src='oyen/oyen-jempol.svg';},500);},{passive:true});
+  }
+
+  // ---- cek tipe: jalan masuk bawa HP, geleng sedih, lalu ngerespon tipe yang dibuka ----
+  var oz=document.getElementById('oyTipe'),zt=document.getElementById('oyTipeTxt');
+  function shake(el){ if(reduce||!el.animate)return; el.animate([{transform:'rotate(0)'},{transform:'rotate(-7deg)'},{transform:'rotate(7deg)'},{transform:'rotate(-5deg)'},{transform:'rotate(0)'}],{duration:620,easing:'ease-in-out'}); }
+  if(oz){
+    seen(oz,function(){
+      if(reduce||!oz.animate)return;
+      var f=0,t=setInterval(function(){f^=1;oz.src='oyen/oyen-jalan'+(f+1)+'.svg';},150);
+      oz.animate([{transform:'translateX(160px)'},{transform:'translateX(0)'}],{duration:1100,easing:'linear'}).finished.then(function(){
+        clearInterval(t);oz.src='oyen/oyen-sedih.svg';shake(oz);
+      });
+    });
+    document.querySelectorAll('details.type').forEach(function(d){d.addEventListener('toggle',function(){
+      if(!d.open){oz.src='oyen/oyen-sedih.svg';zt.textContent='Tap salah satu, aku bantu baca';return;}
+      if(d.classList.contains('t-ok')){oz.src='oyen/oyen-jempol.svg';zt.textContent='Ini bisa diproses!';jump(oz,26);}
+      else if(d.classList.contains('t-warn')){oz.src='oyen/oyen-mikir.svg';zt.textContent='Tanya admin dulu ya';jump(oz,14);}
+      else {oz.src='oyen/oyen-sedih.svg';zt.textContent='Yang ini gak bisa :(';shake(oz);}
+    });});
+  }
+
   // form: Oyen ganti pose sesuai jawaban
   var fi=document.getElementById('oyForm'),ft=document.getElementById('oyFormTxt'),imei=document.getElementById('imei'),msg=document.getElementById('imei-msg');
-  function say(p,t){if(ft.textContent===t)return;fi.src='oyen/oyen-'+p+'.svg';ft.textContent=t;fi.classList.remove('pop');void fi.offsetWidth;if(!reduce)fi.classList.add('pop');}
+  function say(p,t){if(ft.textContent===t)return;fi.src='oyen/oyen-'+p+'.svg';ft.textContent=t;jump(fi,26);}
   document.querySelectorAll('input[name=lock]').forEach(function(r){r.addEventListener('change',function(){
     if(r.value.indexOf('Tidak ada')===0)say('jempol','Mantap, yang begini biasanya langsung bisa!');
     else if(r.value.indexOf('SIM dikunci')===0)say('mikir','Tenang, admin cek dulu. Jangan bayar sebelum dicek ya.');
