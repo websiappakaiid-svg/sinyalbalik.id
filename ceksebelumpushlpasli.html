@@ -357,7 +357,7 @@ html,body{overflow-x:clip}
 .tt{position:fixed;inset:0;z-index:60;background:rgba(8,15,30,.72);display:flex;align-items:flex-end;justify-content:center}
 .tt[hidden],.tt [hidden]{display:none}
 .tt-arr{position:absolute;top:calc(6px + env(safe-area-inset-top));right:10px;width:96px;height:150px;color:#fff}
-.tt-box{position:relative;width:100%;max-width:460px;max-height:calc(100% - 150px);overflow:auto;background:#fff;border-radius:22px 22px 0 0;padding:24px 20px calc(20px + env(safe-area-inset-bottom));outline:0}
+.tt-box{position:relative;width:100%;max-width:460px;max-height:calc(100% - 90px);overflow:auto;background:#fff;border-radius:22px 22px 0 0;padding:24px 20px calc(20px + env(safe-area-inset-bottom));outline:0}
 .tt-box h3{font-size:19px;padding-right:38px;margin-bottom:4px}
 .tt-box p{color:var(--ink-2);font-size:15.5px}
 .tt-x{position:absolute;top:12px;right:12px;width:44px;height:44px;border:0;background:none;color:var(--ink-3);cursor:pointer;display:grid;place-items:center}
@@ -371,7 +371,8 @@ html,body{overflow-x:clip}
 .tt-num{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1.5px solid var(--line);border-radius:14px;padding:8px 8px 8px 14px;margin:8px 0}
 .tt-num span{font-weight:800;font-size:18px;white-space:nowrap;-webkit-user-select:text;user-select:text}
 .tt-num .btn{min-height:46px;padding:10px 14px;font-size:15px;flex:none}
-.tt-link{border:0;background:none;padding:6px 0;font:inherit;font-weight:700;color:var(--wa);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.tt-num .btn{min-width:124px}
+.tt-num .tt-pv{font-weight:500;font-size:14px;line-height:1.35;color:var(--ink-2);white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .tt-ok{min-height:22px;margin-top:10px;font-size:14px!important;font-weight:600;color:var(--ok)!important;text-align:center;-webkit-user-select:text;user-select:text}
 </style>
 </head>
@@ -779,15 +780,16 @@ html,body{overflow-x:clip}
         <li><b>1</b><span>Pencet titik tiga di kanan atas</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18L18 6M9 6h9v9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
         <li><b>2</b><span>Pilih "Buka di browser"</span></li>
       </ol>
-      <p class="tt-note">Habis itu chat-nya langsung siap, gak usah isi ulang.</p>
+      <p class="tt-note">Habis itu langsung lanjut ke WhatsApp admin.</p>
       <p class="tt-cap">Cara manual</p>
+      <p class="tt-note">Salin dua ini, terus tempel sendiri di WhatsApp.</p>
       <div class="tt-num"><span>0851-4293-8392</span><button type="button" class="btn btn-wa" id="ttNum">Salin nomor</button></div>
-      <p class="tt-note">Buka WhatsApp sendiri, tempel nomornya, terus chat. <button type="button" class="tt-link" id="ttMsg">Salin pesannya juga</button></p>
+      <div class="tt-num"><span class="tt-pv" id="ttPv"></span><button type="button" class="btn btn-wa" id="ttMsg">Salin pesan</button></div>
       <p class="tt-ok" id="ttOk" aria-live="polite"></p>
     </div>
     <div id="ttB" hidden>
-      <p style="margin-bottom:16px">Pesannya udah disiapin, tinggal kirim ke admin.</p>
-      <a class="btn btn-wa btn-block" id="ttGo" href="#"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Lanjut ke WhatsApp</a>
+      <p style="margin-bottom:16px">Kalau gak kebuka sendiri, pencet tombol ini.</p>
+      <a class="btn btn-wa btn-block" id="ttGo" href="#"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Buka WhatsApp</a>
     </div>
   </div>
 </div>
@@ -921,10 +923,10 @@ html,body{overflow-x:clip}
   }
   var tt=document.getElementById('tt'),ttBox=tt.querySelector('.tt-box'),ttOk=document.getElementById('ttOk'),ttText='',ttBack=null;
   function ttShow(text,inBrowser){
-    ttText=text;ttOk.textContent='';ttBack=document.activeElement;
+    ttText=text;ttOk.textContent='';document.getElementById('ttPv').textContent=text.replace(/^Halo Admin( SinyalBalik)?, (mau konsultasi dulu ya\.\s*)?/,'').replace(/\n+/g,' · ');ttBack=document.activeElement;
     document.getElementById('ttA').hidden=inBrowser;document.getElementById('ttB').hidden=!inBrowser;
     document.getElementById('ttArr').style.display=inBrowser?'none':'';
-    if(inBrowser){document.getElementById('ttH').textContent='Siap, tinggal lanjut';document.getElementById('ttGo').href=waUrl(text);}
+    if(inBrowser){document.getElementById('ttH').textContent='Membuka WhatsApp admin…';document.getElementById('ttGo').href=waUrl(text);setTimeout(function(){location.href=waUrl(text);},700);}
     tt.hidden=false;document.body.style.overflow='hidden';ttBox.focus();
   }
   function ttHide(){tt.hidden=true;document.body.style.overflow='';if(ttBack&&ttBack.focus)ttBack.focus();}
